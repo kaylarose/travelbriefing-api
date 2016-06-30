@@ -8,9 +8,9 @@ import org.junit.Test;
 import retrofit2.Retrofit;
 import retrofit2.adapter.rxjava.RxJavaCallAdapterFactory;
 import retrofit2.http.Path;
-import retrofit2.mock.BehaviorDelegate;
-import retrofit2.mock.MockRetrofit;
-import retrofit2.mock.NetworkBehavior;
+//import retrofit2.mock.BehaviorDelegate;
+//import retrofit2.mock.MockRetrofit;
+//import retrofit2.mock.NetworkBehavior;
 import rx.Observable;
 import rx.observers.TestSubscriber;
 
@@ -23,6 +23,7 @@ public class TravelBriefingServiceCloudMockTest {
 
     private TravelBriefingServiceInterface mockService;
 
+    /*
     public class MockService implements TravelBriefingServiceInterface {
         private final BehaviorDelegate<TravelBriefingServiceInterface> delegate;
 
@@ -73,4 +74,5 @@ public class TravelBriefingServiceCloudMockTest {
 
     }
 
+*/
 }
