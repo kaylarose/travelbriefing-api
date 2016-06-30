@@ -1,2 +1,3 @@
 rootProject.name = 'travelbriefing'
-
+include ':api'
+include ':app'

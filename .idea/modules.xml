@@ -2,9 +2,9 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/api/api.iml" filepath="$PROJECT_DIR$/.idea/modules/api/api.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/app.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/travelbriefing.iml" filepath="$PROJECT_DIR$/.idea/modules/travelbriefing.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/travelbriefing_main.iml" filepath="$PROJECT_DIR$/.idea/modules/travelbriefing_main.iml" group="travelbriefing" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/travelbriefing_test.iml" filepath="$PROJECT_DIR$/.idea/modules/travelbriefing_test.iml" group="travelbriefing" />
     </modules>
   </component>
 </project>
