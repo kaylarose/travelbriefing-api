@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="j2objc-gradle-0.6.1-alpha-SNAPSHOT">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/api/libs/j2objc-gradle-0.6.1-alpha-SNAPSHOT.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
