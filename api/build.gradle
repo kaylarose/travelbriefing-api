@@ -5,17 +5,19 @@ buildscript {
     repositories {
         flatDir dirs: './libs'
     }
+
     dependencies {
         classpath group: 'com.github.j2objccontrib.j2objcgradle', name: 'j2objc-gradle',
                 version: '0.6.1-alpha-SNAPSHOT'
     }
+
 }
 
 plugins {
     id 'java'
 }
 
-apply plugin: 'com.github.j2objccontrib.j2objcgradle'
+//apply plugin: 'com.github.j2objccontrib.j2objcgradle'
 
 
 group 'com.totsp'
@@ -34,11 +36,12 @@ dependencies {
     compile 'com.squareup.retrofit2:retrofit:2.1.0'
     compile 'com.squareup.retrofit2:converter-gson:2.1.0'
     compile 'com.squareup.retrofit2:adapter-rxjava:2.1.0'
-    compile 'io.reactivex:rxandroid:1.0.1'
+    compile 'io.reactivex:rxjava:1.1.6'
 }
 
 
 // Plugin settings; put these at the bottom of the file.
+/*
 j2objcConfig {
     // Sets up libraries you depend on
     autoConfigureDeps true
@@ -49,3 +52,4 @@ j2objcConfig {
 
     finalConfigure()          // Must be last call to configuration
 }
+*/
