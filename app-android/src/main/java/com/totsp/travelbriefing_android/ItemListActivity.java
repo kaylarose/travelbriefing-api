@@ -5,7 +5,6 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 import android.support.design.widget.FloatingActionButton;
@@ -17,12 +16,8 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 
-import com.totsp.travelbriefing.model.Country;
 import com.totsp.travelbriefing.model.CountryListItem;
 import com.totsp.travelbriefing.service.TravelBriefingService;
-import com.totsp.travelbriefing.service.TravelBriefingServiceInterface;
-import com.totsp.travelbriefing_android.dummy.DummyContent;
-import rx.Observable;
 import rx.Subscriber;
 import rx.android.schedulers.AndroidSchedulers;
 import rx.schedulers.Schedulers;
@@ -42,14 +37,7 @@ public class ItemListActivity extends AppCompatActivity {
 
     private static final String TAG = "TRAVELBRIEF";
 
-    private TravelBriefingService service;
-
     private boolean mTwoPane;
-
-    private void log(String message) {
-        Log.i(TAG, message);
-    }
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -80,12 +68,22 @@ public class ItemListActivity extends AppCompatActivity {
             // activity should be in two-pane mode.
             mTwoPane = true;
         }
+    }
 
+    //
+    // priv
+    //
+
+    private void setupRecyclerView(@NonNull RecyclerView recyclerView) {
+        loadData(recyclerView);
+    }
+
+    private void loadData(@NonNull final RecyclerView recyclerView) {
 
         // TODO check is connected
         // TODO rxandroid dep?
         // TODO rxandroid pattern
-        service = new TravelBriefingService();
+        TravelBriefingService service = ((TravelBriefingApplication)getApplication()).getService();
         Subscriber<List<CountryListItem>> subscriber = new Subscriber<List<CountryListItem>>() {
             @Override
             public void onCompleted() {
@@ -99,9 +97,7 @@ public class ItemListActivity extends AppCompatActivity {
 
             @Override
             public void onNext(List<CountryListItem> countries) {
-                for (CountryListItem country: countries) {
-                    System.out.println("COUNTRY:" + country.getName());
-                }
+                recyclerView.setAdapter(new SimpleItemRecyclerViewAdapter(countries));
             }
         };
         service.getCountries()
@@ -110,16 +106,20 @@ public class ItemListActivity extends AppCompatActivity {
                 .subscribe(subscriber);
     }
 
-    private void setupRecyclerView(@NonNull RecyclerView recyclerView) {
-        recyclerView.setAdapter(new SimpleItemRecyclerViewAdapter(DummyContent.ITEMS));
+    private void log(String message) {
+        Log.i(TAG, message);
     }
 
-    public class SimpleItemRecyclerViewAdapter
+    //
+    // view adapter
+    //
+
+    class SimpleItemRecyclerViewAdapter
             extends RecyclerView.Adapter<SimpleItemRecyclerViewAdapter.ViewHolder> {
 
-        private final List<DummyContent.DummyItem> mValues;
+        private final List<CountryListItem> mValues;
 
-        public SimpleItemRecyclerViewAdapter(List<DummyContent.DummyItem> items) {
+        public SimpleItemRecyclerViewAdapter(List<CountryListItem> items) {
             mValues = items;
         }
 
@@ -133,15 +133,16 @@ public class ItemListActivity extends AppCompatActivity {
         @Override
         public void onBindViewHolder(final ViewHolder holder, int position) {
             holder.mItem = mValues.get(position);
-            holder.mIdView.setText(mValues.get(position).id);
-            holder.mContentView.setText(mValues.get(position).content);
+            holder.mIdView.setText("" + position);
+            holder.mContentView.setText(mValues.get(position).getName());
 
             holder.mView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
+
                     if (mTwoPane) {
                         Bundle arguments = new Bundle();
-                        arguments.putString(ItemDetailFragment.ARG_ITEM_ID, holder.mItem.id);
+                        arguments.putString(ItemDetailFragment.ARG_ITEM_ID, holder.mItem.getName());
                         ItemDetailFragment fragment = new ItemDetailFragment();
                         fragment.setArguments(arguments);
                         getSupportFragmentManager().beginTransaction()
@@ -150,10 +151,10 @@ public class ItemListActivity extends AppCompatActivity {
                     } else {
                         Context context = v.getContext();
                         Intent intent = new Intent(context, ItemDetailActivity.class);
-                        intent.putExtra(ItemDetailFragment.ARG_ITEM_ID, holder.mItem.id);
-
+                        intent.putExtra(ItemDetailFragment.ARG_ITEM_ID, holder.mItem.getName());
                         context.startActivity(intent);
                     }
+
                 }
             });
         }
@@ -167,7 +168,7 @@ public class ItemListActivity extends AppCompatActivity {
             public final View mView;
             public final TextView mIdView;
             public final TextView mContentView;
-            public DummyContent.DummyItem mItem;
+            public CountryListItem mItem;
 
             public ViewHolder(View view) {
                 super(view);
