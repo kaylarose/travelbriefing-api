@@ -40,6 +40,12 @@ dependencies {
 }
 
 
+task updateAndroidLibs (dependsOn: jar, type: Copy) {
+    println "****** BUILD and COPY: [$jar.archivePath]"
+    from './build/libs/api-1.0-SNAPSHOT.jar' // tried $archivePath and variations on $archiveName, all fail?
+    into '../app-android/libs'
+}
+
 // Plugin settings; put these at the bottom of the file.
 /*
 j2objcConfig {

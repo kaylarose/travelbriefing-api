@@ -10,15 +10,25 @@ import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
 
+import com.totsp.travelbriefing.model.Country;
+import com.totsp.travelbriefing.model.CountryListItem;
+import com.totsp.travelbriefing.service.TravelBriefingService;
+import com.totsp.travelbriefing.service.TravelBriefingServiceInterface;
 import com.totsp.travelbriefing_android.dummy.DummyContent;
+import rx.Observable;
+import rx.Subscriber;
+import rx.android.schedulers.AndroidSchedulers;
+import rx.schedulers.Schedulers;
 
 import java.util.List;
+
 
 /**
  * An activity representing a list of Items. This activity
@@ -30,11 +40,16 @@ import java.util.List;
  */
 public class ItemListActivity extends AppCompatActivity {
 
-    /**
-     * Whether or not the activity is in two-pane mode, i.e. running on a tablet
-     * device.
-     */
+    private static final String TAG = "TRAVELBRIEF";
+
+    private TravelBriefingService service;
+
     private boolean mTwoPane;
+
+    private void log(String message) {
+        Log.i(TAG, message);
+    }
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -65,6 +80,34 @@ public class ItemListActivity extends AppCompatActivity {
             // activity should be in two-pane mode.
             mTwoPane = true;
         }
+
+
+        // TODO check is connected
+        // TODO rxandroid dep?
+        // TODO rxandroid pattern
+        service = new TravelBriefingService();
+        Subscriber<List<CountryListItem>> subscriber = new Subscriber<List<CountryListItem>>() {
+            @Override
+            public void onCompleted() {
+                log("subscriber onCompleted");
+            }
+
+            @Override
+            public void onError(Throwable e) {
+                Log.e(TAG, "subscriber error", e);
+            }
+
+            @Override
+            public void onNext(List<CountryListItem> countries) {
+                for (CountryListItem country: countries) {
+                    System.out.println("COUNTRY:" + country.getName());
+                }
+            }
+        };
+        service.getCountries()
+                .subscribeOn(Schedulers.newThread())
+                .observeOn(AndroidSchedulers.mainThread())
+                .subscribe(subscriber);
     }
 
     private void setupRecyclerView(@NonNull RecyclerView recyclerView) {

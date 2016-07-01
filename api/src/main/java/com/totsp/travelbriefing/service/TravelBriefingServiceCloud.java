@@ -1,6 +1,7 @@
 package com.totsp.travelbriefing.service;
 
 import com.totsp.travelbriefing.model.Country;
+import com.totsp.travelbriefing.model.CountryListItem;
 import retrofit2.Retrofit;
 import retrofit2.adapter.rxjava.RxJavaCallAdapterFactory;
 import retrofit2.converter.gson.GsonConverterFactory;
@@ -30,9 +31,18 @@ class TravelBriefingServiceCloud implements TravelBriefingServiceInterface {
     }
 
     @Override
-    public Observable<List<Country>> getCountries() {
+    public Observable<List<CountryListItem>> getCountries() {
         System.out.println("TravelBriefingServiceCloud getCountries");
-        return SERVICE.getCountries();
+        Observable<List<CountryListItem>> countries = SERVICE.getCountries();
+        // pipe the stream to another observable to SAVE the item in the cache
+        Observable<List<CountryListItem>> countriesWithSave = countries.doOnNext(new Action1<List<CountryListItem>>() {
+            @Override
+            public void call(List<CountryListItem> countryList) {
+                System.out.println("   returning countryList from service, cache PUT");
+                TravelBriefingServiceCache.cacheCountryList(countryList);
+            }
+        });
+        return countriesWithSave;
     }
 
     @Override
@@ -44,7 +54,7 @@ class TravelBriefingServiceCloud implements TravelBriefingServiceInterface {
             @Override
             public void call(Country country) {
                 System.out.println("   returning country from service, cache PUT");
-                TravelBriefingServiceCache.CACHE.put(countryName, country);
+                TravelBriefingServiceCache.cacheCountry(countryName, country);
             }
         });
         return countryWithSave;
