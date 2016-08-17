@@ -10,8 +10,14 @@
     <packaging>pom</packaging>
 
     <properties>
+        <!-- Defaults to $J2OBJC_HOME environment var -->
         <J2OBJC_PATH>${env.J2OBJC_HOME}</J2OBJC_PATH>
+        <!-- All transpiled classes from the com.totsp package will get prefixed with TOTSP -->
         <OBJC_PREFIX>com.totsp.*=TOTSP</OBJC_PREFIX>
+        <!-- ./src/main/java -->
+        <JAVA_SRC_PATH>${project.basedir}/src/main/java</JAVA_SRC_PATH>
+        <!-- ./target/j2objc/src -->
+        <OBJC_SRC_PATH>${project.build.directory}/j2objc/src</OBJC_SRC_PATH>
     </properties>
 
     <pluginRepositories>
@@ -78,10 +84,9 @@
                     <j2objcPath>${J2OBJC_PATH}/j2objc</j2objcPath>
                     <useArc>true</useArc>
                     <noPackageDirectories>true</noPackageDirectories>
-                    <!-- default value -->
-                    <sourcePath>${project.basedir}/src/main/java</sourcePath>
-                    <!-- default value -->
-                    <d>${project.build.directory}/j2objc/src</d>
+                    <sourcePath>${JAVA_SRC_PATH}</sourcePath>
+                    <d>${OBJC_SRC_PATH}</d>
+                    <!-- Externalize Generated Class Prefix -->
                     <prefix>${OBJC_PREFIX}</prefix>
                 </configuration>
             </plugin>
