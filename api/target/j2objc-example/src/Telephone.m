@@ -7,7 +7,7 @@
 #include "Telephone.h"
 #include "com/google/common/base/MoreObjects.h"
 
-@interface ComTotspTravelbriefingModelTelephone () {
+@interface TOTSPTelephone () {
  @public
   NSString *callingCode_;
   NSString *police_;
@@ -17,18 +17,18 @@
 
 @end
 
-J2OBJC_FIELD_SETTER(ComTotspTravelbriefingModelTelephone, callingCode_, NSString *)
-J2OBJC_FIELD_SETTER(ComTotspTravelbriefingModelTelephone, police_, NSString *)
-J2OBJC_FIELD_SETTER(ComTotspTravelbriefingModelTelephone, ambulance_, NSString *)
-J2OBJC_FIELD_SETTER(ComTotspTravelbriefingModelTelephone, fire_, NSString *)
+J2OBJC_FIELD_SETTER(TOTSPTelephone, callingCode_, NSString *)
+J2OBJC_FIELD_SETTER(TOTSPTelephone, police_, NSString *)
+J2OBJC_FIELD_SETTER(TOTSPTelephone, ambulance_, NSString *)
+J2OBJC_FIELD_SETTER(TOTSPTelephone, fire_, NSString *)
 
-@implementation ComTotspTravelbriefingModelTelephone
+@implementation TOTSPTelephone
 
 - (instancetype)initWithNSString:(NSString *)callingCode
                     withNSString:(NSString *)police
                     withNSString:(NSString *)ambulance
                     withNSString:(NSString *)fire {
-  ComTotspTravelbriefingModelTelephone_initWithNSString_withNSString_withNSString_withNSString_(self, callingCode, police, ambulance, fire);
+  TOTSPTelephone_initWithNSString_withNSString_withNSString_withNSString_(self, callingCode, police, ambulance, fire);
   return self;
 }
 
@@ -88,13 +88,13 @@ J2OBJC_FIELD_SETTER(ComTotspTravelbriefingModelTelephone, fire_, NSString *)
     { "fire_", "LNSString;", .constantValue.asLong = 0, 0x2, -1, -1, -1, -1 },
   };
   static const void *ptrTable[] = { "LNSString;LNSString;LNSString;LNSString;", "setCallingCode", "LNSString;", "setPolice", "setAmbulance", "setFire", "toString" };
-  static const J2ObjcClassInfo _ComTotspTravelbriefingModelTelephone = { "Telephone", "com.totsp.travelbriefing.model", ptrTable, methods, fields, 7, 0x1, 10, 4, -1, -1, -1, -1, -1 };
-  return &_ComTotspTravelbriefingModelTelephone;
+  static const J2ObjcClassInfo _TOTSPTelephone = { "Telephone", "com.totsp.travelbriefing.model", ptrTable, methods, fields, 7, 0x1, 10, 4, -1, -1, -1, -1, -1 };
+  return &_TOTSPTelephone;
 }
 
 @end
 
-void ComTotspTravelbriefingModelTelephone_initWithNSString_withNSString_withNSString_withNSString_(ComTotspTravelbriefingModelTelephone *self, NSString *callingCode, NSString *police, NSString *ambulance, NSString *fire) {
+void TOTSPTelephone_initWithNSString_withNSString_withNSString_withNSString_(TOTSPTelephone *self, NSString *callingCode, NSString *police, NSString *ambulance, NSString *fire) {
   NSObject_init(self);
   self->callingCode_ = callingCode;
   self->police_ = police;
@@ -102,12 +102,12 @@ void ComTotspTravelbriefingModelTelephone_initWithNSString_withNSString_withNSSt
   self->fire_ = fire;
 }
 
-ComTotspTravelbriefingModelTelephone *new_ComTotspTravelbriefingModelTelephone_initWithNSString_withNSString_withNSString_withNSString_(NSString *callingCode, NSString *police, NSString *ambulance, NSString *fire) {
-  J2OBJC_NEW_IMPL(ComTotspTravelbriefingModelTelephone, initWithNSString_withNSString_withNSString_withNSString_, callingCode, police, ambulance, fire)
+TOTSPTelephone *new_TOTSPTelephone_initWithNSString_withNSString_withNSString_withNSString_(NSString *callingCode, NSString *police, NSString *ambulance, NSString *fire) {
+  J2OBJC_NEW_IMPL(TOTSPTelephone, initWithNSString_withNSString_withNSString_withNSString_, callingCode, police, ambulance, fire)
 }
 
-ComTotspTravelbriefingModelTelephone *create_ComTotspTravelbriefingModelTelephone_initWithNSString_withNSString_withNSString_withNSString_(NSString *callingCode, NSString *police, NSString *ambulance, NSString *fire) {
-  J2OBJC_CREATE_IMPL(ComTotspTravelbriefingModelTelephone, initWithNSString_withNSString_withNSString_withNSString_, callingCode, police, ambulance, fire)
+TOTSPTelephone *create_TOTSPTelephone_initWithNSString_withNSString_withNSString_withNSString_(NSString *callingCode, NSString *police, NSString *ambulance, NSString *fire) {
+  J2OBJC_CREATE_IMPL(TOTSPTelephone, initWithNSString_withNSString_withNSString_withNSString_, callingCode, police, ambulance, fire)
 }
 
-J2OBJC_CLASS_TYPE_LITERAL_SOURCE(ComTotspTravelbriefingModelTelephone)
+J2OBJC_CLASS_TYPE_LITERAL_SOURCE(TOTSPTelephone)

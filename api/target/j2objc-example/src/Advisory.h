@@ -13,10 +13,10 @@
 #endif
 #undef RESTRICT_Advisory
 
-#if !defined (ComTotspTravelbriefingModelAdvisory_) && (INCLUDE_ALL_Advisory || defined(INCLUDE_ComTotspTravelbriefingModelAdvisory))
-#define ComTotspTravelbriefingModelAdvisory_
+#if !defined (TOTSPAdvisory_) && (INCLUDE_ALL_Advisory || defined(INCLUDE_TOTSPAdvisory))
+#define TOTSPAdvisory_
 
-@interface ComTotspTravelbriefingModelAdvisory : NSObject
+@interface TOTSPAdvisory : NSObject
 
 #pragma mark Public
 
@@ -35,15 +35,17 @@
 
 @end
 
-J2OBJC_EMPTY_STATIC_INIT(ComTotspTravelbriefingModelAdvisory)
+J2OBJC_EMPTY_STATIC_INIT(TOTSPAdvisory)
 
-FOUNDATION_EXPORT void ComTotspTravelbriefingModelAdvisory_initWithNSString_withNSString_(ComTotspTravelbriefingModelAdvisory *self, NSString *advise, NSString *url);
+FOUNDATION_EXPORT void TOTSPAdvisory_initWithNSString_withNSString_(TOTSPAdvisory *self, NSString *advise, NSString *url);
 
-FOUNDATION_EXPORT ComTotspTravelbriefingModelAdvisory *new_ComTotspTravelbriefingModelAdvisory_initWithNSString_withNSString_(NSString *advise, NSString *url) NS_RETURNS_RETAINED;
+FOUNDATION_EXPORT TOTSPAdvisory *new_TOTSPAdvisory_initWithNSString_withNSString_(NSString *advise, NSString *url) NS_RETURNS_RETAINED;
 
-FOUNDATION_EXPORT ComTotspTravelbriefingModelAdvisory *create_ComTotspTravelbriefingModelAdvisory_initWithNSString_withNSString_(NSString *advise, NSString *url);
+FOUNDATION_EXPORT TOTSPAdvisory *create_TOTSPAdvisory_initWithNSString_withNSString_(NSString *advise, NSString *url);
 
-J2OBJC_TYPE_LITERAL_HEADER(ComTotspTravelbriefingModelAdvisory)
+J2OBJC_TYPE_LITERAL_HEADER(TOTSPAdvisory)
+
+@compatibility_alias ComTotspTravelbriefingModelAdvisory TOTSPAdvisory;
 
 #endif
 

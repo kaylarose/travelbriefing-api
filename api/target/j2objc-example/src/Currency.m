@@ -7,7 +7,7 @@
 #include "J2ObjC_source.h"
 #include "com/google/common/base/MoreObjects.h"
 
-@interface ComTotspTravelbriefingModelCurrency () {
+@interface TOTSPCurrency () {
  @public
   NSString *name_;
   NSString *code_;
@@ -17,18 +17,18 @@
 
 @end
 
-J2OBJC_FIELD_SETTER(ComTotspTravelbriefingModelCurrency, name_, NSString *)
-J2OBJC_FIELD_SETTER(ComTotspTravelbriefingModelCurrency, code_, NSString *)
-J2OBJC_FIELD_SETTER(ComTotspTravelbriefingModelCurrency, symbol_, NSString *)
-J2OBJC_FIELD_SETTER(ComTotspTravelbriefingModelCurrency, rate_, NSString *)
+J2OBJC_FIELD_SETTER(TOTSPCurrency, name_, NSString *)
+J2OBJC_FIELD_SETTER(TOTSPCurrency, code_, NSString *)
+J2OBJC_FIELD_SETTER(TOTSPCurrency, symbol_, NSString *)
+J2OBJC_FIELD_SETTER(TOTSPCurrency, rate_, NSString *)
 
-@implementation ComTotspTravelbriefingModelCurrency
+@implementation TOTSPCurrency
 
 - (instancetype)initWithNSString:(NSString *)name
                     withNSString:(NSString *)code
                     withNSString:(NSString *)symbol
                     withNSString:(NSString *)rate {
-  ComTotspTravelbriefingModelCurrency_initWithNSString_withNSString_withNSString_withNSString_(self, name, code, symbol, rate);
+  TOTSPCurrency_initWithNSString_withNSString_withNSString_withNSString_(self, name, code, symbol, rate);
   return self;
 }
 
@@ -88,13 +88,13 @@ J2OBJC_FIELD_SETTER(ComTotspTravelbriefingModelCurrency, rate_, NSString *)
     { "rate_", "LNSString;", .constantValue.asLong = 0, 0x2, -1, -1, -1, -1 },
   };
   static const void *ptrTable[] = { "LNSString;LNSString;LNSString;LNSString;", "setName", "LNSString;", "setCode", "setSymbol", "setRate", "toString" };
-  static const J2ObjcClassInfo _ComTotspTravelbriefingModelCurrency = { "Currency", "com.totsp.travelbriefing.model", ptrTable, methods, fields, 7, 0x1, 10, 4, -1, -1, -1, -1, -1 };
-  return &_ComTotspTravelbriefingModelCurrency;
+  static const J2ObjcClassInfo _TOTSPCurrency = { "Currency", "com.totsp.travelbriefing.model", ptrTable, methods, fields, 7, 0x1, 10, 4, -1, -1, -1, -1, -1 };
+  return &_TOTSPCurrency;
 }
 
 @end
 
-void ComTotspTravelbriefingModelCurrency_initWithNSString_withNSString_withNSString_withNSString_(ComTotspTravelbriefingModelCurrency *self, NSString *name, NSString *code, NSString *symbol, NSString *rate) {
+void TOTSPCurrency_initWithNSString_withNSString_withNSString_withNSString_(TOTSPCurrency *self, NSString *name, NSString *code, NSString *symbol, NSString *rate) {
   NSObject_init(self);
   self->name_ = name;
   self->code_ = code;
@@ -102,12 +102,12 @@ void ComTotspTravelbriefingModelCurrency_initWithNSString_withNSString_withNSStr
   self->rate_ = rate;
 }
 
-ComTotspTravelbriefingModelCurrency *new_ComTotspTravelbriefingModelCurrency_initWithNSString_withNSString_withNSString_withNSString_(NSString *name, NSString *code, NSString *symbol, NSString *rate) {
-  J2OBJC_NEW_IMPL(ComTotspTravelbriefingModelCurrency, initWithNSString_withNSString_withNSString_withNSString_, name, code, symbol, rate)
+TOTSPCurrency *new_TOTSPCurrency_initWithNSString_withNSString_withNSString_withNSString_(NSString *name, NSString *code, NSString *symbol, NSString *rate) {
+  J2OBJC_NEW_IMPL(TOTSPCurrency, initWithNSString_withNSString_withNSString_withNSString_, name, code, symbol, rate)
 }
 
-ComTotspTravelbriefingModelCurrency *create_ComTotspTravelbriefingModelCurrency_initWithNSString_withNSString_withNSString_withNSString_(NSString *name, NSString *code, NSString *symbol, NSString *rate) {
-  J2OBJC_CREATE_IMPL(ComTotspTravelbriefingModelCurrency, initWithNSString_withNSString_withNSString_withNSString_, name, code, symbol, rate)
+TOTSPCurrency *create_TOTSPCurrency_initWithNSString_withNSString_withNSString_withNSString_(NSString *name, NSString *code, NSString *symbol, NSString *rate) {
+  J2OBJC_CREATE_IMPL(TOTSPCurrency, initWithNSString_withNSString_withNSString_withNSString_, name, code, symbol, rate)
 }
 
-J2OBJC_CLASS_TYPE_LITERAL_SOURCE(ComTotspTravelbriefingModelCurrency)
+J2OBJC_CLASS_TYPE_LITERAL_SOURCE(TOTSPCurrency)

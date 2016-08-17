@@ -13,10 +13,10 @@
 #endif
 #undef RESTRICT_Water
 
-#if !defined (ComTotspTravelbriefingModelWater_) && (INCLUDE_ALL_Water || defined(INCLUDE_ComTotspTravelbriefingModelWater))
-#define ComTotspTravelbriefingModelWater_
+#if !defined (TOTSPWater_) && (INCLUDE_ALL_Water || defined(INCLUDE_TOTSPWater))
+#define TOTSPWater_
 
-@interface ComTotspTravelbriefingModelWater : NSObject
+@interface TOTSPWater : NSObject
 
 #pragma mark Public
 
@@ -35,15 +35,17 @@
 
 @end
 
-J2OBJC_EMPTY_STATIC_INIT(ComTotspTravelbriefingModelWater)
+J2OBJC_EMPTY_STATIC_INIT(TOTSPWater)
 
-FOUNDATION_EXPORT void ComTotspTravelbriefingModelWater_initWithNSString_withNSString_(ComTotspTravelbriefingModelWater *self, NSString *shrt, NSString *full);
+FOUNDATION_EXPORT void TOTSPWater_initWithNSString_withNSString_(TOTSPWater *self, NSString *shrt, NSString *full);
 
-FOUNDATION_EXPORT ComTotspTravelbriefingModelWater *new_ComTotspTravelbriefingModelWater_initWithNSString_withNSString_(NSString *shrt, NSString *full) NS_RETURNS_RETAINED;
+FOUNDATION_EXPORT TOTSPWater *new_TOTSPWater_initWithNSString_withNSString_(NSString *shrt, NSString *full) NS_RETURNS_RETAINED;
 
-FOUNDATION_EXPORT ComTotspTravelbriefingModelWater *create_ComTotspTravelbriefingModelWater_initWithNSString_withNSString_(NSString *shrt, NSString *full);
+FOUNDATION_EXPORT TOTSPWater *create_TOTSPWater_initWithNSString_withNSString_(NSString *shrt, NSString *full);
 
-J2OBJC_TYPE_LITERAL_HEADER(ComTotspTravelbriefingModelWater)
+J2OBJC_TYPE_LITERAL_HEADER(TOTSPWater)
+
+@compatibility_alias ComTotspTravelbriefingModelWater TOTSPWater;
 
 #endif
 

@@ -7,7 +7,7 @@
 #include "J2ObjC_source.h"
 #include "com/google/common/base/MoreObjects.h"
 
-@interface ComTotspTravelbriefingModelCountryListItem () {
+@interface TOTSPCountryListItem () {
  @public
   NSString *name_;
   NSString *url_;
@@ -15,13 +15,13 @@
 
 @end
 
-J2OBJC_FIELD_SETTER(ComTotspTravelbriefingModelCountryListItem, name_, NSString *)
-J2OBJC_FIELD_SETTER(ComTotspTravelbriefingModelCountryListItem, url_, NSString *)
+J2OBJC_FIELD_SETTER(TOTSPCountryListItem, name_, NSString *)
+J2OBJC_FIELD_SETTER(TOTSPCountryListItem, url_, NSString *)
 
-@implementation ComTotspTravelbriefingModelCountryListItem
+@implementation TOTSPCountryListItem
 
 - (instancetype)initWithNSString:(NSString *)name {
-  ComTotspTravelbriefingModelCountryListItem_initWithNSString_(self, name);
+  TOTSPCountryListItem_initWithNSString_(self, name);
   return self;
 }
 
@@ -59,23 +59,23 @@ J2OBJC_FIELD_SETTER(ComTotspTravelbriefingModelCountryListItem, url_, NSString *
     { "url_", "LNSString;", .constantValue.asLong = 0, 0x2, -1, -1, -1, -1 },
   };
   static const void *ptrTable[] = { "LNSString;", "setName", "setUrl", "toString" };
-  static const J2ObjcClassInfo _ComTotspTravelbriefingModelCountryListItem = { "CountryListItem", "com.totsp.travelbriefing.model", ptrTable, methods, fields, 7, 0x1, 6, 2, -1, -1, -1, -1, -1 };
-  return &_ComTotspTravelbriefingModelCountryListItem;
+  static const J2ObjcClassInfo _TOTSPCountryListItem = { "CountryListItem", "com.totsp.travelbriefing.model", ptrTable, methods, fields, 7, 0x1, 6, 2, -1, -1, -1, -1, -1 };
+  return &_TOTSPCountryListItem;
 }
 
 @end
 
-void ComTotspTravelbriefingModelCountryListItem_initWithNSString_(ComTotspTravelbriefingModelCountryListItem *self, NSString *name) {
+void TOTSPCountryListItem_initWithNSString_(TOTSPCountryListItem *self, NSString *name) {
   NSObject_init(self);
   self->name_ = name;
 }
 
-ComTotspTravelbriefingModelCountryListItem *new_ComTotspTravelbriefingModelCountryListItem_initWithNSString_(NSString *name) {
-  J2OBJC_NEW_IMPL(ComTotspTravelbriefingModelCountryListItem, initWithNSString_, name)
+TOTSPCountryListItem *new_TOTSPCountryListItem_initWithNSString_(NSString *name) {
+  J2OBJC_NEW_IMPL(TOTSPCountryListItem, initWithNSString_, name)
 }
 
-ComTotspTravelbriefingModelCountryListItem *create_ComTotspTravelbriefingModelCountryListItem_initWithNSString_(NSString *name) {
-  J2OBJC_CREATE_IMPL(ComTotspTravelbriefingModelCountryListItem, initWithNSString_, name)
+TOTSPCountryListItem *create_TOTSPCountryListItem_initWithNSString_(NSString *name) {
+  J2OBJC_CREATE_IMPL(TOTSPCountryListItem, initWithNSString_, name)
 }
 
-J2OBJC_CLASS_TYPE_LITERAL_SOURCE(ComTotspTravelbriefingModelCountryListItem)
+J2OBJC_CLASS_TYPE_LITERAL_SOURCE(TOTSPCountryListItem)

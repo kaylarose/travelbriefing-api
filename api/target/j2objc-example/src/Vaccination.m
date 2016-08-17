@@ -7,7 +7,7 @@
 #include "Vaccination.h"
 #include "com/google/common/base/MoreObjects.h"
 
-@interface ComTotspTravelbriefingModelVaccination () {
+@interface TOTSPVaccination () {
  @public
   NSString *name_;
   NSString *message_;
@@ -15,14 +15,14 @@
 
 @end
 
-J2OBJC_FIELD_SETTER(ComTotspTravelbriefingModelVaccination, name_, NSString *)
-J2OBJC_FIELD_SETTER(ComTotspTravelbriefingModelVaccination, message_, NSString *)
+J2OBJC_FIELD_SETTER(TOTSPVaccination, name_, NSString *)
+J2OBJC_FIELD_SETTER(TOTSPVaccination, message_, NSString *)
 
-@implementation ComTotspTravelbriefingModelVaccination
+@implementation TOTSPVaccination
 
 - (instancetype)initWithNSString:(NSString *)name
                     withNSString:(NSString *)message {
-  ComTotspTravelbriefingModelVaccination_initWithNSString_withNSString_(self, name, message);
+  TOTSPVaccination_initWithNSString_withNSString_(self, name, message);
   return self;
 }
 
@@ -60,24 +60,24 @@ J2OBJC_FIELD_SETTER(ComTotspTravelbriefingModelVaccination, message_, NSString *
     { "message_", "LNSString;", .constantValue.asLong = 0, 0x2, -1, -1, -1, -1 },
   };
   static const void *ptrTable[] = { "LNSString;LNSString;", "setName", "LNSString;", "setMessage", "toString" };
-  static const J2ObjcClassInfo _ComTotspTravelbriefingModelVaccination = { "Vaccination", "com.totsp.travelbriefing.model", ptrTable, methods, fields, 7, 0x1, 6, 2, -1, -1, -1, -1, -1 };
-  return &_ComTotspTravelbriefingModelVaccination;
+  static const J2ObjcClassInfo _TOTSPVaccination = { "Vaccination", "com.totsp.travelbriefing.model", ptrTable, methods, fields, 7, 0x1, 6, 2, -1, -1, -1, -1, -1 };
+  return &_TOTSPVaccination;
 }
 
 @end
 
-void ComTotspTravelbriefingModelVaccination_initWithNSString_withNSString_(ComTotspTravelbriefingModelVaccination *self, NSString *name, NSString *message) {
+void TOTSPVaccination_initWithNSString_withNSString_(TOTSPVaccination *self, NSString *name, NSString *message) {
   NSObject_init(self);
   self->name_ = name;
   self->message_ = message;
 }
 
-ComTotspTravelbriefingModelVaccination *new_ComTotspTravelbriefingModelVaccination_initWithNSString_withNSString_(NSString *name, NSString *message) {
-  J2OBJC_NEW_IMPL(ComTotspTravelbriefingModelVaccination, initWithNSString_withNSString_, name, message)
+TOTSPVaccination *new_TOTSPVaccination_initWithNSString_withNSString_(NSString *name, NSString *message) {
+  J2OBJC_NEW_IMPL(TOTSPVaccination, initWithNSString_withNSString_, name, message)
 }
 
-ComTotspTravelbriefingModelVaccination *create_ComTotspTravelbriefingModelVaccination_initWithNSString_withNSString_(NSString *name, NSString *message) {
-  J2OBJC_CREATE_IMPL(ComTotspTravelbriefingModelVaccination, initWithNSString_withNSString_, name, message)
+TOTSPVaccination *create_TOTSPVaccination_initWithNSString_withNSString_(NSString *name, NSString *message) {
+  J2OBJC_CREATE_IMPL(TOTSPVaccination, initWithNSString_withNSString_, name, message)
 }
 
-J2OBJC_CLASS_TYPE_LITERAL_SOURCE(ComTotspTravelbriefingModelVaccination)
+J2OBJC_CLASS_TYPE_LITERAL_SOURCE(TOTSPVaccination)

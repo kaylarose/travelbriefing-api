@@ -18,15 +18,15 @@
 #include "java/lang/System.h"
 #include "java/util/List.h"
 
-inline Retrofit2Retrofit *ComTotspTravelbriefingServiceTravelBriefingServiceCloud_get_RETROFIT();
-static Retrofit2Retrofit *ComTotspTravelbriefingServiceTravelBriefingServiceCloud_RETROFIT;
-J2OBJC_STATIC_FIELD_OBJ_FINAL(ComTotspTravelbriefingServiceTravelBriefingServiceCloud, RETROFIT, Retrofit2Retrofit *)
+inline Retrofit2Retrofit *TOTSPTravelBriefingServiceCloud_get_RETROFIT();
+static Retrofit2Retrofit *TOTSPTravelBriefingServiceCloud_RETROFIT;
+J2OBJC_STATIC_FIELD_OBJ_FINAL(TOTSPTravelBriefingServiceCloud, RETROFIT, Retrofit2Retrofit *)
 
-inline id<ComTotspTravelbriefingServiceTravelBriefingServiceInterface> ComTotspTravelbriefingServiceTravelBriefingServiceCloud_get_SERVICE();
-static id<ComTotspTravelbriefingServiceTravelBriefingServiceInterface> ComTotspTravelbriefingServiceTravelBriefingServiceCloud_SERVICE;
-J2OBJC_STATIC_FIELD_OBJ_FINAL(ComTotspTravelbriefingServiceTravelBriefingServiceCloud, SERVICE, id<ComTotspTravelbriefingServiceTravelBriefingServiceInterface>)
+inline id<TOTSPTravelBriefingServiceInterface> TOTSPTravelBriefingServiceCloud_get_SERVICE();
+static id<TOTSPTravelBriefingServiceInterface> TOTSPTravelBriefingServiceCloud_SERVICE;
+J2OBJC_STATIC_FIELD_OBJ_FINAL(TOTSPTravelBriefingServiceCloud, SERVICE, id<TOTSPTravelBriefingServiceInterface>)
 
-@interface ComTotspTravelbriefingServiceTravelBriefingServiceCloud_$1 : NSObject < RxFunctionsAction1 >
+@interface TOTSPTravelBriefingServiceCloud_$1 : NSObject < RxFunctionsAction1 >
 
 - (void)callWithId:(id<JavaUtilList>)countryList;
 
@@ -34,63 +34,63 @@ J2OBJC_STATIC_FIELD_OBJ_FINAL(ComTotspTravelbriefingServiceTravelBriefingService
 
 @end
 
-J2OBJC_EMPTY_STATIC_INIT(ComTotspTravelbriefingServiceTravelBriefingServiceCloud_$1)
+J2OBJC_EMPTY_STATIC_INIT(TOTSPTravelBriefingServiceCloud_$1)
 
-__attribute__((unused)) static void ComTotspTravelbriefingServiceTravelBriefingServiceCloud_$1_init(ComTotspTravelbriefingServiceTravelBriefingServiceCloud_$1 *self);
+__attribute__((unused)) static void TOTSPTravelBriefingServiceCloud_$1_init(TOTSPTravelBriefingServiceCloud_$1 *self);
 
-__attribute__((unused)) static ComTotspTravelbriefingServiceTravelBriefingServiceCloud_$1 *new_ComTotspTravelbriefingServiceTravelBriefingServiceCloud_$1_init() NS_RETURNS_RETAINED;
+__attribute__((unused)) static TOTSPTravelBriefingServiceCloud_$1 *new_TOTSPTravelBriefingServiceCloud_$1_init() NS_RETURNS_RETAINED;
 
-__attribute__((unused)) static ComTotspTravelbriefingServiceTravelBriefingServiceCloud_$1 *create_ComTotspTravelbriefingServiceTravelBriefingServiceCloud_$1_init();
+__attribute__((unused)) static TOTSPTravelBriefingServiceCloud_$1 *create_TOTSPTravelBriefingServiceCloud_$1_init();
 
-J2OBJC_TYPE_LITERAL_HEADER(ComTotspTravelbriefingServiceTravelBriefingServiceCloud_$1)
+J2OBJC_TYPE_LITERAL_HEADER(TOTSPTravelBriefingServiceCloud_$1)
 
-@interface ComTotspTravelbriefingServiceTravelBriefingServiceCloud_$2 : NSObject < RxFunctionsAction1 > {
+@interface TOTSPTravelBriefingServiceCloud_$2 : NSObject < RxFunctionsAction1 > {
  @public
   NSString *val$countryName_;
 }
 
-- (void)callWithId:(ComTotspTravelbriefingModelCountry *)country;
+- (void)callWithId:(TOTSPCountry *)country;
 
 - (instancetype)initWithNSString:(NSString *)capture$0;
 
 @end
 
-J2OBJC_EMPTY_STATIC_INIT(ComTotspTravelbriefingServiceTravelBriefingServiceCloud_$2)
+J2OBJC_EMPTY_STATIC_INIT(TOTSPTravelBriefingServiceCloud_$2)
 
-J2OBJC_FIELD_SETTER(ComTotspTravelbriefingServiceTravelBriefingServiceCloud_$2, val$countryName_, NSString *)
+J2OBJC_FIELD_SETTER(TOTSPTravelBriefingServiceCloud_$2, val$countryName_, NSString *)
 
-__attribute__((unused)) static void ComTotspTravelbriefingServiceTravelBriefingServiceCloud_$2_initWithNSString_(ComTotspTravelbriefingServiceTravelBriefingServiceCloud_$2 *self, NSString *capture$0);
+__attribute__((unused)) static void TOTSPTravelBriefingServiceCloud_$2_initWithNSString_(TOTSPTravelBriefingServiceCloud_$2 *self, NSString *capture$0);
 
-__attribute__((unused)) static ComTotspTravelbriefingServiceTravelBriefingServiceCloud_$2 *new_ComTotspTravelbriefingServiceTravelBriefingServiceCloud_$2_initWithNSString_(NSString *capture$0) NS_RETURNS_RETAINED;
+__attribute__((unused)) static TOTSPTravelBriefingServiceCloud_$2 *new_TOTSPTravelBriefingServiceCloud_$2_initWithNSString_(NSString *capture$0) NS_RETURNS_RETAINED;
 
-__attribute__((unused)) static ComTotspTravelbriefingServiceTravelBriefingServiceCloud_$2 *create_ComTotspTravelbriefingServiceTravelBriefingServiceCloud_$2_initWithNSString_(NSString *capture$0);
+__attribute__((unused)) static TOTSPTravelBriefingServiceCloud_$2 *create_TOTSPTravelBriefingServiceCloud_$2_initWithNSString_(NSString *capture$0);
 
-J2OBJC_TYPE_LITERAL_HEADER(ComTotspTravelbriefingServiceTravelBriefingServiceCloud_$2)
+J2OBJC_TYPE_LITERAL_HEADER(TOTSPTravelBriefingServiceCloud_$2)
 
-J2OBJC_INITIALIZED_DEFN(ComTotspTravelbriefingServiceTravelBriefingServiceCloud)
+J2OBJC_INITIALIZED_DEFN(TOTSPTravelBriefingServiceCloud)
 
-NSString *ComTotspTravelbriefingServiceTravelBriefingServiceCloud_HOST = @"https://travelbriefing.org";
+NSString *TOTSPTravelBriefingServiceCloud_HOST = @"https://travelbriefing.org";
 
-@implementation ComTotspTravelbriefingServiceTravelBriefingServiceCloud
+@implementation TOTSPTravelBriefingServiceCloud
 
 J2OBJC_IGNORE_DESIGNATED_BEGIN
 - (instancetype)init {
-  ComTotspTravelbriefingServiceTravelBriefingServiceCloud_init(self);
+  TOTSPTravelBriefingServiceCloud_init(self);
   return self;
 }
 J2OBJC_IGNORE_DESIGNATED_END
 
 - (RxObservable *)getCountries {
   [((JavaIoPrintStream *) nil_chk(JreLoadStatic(JavaLangSystem, out))) printlnWithNSString:@"TravelBriefingServiceCloud getCountries"];
-  RxObservable *countries = [((id<ComTotspTravelbriefingServiceTravelBriefingServiceInterface>) nil_chk(ComTotspTravelbriefingServiceTravelBriefingServiceCloud_SERVICE)) getCountries];
-  RxObservable *countriesWithSave = [((RxObservable *) nil_chk(countries)) doOnNextWithRxFunctionsAction1:new_ComTotspTravelbriefingServiceTravelBriefingServiceCloud_$1_init()];
+  RxObservable *countries = [((id<TOTSPTravelBriefingServiceInterface>) nil_chk(TOTSPTravelBriefingServiceCloud_SERVICE)) getCountries];
+  RxObservable *countriesWithSave = [((RxObservable *) nil_chk(countries)) doOnNextWithRxFunctionsAction1:new_TOTSPTravelBriefingServiceCloud_$1_init()];
   return countriesWithSave;
 }
 
 - (RxObservable *)getCountryWithNSString:(NSString *)countryName {
   [((JavaIoPrintStream *) nil_chk(JreLoadStatic(JavaLangSystem, out))) printlnWithNSString:JreStrcat("$$", @"TravelBriefingServiceCloud getCountry:", countryName)];
-  RxObservable *country = [((id<ComTotspTravelbriefingServiceTravelBriefingServiceInterface>) nil_chk(ComTotspTravelbriefingServiceTravelBriefingServiceCloud_SERVICE)) getCountryWithNSString:countryName];
-  RxObservable *countryWithSave = [((RxObservable *) nil_chk(country)) doOnNextWithRxFunctionsAction1:new_ComTotspTravelbriefingServiceTravelBriefingServiceCloud_$2_initWithNSString_(countryName)];
+  RxObservable *country = [((id<TOTSPTravelBriefingServiceInterface>) nil_chk(TOTSPTravelBriefingServiceCloud_SERVICE)) getCountryWithNSString:countryName];
+  RxObservable *countryWithSave = [((RxObservable *) nil_chk(country)) doOnNextWithRxFunctionsAction1:new_TOTSPTravelBriefingServiceCloud_$2_initWithNSString_(countryName)];
   return countryWithSave;
 }
 
@@ -103,48 +103,48 @@ J2OBJC_IGNORE_DESIGNATED_END
   static const J2ObjcFieldInfo fields[] = {
     { "HOST", "LNSString;", .constantValue.asLong = 0, 0x19, -1, 4, -1, -1 },
     { "RETROFIT", "LRetrofit2Retrofit;", .constantValue.asLong = 0, 0x1a, -1, 5, -1, -1 },
-    { "SERVICE", "LComTotspTravelbriefingServiceTravelBriefingServiceInterface;", .constantValue.asLong = 0, 0x1a, -1, 6, -1, -1 },
+    { "SERVICE", "LTOTSPTravelBriefingServiceInterface;", .constantValue.asLong = 0, 0x1a, -1, 6, -1, -1 },
   };
-  static const void *ptrTable[] = { "()Lrx/Observable<Ljava/util/List<Lcom/totsp/travelbriefing/model/CountryListItem;>;>;", "getCountry", "LNSString;", "(Ljava/lang/String;)Lrx/Observable<Lcom/totsp/travelbriefing/model/Country;>;", &ComTotspTravelbriefingServiceTravelBriefingServiceCloud_HOST, &ComTotspTravelbriefingServiceTravelBriefingServiceCloud_RETROFIT, &ComTotspTravelbriefingServiceTravelBriefingServiceCloud_SERVICE };
-  static const J2ObjcClassInfo _ComTotspTravelbriefingServiceTravelBriefingServiceCloud = { "TravelBriefingServiceCloud", "com.totsp.travelbriefing.service", ptrTable, methods, fields, 7, 0x0, 3, 3, -1, -1, -1, -1, -1 };
-  return &_ComTotspTravelbriefingServiceTravelBriefingServiceCloud;
+  static const void *ptrTable[] = { "()Lrx/Observable<Ljava/util/List<Lcom/totsp/travelbriefing/model/CountryListItem;>;>;", "getCountry", "LNSString;", "(Ljava/lang/String;)Lrx/Observable<Lcom/totsp/travelbriefing/model/Country;>;", &TOTSPTravelBriefingServiceCloud_HOST, &TOTSPTravelBriefingServiceCloud_RETROFIT, &TOTSPTravelBriefingServiceCloud_SERVICE };
+  static const J2ObjcClassInfo _TOTSPTravelBriefingServiceCloud = { "TravelBriefingServiceCloud", "com.totsp.travelbriefing.service", ptrTable, methods, fields, 7, 0x0, 3, 3, -1, -1, -1, -1, -1 };
+  return &_TOTSPTravelBriefingServiceCloud;
 }
 
 + (void)initialize {
-  if (self == [ComTotspTravelbriefingServiceTravelBriefingServiceCloud class]) {
-    ComTotspTravelbriefingServiceTravelBriefingServiceCloud_RETROFIT = [((Retrofit2Retrofit_Builder *) nil_chk([((Retrofit2Retrofit_Builder *) nil_chk([((Retrofit2Retrofit_Builder *) nil_chk([new_Retrofit2Retrofit_Builder_init() baseUrlWithNSString:ComTotspTravelbriefingServiceTravelBriefingServiceCloud_HOST])) addCallAdapterFactoryWithRetrofit2CallAdapter_Factory:Retrofit2AdapterRxjavaRxJavaCallAdapterFactory_create()])) addConverterFactoryWithRetrofit2Converter_Factory:Retrofit2ConverterGsonGsonConverterFactory_create()])) build];
-    ComTotspTravelbriefingServiceTravelBriefingServiceCloud_SERVICE = [((Retrofit2Retrofit *) nil_chk(ComTotspTravelbriefingServiceTravelBriefingServiceCloud_RETROFIT)) createWithIOSClass:ComTotspTravelbriefingServiceTravelBriefingServiceInterface_class_()];
-    J2OBJC_SET_INITIALIZED(ComTotspTravelbriefingServiceTravelBriefingServiceCloud)
+  if (self == [TOTSPTravelBriefingServiceCloud class]) {
+    TOTSPTravelBriefingServiceCloud_RETROFIT = [((Retrofit2Retrofit_Builder *) nil_chk([((Retrofit2Retrofit_Builder *) nil_chk([((Retrofit2Retrofit_Builder *) nil_chk([new_Retrofit2Retrofit_Builder_init() baseUrlWithNSString:TOTSPTravelBriefingServiceCloud_HOST])) addCallAdapterFactoryWithRetrofit2CallAdapter_Factory:Retrofit2AdapterRxjavaRxJavaCallAdapterFactory_create()])) addConverterFactoryWithRetrofit2Converter_Factory:Retrofit2ConverterGsonGsonConverterFactory_create()])) build];
+    TOTSPTravelBriefingServiceCloud_SERVICE = [((Retrofit2Retrofit *) nil_chk(TOTSPTravelBriefingServiceCloud_RETROFIT)) createWithIOSClass:TOTSPTravelBriefingServiceInterface_class_()];
+    J2OBJC_SET_INITIALIZED(TOTSPTravelBriefingServiceCloud)
   }
 }
 
 @end
 
-void ComTotspTravelbriefingServiceTravelBriefingServiceCloud_init(ComTotspTravelbriefingServiceTravelBriefingServiceCloud *self) {
+void TOTSPTravelBriefingServiceCloud_init(TOTSPTravelBriefingServiceCloud *self) {
   NSObject_init(self);
   [((JavaIoPrintStream *) nil_chk(JreLoadStatic(JavaLangSystem, out))) printlnWithNSString:@"TravelBriefingServiceCloud created"];
 }
 
-ComTotspTravelbriefingServiceTravelBriefingServiceCloud *new_ComTotspTravelbriefingServiceTravelBriefingServiceCloud_init() {
-  J2OBJC_NEW_IMPL(ComTotspTravelbriefingServiceTravelBriefingServiceCloud, init)
+TOTSPTravelBriefingServiceCloud *new_TOTSPTravelBriefingServiceCloud_init() {
+  J2OBJC_NEW_IMPL(TOTSPTravelBriefingServiceCloud, init)
 }
 
-ComTotspTravelbriefingServiceTravelBriefingServiceCloud *create_ComTotspTravelbriefingServiceTravelBriefingServiceCloud_init() {
-  J2OBJC_CREATE_IMPL(ComTotspTravelbriefingServiceTravelBriefingServiceCloud, init)
+TOTSPTravelBriefingServiceCloud *create_TOTSPTravelBriefingServiceCloud_init() {
+  J2OBJC_CREATE_IMPL(TOTSPTravelBriefingServiceCloud, init)
 }
 
-J2OBJC_CLASS_TYPE_LITERAL_SOURCE(ComTotspTravelbriefingServiceTravelBriefingServiceCloud)
+J2OBJC_CLASS_TYPE_LITERAL_SOURCE(TOTSPTravelBriefingServiceCloud)
 
-@implementation ComTotspTravelbriefingServiceTravelBriefingServiceCloud_$1
+@implementation TOTSPTravelBriefingServiceCloud_$1
 
 - (void)callWithId:(id<JavaUtilList>)countryList {
   [((JavaIoPrintStream *) nil_chk(JreLoadStatic(JavaLangSystem, out))) printlnWithNSString:@"   returning countryList from service, cache PUT"];
-  ComTotspTravelbriefingServiceTravelBriefingServiceCache_cacheCountryListWithJavaUtilList_(countryList);
+  TOTSPTravelBriefingServiceCache_cacheCountryListWithJavaUtilList_(countryList);
 }
 
 J2OBJC_IGNORE_DESIGNATED_BEGIN
 - (instancetype)init {
-  ComTotspTravelbriefingServiceTravelBriefingServiceCloud_$1_init(self);
+  TOTSPTravelBriefingServiceCloud_$1_init(self);
   return self;
 }
 J2OBJC_IGNORE_DESIGNATED_END
@@ -154,36 +154,36 @@ J2OBJC_IGNORE_DESIGNATED_END
     { "callWithId:", "V", 0x1, 0, 1, -1, 2, -1, -1 },
     { "init", NULL, 0x0, -1, -1, -1, -1, -1, -1 },
   };
-  static const void *ptrTable[] = { "call", "LJavaUtilList;", "(Ljava/util/List<Lcom/totsp/travelbriefing/model/CountryListItem;>;)V", "LComTotspTravelbriefingServiceTravelBriefingServiceCloud;", "getCountries", "Ljava/lang/Object;Lrx/functions/Action1<Ljava/util/List<Lcom/totsp/travelbriefing/model/CountryListItem;>;>;" };
-  static const J2ObjcClassInfo _ComTotspTravelbriefingServiceTravelBriefingServiceCloud_$1 = { "", "com.totsp.travelbriefing.service", ptrTable, methods, NULL, 7, 0x8008, 2, 0, 3, -1, 4, 5, -1 };
-  return &_ComTotspTravelbriefingServiceTravelBriefingServiceCloud_$1;
+  static const void *ptrTable[] = { "call", "LJavaUtilList;", "(Ljava/util/List<Lcom/totsp/travelbriefing/model/CountryListItem;>;)V", "LTOTSPTravelBriefingServiceCloud;", "getCountries", "Ljava/lang/Object;Lrx/functions/Action1<Ljava/util/List<Lcom/totsp/travelbriefing/model/CountryListItem;>;>;" };
+  static const J2ObjcClassInfo _TOTSPTravelBriefingServiceCloud_$1 = { "", "com.totsp.travelbriefing.service", ptrTable, methods, NULL, 7, 0x8008, 2, 0, 3, -1, 4, 5, -1 };
+  return &_TOTSPTravelBriefingServiceCloud_$1;
 }
 
 @end
 
-void ComTotspTravelbriefingServiceTravelBriefingServiceCloud_$1_init(ComTotspTravelbriefingServiceTravelBriefingServiceCloud_$1 *self) {
+void TOTSPTravelBriefingServiceCloud_$1_init(TOTSPTravelBriefingServiceCloud_$1 *self) {
   NSObject_init(self);
 }
 
-ComTotspTravelbriefingServiceTravelBriefingServiceCloud_$1 *new_ComTotspTravelbriefingServiceTravelBriefingServiceCloud_$1_init() {
-  J2OBJC_NEW_IMPL(ComTotspTravelbriefingServiceTravelBriefingServiceCloud_$1, init)
+TOTSPTravelBriefingServiceCloud_$1 *new_TOTSPTravelBriefingServiceCloud_$1_init() {
+  J2OBJC_NEW_IMPL(TOTSPTravelBriefingServiceCloud_$1, init)
 }
 
-ComTotspTravelbriefingServiceTravelBriefingServiceCloud_$1 *create_ComTotspTravelbriefingServiceTravelBriefingServiceCloud_$1_init() {
-  J2OBJC_CREATE_IMPL(ComTotspTravelbriefingServiceTravelBriefingServiceCloud_$1, init)
+TOTSPTravelBriefingServiceCloud_$1 *create_TOTSPTravelBriefingServiceCloud_$1_init() {
+  J2OBJC_CREATE_IMPL(TOTSPTravelBriefingServiceCloud_$1, init)
 }
 
-J2OBJC_CLASS_TYPE_LITERAL_SOURCE(ComTotspTravelbriefingServiceTravelBriefingServiceCloud_$1)
+J2OBJC_CLASS_TYPE_LITERAL_SOURCE(TOTSPTravelBriefingServiceCloud_$1)
 
-@implementation ComTotspTravelbriefingServiceTravelBriefingServiceCloud_$2
+@implementation TOTSPTravelBriefingServiceCloud_$2
 
-- (void)callWithId:(ComTotspTravelbriefingModelCountry *)country {
+- (void)callWithId:(TOTSPCountry *)country {
   [((JavaIoPrintStream *) nil_chk(JreLoadStatic(JavaLangSystem, out))) printlnWithNSString:@"   returning country from service, cache PUT"];
-  ComTotspTravelbriefingServiceTravelBriefingServiceCache_cacheCountryWithNSString_withComTotspTravelbriefingModelCountry_(val$countryName_, country);
+  TOTSPTravelBriefingServiceCache_cacheCountryWithNSString_withTOTSPCountry_(val$countryName_, country);
 }
 
 - (instancetype)initWithNSString:(NSString *)capture$0 {
-  ComTotspTravelbriefingServiceTravelBriefingServiceCloud_$2_initWithNSString_(self, capture$0);
+  TOTSPTravelBriefingServiceCloud_$2_initWithNSString_(self, capture$0);
   return self;
 }
 
@@ -195,24 +195,24 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(ComTotspTravelbriefingServiceTravelBriefingServ
   static const J2ObjcFieldInfo fields[] = {
     { "val$countryName_", "LNSString;", .constantValue.asLong = 0, 0x1012, -1, -1, -1, -1 },
   };
-  static const void *ptrTable[] = { "call", "LComTotspTravelbriefingModelCountry;", "LNSString;", "LComTotspTravelbriefingServiceTravelBriefingServiceCloud;", "getCountryWithNSString:", "Ljava/lang/Object;Lrx/functions/Action1<Lcom/totsp/travelbriefing/model/Country;>;" };
-  static const J2ObjcClassInfo _ComTotspTravelbriefingServiceTravelBriefingServiceCloud_$2 = { "", "com.totsp.travelbriefing.service", ptrTable, methods, fields, 7, 0x8008, 2, 1, 3, -1, 4, 5, -1 };
-  return &_ComTotspTravelbriefingServiceTravelBriefingServiceCloud_$2;
+  static const void *ptrTable[] = { "call", "LTOTSPCountry;", "LNSString;", "LTOTSPTravelBriefingServiceCloud;", "getCountryWithNSString:", "Ljava/lang/Object;Lrx/functions/Action1<Lcom/totsp/travelbriefing/model/Country;>;" };
+  static const J2ObjcClassInfo _TOTSPTravelBriefingServiceCloud_$2 = { "", "com.totsp.travelbriefing.service", ptrTable, methods, fields, 7, 0x8008, 2, 1, 3, -1, 4, 5, -1 };
+  return &_TOTSPTravelBriefingServiceCloud_$2;
 }
 
 @end
 
-void ComTotspTravelbriefingServiceTravelBriefingServiceCloud_$2_initWithNSString_(ComTotspTravelbriefingServiceTravelBriefingServiceCloud_$2 *self, NSString *capture$0) {
+void TOTSPTravelBriefingServiceCloud_$2_initWithNSString_(TOTSPTravelBriefingServiceCloud_$2 *self, NSString *capture$0) {
   self->val$countryName_ = capture$0;
   NSObject_init(self);
 }
 
-ComTotspTravelbriefingServiceTravelBriefingServiceCloud_$2 *new_ComTotspTravelbriefingServiceTravelBriefingServiceCloud_$2_initWithNSString_(NSString *capture$0) {
-  J2OBJC_NEW_IMPL(ComTotspTravelbriefingServiceTravelBriefingServiceCloud_$2, initWithNSString_, capture$0)
+TOTSPTravelBriefingServiceCloud_$2 *new_TOTSPTravelBriefingServiceCloud_$2_initWithNSString_(NSString *capture$0) {
+  J2OBJC_NEW_IMPL(TOTSPTravelBriefingServiceCloud_$2, initWithNSString_, capture$0)
 }
 
-ComTotspTravelbriefingServiceTravelBriefingServiceCloud_$2 *create_ComTotspTravelbriefingServiceTravelBriefingServiceCloud_$2_initWithNSString_(NSString *capture$0) {
-  J2OBJC_CREATE_IMPL(ComTotspTravelbriefingServiceTravelBriefingServiceCloud_$2, initWithNSString_, capture$0)
+TOTSPTravelBriefingServiceCloud_$2 *create_TOTSPTravelBriefingServiceCloud_$2_initWithNSString_(NSString *capture$0) {
+  J2OBJC_CREATE_IMPL(TOTSPTravelBriefingServiceCloud_$2, initWithNSString_, capture$0)
 }
 
-J2OBJC_CLASS_TYPE_LITERAL_SOURCE(ComTotspTravelbriefingServiceTravelBriefingServiceCloud_$2)
+J2OBJC_CLASS_TYPE_LITERAL_SOURCE(TOTSPTravelBriefingServiceCloud_$2)

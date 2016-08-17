@@ -7,19 +7,19 @@
 #include "Timezone.h"
 #include "com/google/common/base/MoreObjects.h"
 
-@interface ComTotspTravelbriefingModelTimezone () {
+@interface TOTSPTimezone () {
  @public
   NSString *name_;
 }
 
 @end
 
-J2OBJC_FIELD_SETTER(ComTotspTravelbriefingModelTimezone, name_, NSString *)
+J2OBJC_FIELD_SETTER(TOTSPTimezone, name_, NSString *)
 
-@implementation ComTotspTravelbriefingModelTimezone
+@implementation TOTSPTimezone
 
 - (instancetype)initWithNSString:(NSString *)name {
-  ComTotspTravelbriefingModelTimezone_initWithNSString_(self, name);
+  TOTSPTimezone_initWithNSString_(self, name);
   return self;
 }
 
@@ -46,23 +46,23 @@ J2OBJC_FIELD_SETTER(ComTotspTravelbriefingModelTimezone, name_, NSString *)
     { "name_", "LNSString;", .constantValue.asLong = 0, 0x2, -1, -1, -1, -1 },
   };
   static const void *ptrTable[] = { "LNSString;", "setName", "toString" };
-  static const J2ObjcClassInfo _ComTotspTravelbriefingModelTimezone = { "Timezone", "com.totsp.travelbriefing.model", ptrTable, methods, fields, 7, 0x1, 4, 1, -1, -1, -1, -1, -1 };
-  return &_ComTotspTravelbriefingModelTimezone;
+  static const J2ObjcClassInfo _TOTSPTimezone = { "Timezone", "com.totsp.travelbriefing.model", ptrTable, methods, fields, 7, 0x1, 4, 1, -1, -1, -1, -1, -1 };
+  return &_TOTSPTimezone;
 }
 
 @end
 
-void ComTotspTravelbriefingModelTimezone_initWithNSString_(ComTotspTravelbriefingModelTimezone *self, NSString *name) {
+void TOTSPTimezone_initWithNSString_(TOTSPTimezone *self, NSString *name) {
   NSObject_init(self);
   self->name_ = name;
 }
 
-ComTotspTravelbriefingModelTimezone *new_ComTotspTravelbriefingModelTimezone_initWithNSString_(NSString *name) {
-  J2OBJC_NEW_IMPL(ComTotspTravelbriefingModelTimezone, initWithNSString_, name)
+TOTSPTimezone *new_TOTSPTimezone_initWithNSString_(NSString *name) {
+  J2OBJC_NEW_IMPL(TOTSPTimezone, initWithNSString_, name)
 }
 
-ComTotspTravelbriefingModelTimezone *create_ComTotspTravelbriefingModelTimezone_initWithNSString_(NSString *name) {
-  J2OBJC_CREATE_IMPL(ComTotspTravelbriefingModelTimezone, initWithNSString_, name)
+TOTSPTimezone *create_TOTSPTimezone_initWithNSString_(NSString *name) {
+  J2OBJC_CREATE_IMPL(TOTSPTimezone, initWithNSString_, name)
 }
 
-J2OBJC_CLASS_TYPE_LITERAL_SOURCE(ComTotspTravelbriefingModelTimezone)
+J2OBJC_CLASS_TYPE_LITERAL_SOURCE(TOTSPTimezone)

@@ -13,10 +13,10 @@
 #endif
 #undef RESTRICT_Timezone
 
-#if !defined (ComTotspTravelbriefingModelTimezone_) && (INCLUDE_ALL_Timezone || defined(INCLUDE_ComTotspTravelbriefingModelTimezone))
-#define ComTotspTravelbriefingModelTimezone_
+#if !defined (TOTSPTimezone_) && (INCLUDE_ALL_Timezone || defined(INCLUDE_TOTSPTimezone))
+#define TOTSPTimezone_
 
-@interface ComTotspTravelbriefingModelTimezone : NSObject
+@interface TOTSPTimezone : NSObject
 
 #pragma mark Public
 
@@ -30,15 +30,17 @@
 
 @end
 
-J2OBJC_EMPTY_STATIC_INIT(ComTotspTravelbriefingModelTimezone)
+J2OBJC_EMPTY_STATIC_INIT(TOTSPTimezone)
 
-FOUNDATION_EXPORT void ComTotspTravelbriefingModelTimezone_initWithNSString_(ComTotspTravelbriefingModelTimezone *self, NSString *name);
+FOUNDATION_EXPORT void TOTSPTimezone_initWithNSString_(TOTSPTimezone *self, NSString *name);
 
-FOUNDATION_EXPORT ComTotspTravelbriefingModelTimezone *new_ComTotspTravelbriefingModelTimezone_initWithNSString_(NSString *name) NS_RETURNS_RETAINED;
+FOUNDATION_EXPORT TOTSPTimezone *new_TOTSPTimezone_initWithNSString_(NSString *name) NS_RETURNS_RETAINED;
 
-FOUNDATION_EXPORT ComTotspTravelbriefingModelTimezone *create_ComTotspTravelbriefingModelTimezone_initWithNSString_(NSString *name);
+FOUNDATION_EXPORT TOTSPTimezone *create_TOTSPTimezone_initWithNSString_(NSString *name);
 
-J2OBJC_TYPE_LITERAL_HEADER(ComTotspTravelbriefingModelTimezone)
+J2OBJC_TYPE_LITERAL_HEADER(TOTSPTimezone)
+
+@compatibility_alias ComTotspTravelbriefingModelTimezone TOTSPTimezone;
 
 #endif
 

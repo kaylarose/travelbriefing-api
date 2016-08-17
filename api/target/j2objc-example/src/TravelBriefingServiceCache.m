@@ -14,41 +14,41 @@
 #include "java/util/List.h"
 #include "java/util/concurrent/TimeUnit.h"
 
-inline NSString *ComTotspTravelbriefingServiceTravelBriefingServiceCache_get_CACHE_KEY_COUNTRYLIST();
-static NSString *ComTotspTravelbriefingServiceTravelBriefingServiceCache_CACHE_KEY_COUNTRYLIST = @"clkk";
-J2OBJC_STATIC_FIELD_OBJ_FINAL(ComTotspTravelbriefingServiceTravelBriefingServiceCache, CACHE_KEY_COUNTRYLIST, NSString *)
+inline NSString *TOTSPTravelBriefingServiceCache_get_CACHE_KEY_COUNTRYLIST();
+static NSString *TOTSPTravelBriefingServiceCache_CACHE_KEY_COUNTRYLIST = @"clkk";
+J2OBJC_STATIC_FIELD_OBJ_FINAL(TOTSPTravelBriefingServiceCache, CACHE_KEY_COUNTRYLIST, NSString *)
 
-inline id<ComGoogleCommonCacheCache> ComTotspTravelbriefingServiceTravelBriefingServiceCache_get_CACHE_COUNTRY();
-static id<ComGoogleCommonCacheCache> ComTotspTravelbriefingServiceTravelBriefingServiceCache_CACHE_COUNTRY;
-J2OBJC_STATIC_FIELD_OBJ_FINAL(ComTotspTravelbriefingServiceTravelBriefingServiceCache, CACHE_COUNTRY, id<ComGoogleCommonCacheCache>)
+inline id<ComGoogleCommonCacheCache> TOTSPTravelBriefingServiceCache_get_CACHE_COUNTRY();
+static id<ComGoogleCommonCacheCache> TOTSPTravelBriefingServiceCache_CACHE_COUNTRY;
+J2OBJC_STATIC_FIELD_OBJ_FINAL(TOTSPTravelBriefingServiceCache, CACHE_COUNTRY, id<ComGoogleCommonCacheCache>)
 
-inline id<ComGoogleCommonCacheCache> ComTotspTravelbriefingServiceTravelBriefingServiceCache_get_CACHE_COUNTRYLIST();
-static id<ComGoogleCommonCacheCache> ComTotspTravelbriefingServiceTravelBriefingServiceCache_CACHE_COUNTRYLIST;
-J2OBJC_STATIC_FIELD_OBJ_FINAL(ComTotspTravelbriefingServiceTravelBriefingServiceCache, CACHE_COUNTRYLIST, id<ComGoogleCommonCacheCache>)
+inline id<ComGoogleCommonCacheCache> TOTSPTravelBriefingServiceCache_get_CACHE_COUNTRYLIST();
+static id<ComGoogleCommonCacheCache> TOTSPTravelBriefingServiceCache_CACHE_COUNTRYLIST;
+J2OBJC_STATIC_FIELD_OBJ_FINAL(TOTSPTravelBriefingServiceCache, CACHE_COUNTRYLIST, id<ComGoogleCommonCacheCache>)
 
-J2OBJC_INITIALIZED_DEFN(ComTotspTravelbriefingServiceTravelBriefingServiceCache)
+J2OBJC_INITIALIZED_DEFN(TOTSPTravelBriefingServiceCache)
 
-@implementation ComTotspTravelbriefingServiceTravelBriefingServiceCache
+@implementation TOTSPTravelBriefingServiceCache
 
 J2OBJC_IGNORE_DESIGNATED_BEGIN
 - (instancetype)init {
-  ComTotspTravelbriefingServiceTravelBriefingServiceCache_init(self);
+  TOTSPTravelBriefingServiceCache_init(self);
   return self;
 }
 J2OBJC_IGNORE_DESIGNATED_END
 
 + (void)cacheCountryWithNSString:(NSString *)name
-withComTotspTravelbriefingModelCountry:(ComTotspTravelbriefingModelCountry *)country {
-  ComTotspTravelbriefingServiceTravelBriefingServiceCache_cacheCountryWithNSString_withComTotspTravelbriefingModelCountry_(name, country);
+                withTOTSPCountry:(TOTSPCountry *)country {
+  TOTSPTravelBriefingServiceCache_cacheCountryWithNSString_withTOTSPCountry_(name, country);
 }
 
 + (void)cacheCountryListWithJavaUtilList:(id<JavaUtilList>)countries {
-  ComTotspTravelbriefingServiceTravelBriefingServiceCache_cacheCountryListWithJavaUtilList_(countries);
+  TOTSPTravelBriefingServiceCache_cacheCountryListWithJavaUtilList_(countries);
 }
 
 - (RxObservable *)getCountries {
   [((JavaIoPrintStream *) nil_chk(JreLoadStatic(JavaLangSystem, out))) printlnWithNSString:@"TravelBriefingServiceCache getCountries"];
-  id<JavaUtilList> countries = [((id<ComGoogleCommonCacheCache>) nil_chk(ComTotspTravelbriefingServiceTravelBriefingServiceCache_CACHE_COUNTRYLIST)) getIfPresentWithId:ComTotspTravelbriefingServiceTravelBriefingServiceCache_CACHE_KEY_COUNTRYLIST];
+  id<JavaUtilList> countries = [((id<ComGoogleCommonCacheCache>) nil_chk(TOTSPTravelBriefingServiceCache_CACHE_COUNTRYLIST)) getIfPresentWithId:TOTSPTravelBriefingServiceCache_CACHE_KEY_COUNTRYLIST];
   if (countries != nil) {
     [JreLoadStatic(JavaLangSystem, out) printlnWithNSString:@"   CACHE HIT"];
     return RxObservable_justWithId_(countries);
@@ -58,7 +58,7 @@ withComTotspTravelbriefingModelCountry:(ComTotspTravelbriefingModelCountry *)cou
 
 - (RxObservable *)getCountryWithNSString:(NSString *)countryName {
   [((JavaIoPrintStream *) nil_chk(JreLoadStatic(JavaLangSystem, out))) printlnWithNSString:JreStrcat("$$", @"TravelBriefingServiceCache getCountry:", countryName)];
-  ComTotspTravelbriefingModelCountry *country = [((id<ComGoogleCommonCacheCache>) nil_chk(ComTotspTravelbriefingServiceTravelBriefingServiceCache_CACHE_COUNTRY)) getIfPresentWithId:countryName];
+  TOTSPCountry *country = [((id<ComGoogleCommonCacheCache>) nil_chk(TOTSPTravelBriefingServiceCache_CACHE_COUNTRY)) getIfPresentWithId:countryName];
   if (country != nil) {
     [JreLoadStatic(JavaLangSystem, out) printlnWithNSString:@"   CACHE HIT"];
     return RxObservable_justWithId_(country);
@@ -69,7 +69,7 @@ withComTotspTravelbriefingModelCountry:(ComTotspTravelbriefingModelCountry *)cou
 + (const J2ObjcClassInfo *)__metadata {
   static const J2ObjcMethodInfo methods[] = {
     { "init", NULL, 0x1, -1, -1, -1, -1, -1, -1 },
-    { "cacheCountryWithNSString:withComTotspTravelbriefingModelCountry:", "V", 0x9, 0, 1, -1, -1, -1, -1 },
+    { "cacheCountryWithNSString:withTOTSPCountry:", "V", 0x9, 0, 1, -1, -1, -1, -1 },
     { "cacheCountryListWithJavaUtilList:", "V", 0x9, 2, 3, -1, 4, -1, -1 },
     { "getCountries", "LRxObservable;", 0x1, -1, -1, -1, 5, -1, -1 },
     { "getCountryWithNSString:", "LRxObservable;", 0x1, 6, 7, -1, 8, -1, -1 },
@@ -79,43 +79,43 @@ withComTotspTravelbriefingModelCountry:(ComTotspTravelbriefingModelCountry *)cou
     { "CACHE_COUNTRY", "LComGoogleCommonCacheCache;", .constantValue.asLong = 0, 0x1a, -1, 10, 11, -1 },
     { "CACHE_COUNTRYLIST", "LComGoogleCommonCacheCache;", .constantValue.asLong = 0, 0x1a, -1, 12, 13, -1 },
   };
-  static const void *ptrTable[] = { "cacheCountry", "LNSString;LComTotspTravelbriefingModelCountry;", "cacheCountryList", "LJavaUtilList;", "(Ljava/util/List<Lcom/totsp/travelbriefing/model/CountryListItem;>;)V", "()Lrx/Observable<Ljava/util/List<Lcom/totsp/travelbriefing/model/CountryListItem;>;>;", "getCountry", "LNSString;", "(Ljava/lang/String;)Lrx/Observable<Lcom/totsp/travelbriefing/model/Country;>;", &ComTotspTravelbriefingServiceTravelBriefingServiceCache_CACHE_KEY_COUNTRYLIST, &ComTotspTravelbriefingServiceTravelBriefingServiceCache_CACHE_COUNTRY, "Lcom/google/common/cache/Cache<Ljava/lang/String;Lcom/totsp/travelbriefing/model/Country;>;", &ComTotspTravelbriefingServiceTravelBriefingServiceCache_CACHE_COUNTRYLIST, "Lcom/google/common/cache/Cache<Ljava/lang/String;Ljava/util/List<Lcom/totsp/travelbriefing/model/CountryListItem;>;>;" };
-  static const J2ObjcClassInfo _ComTotspTravelbriefingServiceTravelBriefingServiceCache = { "TravelBriefingServiceCache", "com.totsp.travelbriefing.service", ptrTable, methods, fields, 7, 0x0, 5, 3, -1, -1, -1, -1, -1 };
-  return &_ComTotspTravelbriefingServiceTravelBriefingServiceCache;
+  static const void *ptrTable[] = { "cacheCountry", "LNSString;LTOTSPCountry;", "cacheCountryList", "LJavaUtilList;", "(Ljava/util/List<Lcom/totsp/travelbriefing/model/CountryListItem;>;)V", "()Lrx/Observable<Ljava/util/List<Lcom/totsp/travelbriefing/model/CountryListItem;>;>;", "getCountry", "LNSString;", "(Ljava/lang/String;)Lrx/Observable<Lcom/totsp/travelbriefing/model/Country;>;", &TOTSPTravelBriefingServiceCache_CACHE_KEY_COUNTRYLIST, &TOTSPTravelBriefingServiceCache_CACHE_COUNTRY, "Lcom/google/common/cache/Cache<Ljava/lang/String;Lcom/totsp/travelbriefing/model/Country;>;", &TOTSPTravelBriefingServiceCache_CACHE_COUNTRYLIST, "Lcom/google/common/cache/Cache<Ljava/lang/String;Ljava/util/List<Lcom/totsp/travelbriefing/model/CountryListItem;>;>;" };
+  static const J2ObjcClassInfo _TOTSPTravelBriefingServiceCache = { "TravelBriefingServiceCache", "com.totsp.travelbriefing.service", ptrTable, methods, fields, 7, 0x0, 5, 3, -1, -1, -1, -1, -1 };
+  return &_TOTSPTravelBriefingServiceCache;
 }
 
 + (void)initialize {
-  if (self == [ComTotspTravelbriefingServiceTravelBriefingServiceCache class]) {
-    ComTotspTravelbriefingServiceTravelBriefingServiceCache_CACHE_COUNTRY = [((ComGoogleCommonCacheCacheBuilder *) nil_chk([((ComGoogleCommonCacheCacheBuilder *) nil_chk([((ComGoogleCommonCacheCacheBuilder *) nil_chk([((ComGoogleCommonCacheCacheBuilder *) nil_chk(ComGoogleCommonCacheCacheBuilder_newBuilder())) maximumSizeWithLong:100])) recordStats])) expireAfterWriteWithLong:10 withJavaUtilConcurrentTimeUnit:JreLoadEnum(JavaUtilConcurrentTimeUnit, MINUTES)])) build];
-    ComTotspTravelbriefingServiceTravelBriefingServiceCache_CACHE_COUNTRYLIST = [((ComGoogleCommonCacheCacheBuilder *) nil_chk([((ComGoogleCommonCacheCacheBuilder *) nil_chk([((ComGoogleCommonCacheCacheBuilder *) nil_chk([((ComGoogleCommonCacheCacheBuilder *) nil_chk(ComGoogleCommonCacheCacheBuilder_newBuilder())) maximumSizeWithLong:1])) recordStats])) expireAfterWriteWithLong:10 withJavaUtilConcurrentTimeUnit:JreLoadEnum(JavaUtilConcurrentTimeUnit, MINUTES)])) build];
-    J2OBJC_SET_INITIALIZED(ComTotspTravelbriefingServiceTravelBriefingServiceCache)
+  if (self == [TOTSPTravelBriefingServiceCache class]) {
+    TOTSPTravelBriefingServiceCache_CACHE_COUNTRY = [((ComGoogleCommonCacheCacheBuilder *) nil_chk([((ComGoogleCommonCacheCacheBuilder *) nil_chk([((ComGoogleCommonCacheCacheBuilder *) nil_chk([((ComGoogleCommonCacheCacheBuilder *) nil_chk(ComGoogleCommonCacheCacheBuilder_newBuilder())) maximumSizeWithLong:100])) recordStats])) expireAfterWriteWithLong:10 withJavaUtilConcurrentTimeUnit:JreLoadEnum(JavaUtilConcurrentTimeUnit, MINUTES)])) build];
+    TOTSPTravelBriefingServiceCache_CACHE_COUNTRYLIST = [((ComGoogleCommonCacheCacheBuilder *) nil_chk([((ComGoogleCommonCacheCacheBuilder *) nil_chk([((ComGoogleCommonCacheCacheBuilder *) nil_chk([((ComGoogleCommonCacheCacheBuilder *) nil_chk(ComGoogleCommonCacheCacheBuilder_newBuilder())) maximumSizeWithLong:1])) recordStats])) expireAfterWriteWithLong:10 withJavaUtilConcurrentTimeUnit:JreLoadEnum(JavaUtilConcurrentTimeUnit, MINUTES)])) build];
+    J2OBJC_SET_INITIALIZED(TOTSPTravelBriefingServiceCache)
   }
 }
 
 @end
 
-void ComTotspTravelbriefingServiceTravelBriefingServiceCache_init(ComTotspTravelbriefingServiceTravelBriefingServiceCache *self) {
+void TOTSPTravelBriefingServiceCache_init(TOTSPTravelBriefingServiceCache *self) {
   NSObject_init(self);
   [((JavaIoPrintStream *) nil_chk(JreLoadStatic(JavaLangSystem, out))) printlnWithNSString:@"TravelBriefingServiceCache created"];
 }
 
-ComTotspTravelbriefingServiceTravelBriefingServiceCache *new_ComTotspTravelbriefingServiceTravelBriefingServiceCache_init() {
-  J2OBJC_NEW_IMPL(ComTotspTravelbriefingServiceTravelBriefingServiceCache, init)
+TOTSPTravelBriefingServiceCache *new_TOTSPTravelBriefingServiceCache_init() {
+  J2OBJC_NEW_IMPL(TOTSPTravelBriefingServiceCache, init)
 }
 
-ComTotspTravelbriefingServiceTravelBriefingServiceCache *create_ComTotspTravelbriefingServiceTravelBriefingServiceCache_init() {
-  J2OBJC_CREATE_IMPL(ComTotspTravelbriefingServiceTravelBriefingServiceCache, init)
+TOTSPTravelBriefingServiceCache *create_TOTSPTravelBriefingServiceCache_init() {
+  J2OBJC_CREATE_IMPL(TOTSPTravelBriefingServiceCache, init)
 }
 
-void ComTotspTravelbriefingServiceTravelBriefingServiceCache_cacheCountryWithNSString_withComTotspTravelbriefingModelCountry_(NSString *name, ComTotspTravelbriefingModelCountry *country) {
-  ComTotspTravelbriefingServiceTravelBriefingServiceCache_initialize();
-  [((id<ComGoogleCommonCacheCache>) nil_chk(ComTotspTravelbriefingServiceTravelBriefingServiceCache_CACHE_COUNTRY)) putWithId:name withId:country];
+void TOTSPTravelBriefingServiceCache_cacheCountryWithNSString_withTOTSPCountry_(NSString *name, TOTSPCountry *country) {
+  TOTSPTravelBriefingServiceCache_initialize();
+  [((id<ComGoogleCommonCacheCache>) nil_chk(TOTSPTravelBriefingServiceCache_CACHE_COUNTRY)) putWithId:name withId:country];
 }
 
-void ComTotspTravelbriefingServiceTravelBriefingServiceCache_cacheCountryListWithJavaUtilList_(id<JavaUtilList> countries) {
-  ComTotspTravelbriefingServiceTravelBriefingServiceCache_initialize();
-  [((id<ComGoogleCommonCacheCache>) nil_chk(ComTotspTravelbriefingServiceTravelBriefingServiceCache_CACHE_COUNTRYLIST)) invalidateAll];
-  [ComTotspTravelbriefingServiceTravelBriefingServiceCache_CACHE_COUNTRYLIST putWithId:ComTotspTravelbriefingServiceTravelBriefingServiceCache_CACHE_KEY_COUNTRYLIST withId:countries];
+void TOTSPTravelBriefingServiceCache_cacheCountryListWithJavaUtilList_(id<JavaUtilList> countries) {
+  TOTSPTravelBriefingServiceCache_initialize();
+  [((id<ComGoogleCommonCacheCache>) nil_chk(TOTSPTravelBriefingServiceCache_CACHE_COUNTRYLIST)) invalidateAll];
+  [TOTSPTravelBriefingServiceCache_CACHE_COUNTRYLIST putWithId:TOTSPTravelBriefingServiceCache_CACHE_KEY_COUNTRYLIST withId:countries];
 }
 
-J2OBJC_CLASS_TYPE_LITERAL_SOURCE(ComTotspTravelbriefingServiceTravelBriefingServiceCache)
+J2OBJC_CLASS_TYPE_LITERAL_SOURCE(TOTSPTravelBriefingServiceCache)

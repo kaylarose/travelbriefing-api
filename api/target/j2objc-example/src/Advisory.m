@@ -7,7 +7,7 @@
 #include "J2ObjC_source.h"
 #include "com/google/common/base/MoreObjects.h"
 
-@interface ComTotspTravelbriefingModelAdvisory () {
+@interface TOTSPAdvisory () {
  @public
   NSString *advise_;
   NSString *url_;
@@ -15,14 +15,14 @@
 
 @end
 
-J2OBJC_FIELD_SETTER(ComTotspTravelbriefingModelAdvisory, advise_, NSString *)
-J2OBJC_FIELD_SETTER(ComTotspTravelbriefingModelAdvisory, url_, NSString *)
+J2OBJC_FIELD_SETTER(TOTSPAdvisory, advise_, NSString *)
+J2OBJC_FIELD_SETTER(TOTSPAdvisory, url_, NSString *)
 
-@implementation ComTotspTravelbriefingModelAdvisory
+@implementation TOTSPAdvisory
 
 - (instancetype)initWithNSString:(NSString *)advise
                     withNSString:(NSString *)url {
-  ComTotspTravelbriefingModelAdvisory_initWithNSString_withNSString_(self, advise, url);
+  TOTSPAdvisory_initWithNSString_withNSString_(self, advise, url);
   return self;
 }
 
@@ -60,24 +60,24 @@ J2OBJC_FIELD_SETTER(ComTotspTravelbriefingModelAdvisory, url_, NSString *)
     { "url_", "LNSString;", .constantValue.asLong = 0, 0x2, -1, -1, -1, -1 },
   };
   static const void *ptrTable[] = { "LNSString;LNSString;", "setAdvise", "LNSString;", "setUrl", "toString" };
-  static const J2ObjcClassInfo _ComTotspTravelbriefingModelAdvisory = { "Advisory", "com.totsp.travelbriefing.model", ptrTable, methods, fields, 7, 0x1, 6, 2, -1, -1, -1, -1, -1 };
-  return &_ComTotspTravelbriefingModelAdvisory;
+  static const J2ObjcClassInfo _TOTSPAdvisory = { "Advisory", "com.totsp.travelbriefing.model", ptrTable, methods, fields, 7, 0x1, 6, 2, -1, -1, -1, -1, -1 };
+  return &_TOTSPAdvisory;
 }
 
 @end
 
-void ComTotspTravelbriefingModelAdvisory_initWithNSString_withNSString_(ComTotspTravelbriefingModelAdvisory *self, NSString *advise, NSString *url) {
+void TOTSPAdvisory_initWithNSString_withNSString_(TOTSPAdvisory *self, NSString *advise, NSString *url) {
   NSObject_init(self);
   self->advise_ = advise;
   self->url_ = url;
 }
 
-ComTotspTravelbriefingModelAdvisory *new_ComTotspTravelbriefingModelAdvisory_initWithNSString_withNSString_(NSString *advise, NSString *url) {
-  J2OBJC_NEW_IMPL(ComTotspTravelbriefingModelAdvisory, initWithNSString_withNSString_, advise, url)
+TOTSPAdvisory *new_TOTSPAdvisory_initWithNSString_withNSString_(NSString *advise, NSString *url) {
+  J2OBJC_NEW_IMPL(TOTSPAdvisory, initWithNSString_withNSString_, advise, url)
 }
 
-ComTotspTravelbriefingModelAdvisory *create_ComTotspTravelbriefingModelAdvisory_initWithNSString_withNSString_(NSString *advise, NSString *url) {
-  J2OBJC_CREATE_IMPL(ComTotspTravelbriefingModelAdvisory, initWithNSString_withNSString_, advise, url)
+TOTSPAdvisory *create_TOTSPAdvisory_initWithNSString_withNSString_(NSString *advise, NSString *url) {
+  J2OBJC_CREATE_IMPL(TOTSPAdvisory, initWithNSString_withNSString_, advise, url)
 }
 
-J2OBJC_CLASS_TYPE_LITERAL_SOURCE(ComTotspTravelbriefingModelAdvisory)
+J2OBJC_CLASS_TYPE_LITERAL_SOURCE(TOTSPAdvisory)

@@ -13,10 +13,10 @@
 #endif
 #undef RESTRICT_Map
 
-#if !defined (ComTotspTravelbriefingModelMap_) && (INCLUDE_ALL_Map || defined(INCLUDE_ComTotspTravelbriefingModelMap))
-#define ComTotspTravelbriefingModelMap_
+#if !defined (TOTSPMap_) && (INCLUDE_ALL_Map || defined(INCLUDE_TOTSPMap))
+#define TOTSPMap_
 
-@interface ComTotspTravelbriefingModelMap : NSObject
+@interface TOTSPMap : NSObject
 
 #pragma mark Public
 
@@ -40,15 +40,17 @@
 
 @end
 
-J2OBJC_EMPTY_STATIC_INIT(ComTotspTravelbriefingModelMap)
+J2OBJC_EMPTY_STATIC_INIT(TOTSPMap)
 
-FOUNDATION_EXPORT void ComTotspTravelbriefingModelMap_initWithNSString_withNSString_withNSString_(ComTotspTravelbriefingModelMap *self, NSString *lat, NSString *lng, NSString *zoom);
+FOUNDATION_EXPORT void TOTSPMap_initWithNSString_withNSString_withNSString_(TOTSPMap *self, NSString *lat, NSString *lng, NSString *zoom);
 
-FOUNDATION_EXPORT ComTotspTravelbriefingModelMap *new_ComTotspTravelbriefingModelMap_initWithNSString_withNSString_withNSString_(NSString *lat, NSString *lng, NSString *zoom) NS_RETURNS_RETAINED;
+FOUNDATION_EXPORT TOTSPMap *new_TOTSPMap_initWithNSString_withNSString_withNSString_(NSString *lat, NSString *lng, NSString *zoom) NS_RETURNS_RETAINED;
 
-FOUNDATION_EXPORT ComTotspTravelbriefingModelMap *create_ComTotspTravelbriefingModelMap_initWithNSString_withNSString_withNSString_(NSString *lat, NSString *lng, NSString *zoom);
+FOUNDATION_EXPORT TOTSPMap *create_TOTSPMap_initWithNSString_withNSString_withNSString_(NSString *lat, NSString *lng, NSString *zoom);
 
-J2OBJC_TYPE_LITERAL_HEADER(ComTotspTravelbriefingModelMap)
+J2OBJC_TYPE_LITERAL_HEADER(TOTSPMap)
+
+@compatibility_alias ComTotspTravelbriefingModelMap TOTSPMap;
 
 #endif
 

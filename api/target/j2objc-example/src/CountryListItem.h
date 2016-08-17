@@ -13,10 +13,10 @@
 #endif
 #undef RESTRICT_CountryListItem
 
-#if !defined (ComTotspTravelbriefingModelCountryListItem_) && (INCLUDE_ALL_CountryListItem || defined(INCLUDE_ComTotspTravelbriefingModelCountryListItem))
-#define ComTotspTravelbriefingModelCountryListItem_
+#if !defined (TOTSPCountryListItem_) && (INCLUDE_ALL_CountryListItem || defined(INCLUDE_TOTSPCountryListItem))
+#define TOTSPCountryListItem_
 
-@interface ComTotspTravelbriefingModelCountryListItem : NSObject
+@interface TOTSPCountryListItem : NSObject
 
 #pragma mark Public
 
@@ -34,15 +34,17 @@
 
 @end
 
-J2OBJC_EMPTY_STATIC_INIT(ComTotspTravelbriefingModelCountryListItem)
+J2OBJC_EMPTY_STATIC_INIT(TOTSPCountryListItem)
 
-FOUNDATION_EXPORT void ComTotspTravelbriefingModelCountryListItem_initWithNSString_(ComTotspTravelbriefingModelCountryListItem *self, NSString *name);
+FOUNDATION_EXPORT void TOTSPCountryListItem_initWithNSString_(TOTSPCountryListItem *self, NSString *name);
 
-FOUNDATION_EXPORT ComTotspTravelbriefingModelCountryListItem *new_ComTotspTravelbriefingModelCountryListItem_initWithNSString_(NSString *name) NS_RETURNS_RETAINED;
+FOUNDATION_EXPORT TOTSPCountryListItem *new_TOTSPCountryListItem_initWithNSString_(NSString *name) NS_RETURNS_RETAINED;
 
-FOUNDATION_EXPORT ComTotspTravelbriefingModelCountryListItem *create_ComTotspTravelbriefingModelCountryListItem_initWithNSString_(NSString *name);
+FOUNDATION_EXPORT TOTSPCountryListItem *create_TOTSPCountryListItem_initWithNSString_(NSString *name);
 
-J2OBJC_TYPE_LITERAL_HEADER(ComTotspTravelbriefingModelCountryListItem)
+J2OBJC_TYPE_LITERAL_HEADER(TOTSPCountryListItem)
+
+@compatibility_alias ComTotspTravelbriefingModelCountryListItem TOTSPCountryListItem;
 
 #endif
 

@@ -11,40 +11,40 @@
 #include "TravelBriefingServiceInterface.h"
 #include "java/lang/annotation/Annotation.h"
 
-@interface ComTotspTravelbriefingServiceTravelBriefingServiceInterface : NSObject
+@interface TOTSPTravelBriefingServiceInterface : NSObject
 
 @end
 
-__attribute__((unused)) static IOSObjectArray *ComTotspTravelbriefingServiceTravelBriefingServiceInterface__Annotations$0();
+__attribute__((unused)) static IOSObjectArray *TOTSPTravelBriefingServiceInterface__Annotations$0();
 
-__attribute__((unused)) static IOSObjectArray *ComTotspTravelbriefingServiceTravelBriefingServiceInterface__Annotations$1();
+__attribute__((unused)) static IOSObjectArray *TOTSPTravelBriefingServiceInterface__Annotations$1();
 
-__attribute__((unused)) static IOSObjectArray *ComTotspTravelbriefingServiceTravelBriefingServiceInterface__Annotations$2();
+__attribute__((unused)) static IOSObjectArray *TOTSPTravelBriefingServiceInterface__Annotations$2();
 
-@implementation ComTotspTravelbriefingServiceTravelBriefingServiceInterface
+@implementation TOTSPTravelBriefingServiceInterface
 
 + (const J2ObjcClassInfo *)__metadata {
   static const J2ObjcMethodInfo methods[] = {
     { "getCountries", "LRxObservable;", 0x401, -1, -1, -1, 0, 1, -1 },
     { "getCountryWithNSString:", "LRxObservable;", 0x401, 2, 3, -1, 4, 5, 6 },
   };
-  static const void *ptrTable[] = { "()Lrx/Observable<Ljava/util/List<Lcom/totsp/travelbriefing/model/CountryListItem;>;>;", (void *)&ComTotspTravelbriefingServiceTravelBriefingServiceInterface__Annotations$0, "getCountry", "LNSString;", "(Ljava/lang/String;)Lrx/Observable<Lcom/totsp/travelbriefing/model/Country;>;", (void *)&ComTotspTravelbriefingServiceTravelBriefingServiceInterface__Annotations$1, (void *)&ComTotspTravelbriefingServiceTravelBriefingServiceInterface__Annotations$2 };
-  static const J2ObjcClassInfo _ComTotspTravelbriefingServiceTravelBriefingServiceInterface = { "TravelBriefingServiceInterface", "com.totsp.travelbriefing.service", ptrTable, methods, NULL, 7, 0x609, 2, 0, -1, -1, -1, -1, -1 };
-  return &_ComTotspTravelbriefingServiceTravelBriefingServiceInterface;
+  static const void *ptrTable[] = { "()Lrx/Observable<Ljava/util/List<Lcom/totsp/travelbriefing/model/CountryListItem;>;>;", (void *)&TOTSPTravelBriefingServiceInterface__Annotations$0, "getCountry", "LNSString;", "(Ljava/lang/String;)Lrx/Observable<Lcom/totsp/travelbriefing/model/Country;>;", (void *)&TOTSPTravelBriefingServiceInterface__Annotations$1, (void *)&TOTSPTravelBriefingServiceInterface__Annotations$2 };
+  static const J2ObjcClassInfo _TOTSPTravelBriefingServiceInterface = { "TravelBriefingServiceInterface", "com.totsp.travelbriefing.service", ptrTable, methods, NULL, 7, 0x609, 2, 0, -1, -1, -1, -1, -1 };
+  return &_TOTSPTravelBriefingServiceInterface;
 }
 
 @end
 
-IOSObjectArray *ComTotspTravelbriefingServiceTravelBriefingServiceInterface__Annotations$0() {
+IOSObjectArray *TOTSPTravelBriefingServiceInterface__Annotations$0() {
   return [IOSObjectArray newArrayWithObjects:(id[]){ create_Retrofit2HttpGET(@"/countries.json") } count:1 type:JavaLangAnnotationAnnotation_class_()];
 }
 
-IOSObjectArray *ComTotspTravelbriefingServiceTravelBriefingServiceInterface__Annotations$1() {
+IOSObjectArray *TOTSPTravelBriefingServiceInterface__Annotations$1() {
   return [IOSObjectArray newArrayWithObjects:(id[]){ create_Retrofit2HttpGET(@"{country}?format=json") } count:1 type:JavaLangAnnotationAnnotation_class_()];
 }
 
-IOSObjectArray *ComTotspTravelbriefingServiceTravelBriefingServiceInterface__Annotations$2() {
+IOSObjectArray *TOTSPTravelBriefingServiceInterface__Annotations$2() {
   return [IOSObjectArray newArrayWithObjects:(id[]){ [IOSObjectArray newArrayWithObjects:(id[]){ create_Retrofit2HttpPath(false, @"country") } count:1 type:JavaLangAnnotationAnnotation_class_()] } count:1 type:IOSClass_arrayType(JavaLangAnnotationAnnotation_class_(), 1)];
 }
 
-J2OBJC_INTERFACE_TYPE_LITERAL_SOURCE(ComTotspTravelbriefingServiceTravelBriefingServiceInterface)
+J2OBJC_INTERFACE_TYPE_LITERAL_SOURCE(TOTSPTravelBriefingServiceInterface)

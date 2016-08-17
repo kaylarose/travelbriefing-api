@@ -11,6 +11,7 @@
 
     <properties>
         <J2OBJC_PATH>${env.J2OBJC_HOME}</J2OBJC_PATH>
+        <OBJC_PREFIX>com.totsp.*=TOTSP</OBJC_PREFIX>
     </properties>
 
     <pluginRepositories>
@@ -81,6 +82,7 @@
                     <sourcePath>${project.basedir}/src/main/java</sourcePath>
                     <!-- default value -->
                     <d>${project.build.directory}/j2objc/src</d>
+                    <prefix>${OBJC_PREFIX}</prefix>
                 </configuration>
             </plugin>
         </plugins>

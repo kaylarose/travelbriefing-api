@@ -11,7 +11,7 @@
 #include "com/google/common/base/MoreObjects.h"
 #include "java/lang/annotation/Annotation.h"
 
-@interface ComTotspTravelbriefingModelMap () {
+@interface TOTSPMap () {
  @public
   NSString *lat_;
   NSString *lng_;
@@ -20,18 +20,18 @@
 
 @end
 
-J2OBJC_FIELD_SETTER(ComTotspTravelbriefingModelMap, lat_, NSString *)
-J2OBJC_FIELD_SETTER(ComTotspTravelbriefingModelMap, lng_, NSString *)
-J2OBJC_FIELD_SETTER(ComTotspTravelbriefingModelMap, zoom_, NSString *)
+J2OBJC_FIELD_SETTER(TOTSPMap, lat_, NSString *)
+J2OBJC_FIELD_SETTER(TOTSPMap, lng_, NSString *)
+J2OBJC_FIELD_SETTER(TOTSPMap, zoom_, NSString *)
 
-__attribute__((unused)) static IOSObjectArray *ComTotspTravelbriefingModelMap__Annotations$0();
+__attribute__((unused)) static IOSObjectArray *TOTSPMap__Annotations$0();
 
-@implementation ComTotspTravelbriefingModelMap
+@implementation TOTSPMap
 
 - (instancetype)initWithNSString:(NSString *)lat
                     withNSString:(NSString *)lng
                     withNSString:(NSString *)zoom {
-  ComTotspTravelbriefingModelMap_initWithNSString_withNSString_withNSString_(self, lat, lng, zoom);
+  TOTSPMap_initWithNSString_withNSString_withNSString_(self, lat, lng, zoom);
   return self;
 }
 
@@ -79,30 +79,30 @@ __attribute__((unused)) static IOSObjectArray *ComTotspTravelbriefingModelMap__A
     { "lng_", "LNSString;", .constantValue.asLong = 0, 0x2, -1, -1, -1, 6 },
     { "zoom_", "LNSString;", .constantValue.asLong = 0, 0x2, -1, -1, -1, -1 },
   };
-  static const void *ptrTable[] = { "LNSString;LNSString;LNSString;", "setLat", "LNSString;", "setLng", "setZoom", "toString", (void *)&ComTotspTravelbriefingModelMap__Annotations$0 };
-  static const J2ObjcClassInfo _ComTotspTravelbriefingModelMap = { "Map", "com.totsp.travelbriefing.model", ptrTable, methods, fields, 7, 0x1, 8, 3, -1, -1, -1, -1, -1 };
-  return &_ComTotspTravelbriefingModelMap;
+  static const void *ptrTable[] = { "LNSString;LNSString;LNSString;", "setLat", "LNSString;", "setLng", "setZoom", "toString", (void *)&TOTSPMap__Annotations$0 };
+  static const J2ObjcClassInfo _TOTSPMap = { "Map", "com.totsp.travelbriefing.model", ptrTable, methods, fields, 7, 0x1, 8, 3, -1, -1, -1, -1, -1 };
+  return &_TOTSPMap;
 }
 
 @end
 
-void ComTotspTravelbriefingModelMap_initWithNSString_withNSString_withNSString_(ComTotspTravelbriefingModelMap *self, NSString *lat, NSString *lng, NSString *zoom) {
+void TOTSPMap_initWithNSString_withNSString_withNSString_(TOTSPMap *self, NSString *lat, NSString *lng, NSString *zoom) {
   NSObject_init(self);
   self->lat_ = lat;
   self->lng_ = lng;
   self->zoom_ = zoom;
 }
 
-ComTotspTravelbriefingModelMap *new_ComTotspTravelbriefingModelMap_initWithNSString_withNSString_withNSString_(NSString *lat, NSString *lng, NSString *zoom) {
-  J2OBJC_NEW_IMPL(ComTotspTravelbriefingModelMap, initWithNSString_withNSString_withNSString_, lat, lng, zoom)
+TOTSPMap *new_TOTSPMap_initWithNSString_withNSString_withNSString_(NSString *lat, NSString *lng, NSString *zoom) {
+  J2OBJC_NEW_IMPL(TOTSPMap, initWithNSString_withNSString_withNSString_, lat, lng, zoom)
 }
 
-ComTotspTravelbriefingModelMap *create_ComTotspTravelbriefingModelMap_initWithNSString_withNSString_withNSString_(NSString *lat, NSString *lng, NSString *zoom) {
-  J2OBJC_CREATE_IMPL(ComTotspTravelbriefingModelMap, initWithNSString_withNSString_withNSString_, lat, lng, zoom)
+TOTSPMap *create_TOTSPMap_initWithNSString_withNSString_withNSString_(NSString *lat, NSString *lng, NSString *zoom) {
+  J2OBJC_CREATE_IMPL(TOTSPMap, initWithNSString_withNSString_withNSString_, lat, lng, zoom)
 }
 
-IOSObjectArray *ComTotspTravelbriefingModelMap__Annotations$0() {
+IOSObjectArray *TOTSPMap__Annotations$0() {
   return [IOSObjectArray newArrayWithObjects:(id[]){ create_ComGoogleGsonAnnotationsSerializedName([IOSObjectArray newArrayWithObjects:(id[]){  } count:0 type:NSObject_class_()], @"long") } count:1 type:JavaLangAnnotationAnnotation_class_()];
 }
 
-J2OBJC_CLASS_TYPE_LITERAL_SOURCE(ComTotspTravelbriefingModelMap)
+J2OBJC_CLASS_TYPE_LITERAL_SOURCE(TOTSPMap)

@@ -13,10 +13,10 @@
 #endif
 #undef RESTRICT_Currency
 
-#if !defined (ComTotspTravelbriefingModelCurrency_) && (INCLUDE_ALL_Currency || defined(INCLUDE_ComTotspTravelbriefingModelCurrency))
-#define ComTotspTravelbriefingModelCurrency_
+#if !defined (TOTSPCurrency_) && (INCLUDE_ALL_Currency || defined(INCLUDE_TOTSPCurrency))
+#define TOTSPCurrency_
 
-@interface ComTotspTravelbriefingModelCurrency : NSObject
+@interface TOTSPCurrency : NSObject
 
 #pragma mark Public
 
@@ -45,15 +45,17 @@
 
 @end
 
-J2OBJC_EMPTY_STATIC_INIT(ComTotspTravelbriefingModelCurrency)
+J2OBJC_EMPTY_STATIC_INIT(TOTSPCurrency)
 
-FOUNDATION_EXPORT void ComTotspTravelbriefingModelCurrency_initWithNSString_withNSString_withNSString_withNSString_(ComTotspTravelbriefingModelCurrency *self, NSString *name, NSString *code, NSString *symbol, NSString *rate);
+FOUNDATION_EXPORT void TOTSPCurrency_initWithNSString_withNSString_withNSString_withNSString_(TOTSPCurrency *self, NSString *name, NSString *code, NSString *symbol, NSString *rate);
 
-FOUNDATION_EXPORT ComTotspTravelbriefingModelCurrency *new_ComTotspTravelbriefingModelCurrency_initWithNSString_withNSString_withNSString_withNSString_(NSString *name, NSString *code, NSString *symbol, NSString *rate) NS_RETURNS_RETAINED;
+FOUNDATION_EXPORT TOTSPCurrency *new_TOTSPCurrency_initWithNSString_withNSString_withNSString_withNSString_(NSString *name, NSString *code, NSString *symbol, NSString *rate) NS_RETURNS_RETAINED;
 
-FOUNDATION_EXPORT ComTotspTravelbriefingModelCurrency *create_ComTotspTravelbriefingModelCurrency_initWithNSString_withNSString_withNSString_withNSString_(NSString *name, NSString *code, NSString *symbol, NSString *rate);
+FOUNDATION_EXPORT TOTSPCurrency *create_TOTSPCurrency_initWithNSString_withNSString_withNSString_withNSString_(NSString *name, NSString *code, NSString *symbol, NSString *rate);
 
-J2OBJC_TYPE_LITERAL_HEADER(ComTotspTravelbriefingModelCurrency)
+J2OBJC_TYPE_LITERAL_HEADER(TOTSPCurrency)
+
+@compatibility_alias ComTotspTravelbriefingModelCurrency TOTSPCurrency;
 
 #endif
 

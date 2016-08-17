@@ -20,62 +20,62 @@
 #include "java/util/List.h"
 #include "java/util/Map.h"
 
-@interface ComTotspTravelbriefingModelCountry () {
+@interface TOTSPCountry () {
  @public
-  ComTotspTravelbriefingModelName *name_;
+  TOTSPName *name_;
   id<JavaUtilList> languages_;
   id<JavaUtilList> vaccinations_;
-  ComTotspTravelbriefingModelMap *map_;
-  ComTotspTravelbriefingModelTimezone *timezone_;
-  ComTotspTravelbriefingModelElectricity *electricity_;
-  ComTotspTravelbriefingModelCurrency *currency_;
-  ComTotspTravelbriefingModelWater *water_;
-  ComTotspTravelbriefingModelTelephone *telephone_;
+  TOTSPMap *map_;
+  TOTSPTimezone *timezone_;
+  TOTSPElectricity *electricity_;
+  TOTSPCurrency *currency_;
+  TOTSPWater *water_;
+  TOTSPTelephone *telephone_;
   id<JavaUtilMap> advisories_;
 }
 
 @end
 
-J2OBJC_FIELD_SETTER(ComTotspTravelbriefingModelCountry, name_, ComTotspTravelbriefingModelName *)
-J2OBJC_FIELD_SETTER(ComTotspTravelbriefingModelCountry, languages_, id<JavaUtilList>)
-J2OBJC_FIELD_SETTER(ComTotspTravelbriefingModelCountry, vaccinations_, id<JavaUtilList>)
-J2OBJC_FIELD_SETTER(ComTotspTravelbriefingModelCountry, map_, ComTotspTravelbriefingModelMap *)
-J2OBJC_FIELD_SETTER(ComTotspTravelbriefingModelCountry, timezone_, ComTotspTravelbriefingModelTimezone *)
-J2OBJC_FIELD_SETTER(ComTotspTravelbriefingModelCountry, electricity_, ComTotspTravelbriefingModelElectricity *)
-J2OBJC_FIELD_SETTER(ComTotspTravelbriefingModelCountry, currency_, ComTotspTravelbriefingModelCurrency *)
-J2OBJC_FIELD_SETTER(ComTotspTravelbriefingModelCountry, water_, ComTotspTravelbriefingModelWater *)
-J2OBJC_FIELD_SETTER(ComTotspTravelbriefingModelCountry, telephone_, ComTotspTravelbriefingModelTelephone *)
-J2OBJC_FIELD_SETTER(ComTotspTravelbriefingModelCountry, advisories_, id<JavaUtilMap>)
+J2OBJC_FIELD_SETTER(TOTSPCountry, name_, TOTSPName *)
+J2OBJC_FIELD_SETTER(TOTSPCountry, languages_, id<JavaUtilList>)
+J2OBJC_FIELD_SETTER(TOTSPCountry, vaccinations_, id<JavaUtilList>)
+J2OBJC_FIELD_SETTER(TOTSPCountry, map_, TOTSPMap *)
+J2OBJC_FIELD_SETTER(TOTSPCountry, timezone_, TOTSPTimezone *)
+J2OBJC_FIELD_SETTER(TOTSPCountry, electricity_, TOTSPElectricity *)
+J2OBJC_FIELD_SETTER(TOTSPCountry, currency_, TOTSPCurrency *)
+J2OBJC_FIELD_SETTER(TOTSPCountry, water_, TOTSPWater *)
+J2OBJC_FIELD_SETTER(TOTSPCountry, telephone_, TOTSPTelephone *)
+J2OBJC_FIELD_SETTER(TOTSPCountry, advisories_, id<JavaUtilMap>)
 
-__attribute__((unused)) static IOSObjectArray *ComTotspTravelbriefingModelCountry__Annotations$0();
+__attribute__((unused)) static IOSObjectArray *TOTSPCountry__Annotations$0();
 
-__attribute__((unused)) static IOSObjectArray *ComTotspTravelbriefingModelCountry__Annotations$1();
+__attribute__((unused)) static IOSObjectArray *TOTSPCountry__Annotations$1();
 
-__attribute__((unused)) static IOSObjectArray *ComTotspTravelbriefingModelCountry__Annotations$2();
+__attribute__((unused)) static IOSObjectArray *TOTSPCountry__Annotations$2();
 
-__attribute__((unused)) static IOSObjectArray *ComTotspTravelbriefingModelCountry__Annotations$3();
+__attribute__((unused)) static IOSObjectArray *TOTSPCountry__Annotations$3();
 
-@implementation ComTotspTravelbriefingModelCountry
+@implementation TOTSPCountry
 
-- (instancetype)initWithComTotspTravelbriefingModelName:(ComTotspTravelbriefingModelName *)name
-                                       withJavaUtilList:(id<JavaUtilList>)languages
-                                       withJavaUtilList:(id<JavaUtilList>)vaccinations
-                     withComTotspTravelbriefingModelMap:(ComTotspTravelbriefingModelMap *)map
-                withComTotspTravelbriefingModelTimezone:(ComTotspTravelbriefingModelTimezone *)timezone
-             withComTotspTravelbriefingModelElectricity:(ComTotspTravelbriefingModelElectricity *)electricity
-                withComTotspTravelbriefingModelCurrency:(ComTotspTravelbriefingModelCurrency *)currency
-                   withComTotspTravelbriefingModelWater:(ComTotspTravelbriefingModelWater *)water
-               withComTotspTravelbriefingModelTelephone:(ComTotspTravelbriefingModelTelephone *)telephone
-                                        withJavaUtilMap:(id<JavaUtilMap>)advisories {
-  ComTotspTravelbriefingModelCountry_initWithComTotspTravelbriefingModelName_withJavaUtilList_withJavaUtilList_withComTotspTravelbriefingModelMap_withComTotspTravelbriefingModelTimezone_withComTotspTravelbriefingModelElectricity_withComTotspTravelbriefingModelCurrency_withComTotspTravelbriefingModelWater_withComTotspTravelbriefingModelTelephone_withJavaUtilMap_(self, name, languages, vaccinations, map, timezone, electricity, currency, water, telephone, advisories);
+- (instancetype)initWithTOTSPName:(TOTSPName *)name
+                 withJavaUtilList:(id<JavaUtilList>)languages
+                 withJavaUtilList:(id<JavaUtilList>)vaccinations
+                     withTOTSPMap:(TOTSPMap *)map
+                withTOTSPTimezone:(TOTSPTimezone *)timezone
+             withTOTSPElectricity:(TOTSPElectricity *)electricity
+                withTOTSPCurrency:(TOTSPCurrency *)currency
+                   withTOTSPWater:(TOTSPWater *)water
+               withTOTSPTelephone:(TOTSPTelephone *)telephone
+                  withJavaUtilMap:(id<JavaUtilMap>)advisories {
+  TOTSPCountry_initWithTOTSPName_withJavaUtilList_withJavaUtilList_withTOTSPMap_withTOTSPTimezone_withTOTSPElectricity_withTOTSPCurrency_withTOTSPWater_withTOTSPTelephone_withJavaUtilMap_(self, name, languages, vaccinations, map, timezone, electricity, currency, water, telephone, advisories);
   return self;
 }
 
-- (ComTotspTravelbriefingModelName *)getName {
+- (TOTSPName *)getName {
   return name_;
 }
 
-- (void)setNameWithComTotspTravelbriefingModelName:(ComTotspTravelbriefingModelName *)name {
+- (void)setNameWithTOTSPName:(TOTSPName *)name {
   self->name_ = name;
 }
 
@@ -95,51 +95,51 @@ __attribute__((unused)) static IOSObjectArray *ComTotspTravelbriefingModelCountr
   self->vaccinations_ = vaccinations;
 }
 
-- (ComTotspTravelbriefingModelMap *)getMap {
+- (TOTSPMap *)getMap {
   return map_;
 }
 
-- (void)setMapWithComTotspTravelbriefingModelMap:(ComTotspTravelbriefingModelMap *)map {
+- (void)setMapWithTOTSPMap:(TOTSPMap *)map {
   self->map_ = map;
 }
 
-- (ComTotspTravelbriefingModelTimezone *)getTimezone {
+- (TOTSPTimezone *)getTimezone {
   return timezone_;
 }
 
-- (void)setTimezoneWithComTotspTravelbriefingModelTimezone:(ComTotspTravelbriefingModelTimezone *)timezone {
+- (void)setTimezoneWithTOTSPTimezone:(TOTSPTimezone *)timezone {
   self->timezone_ = timezone;
 }
 
-- (ComTotspTravelbriefingModelElectricity *)getElectricity {
+- (TOTSPElectricity *)getElectricity {
   return electricity_;
 }
 
-- (void)setElectricityWithComTotspTravelbriefingModelElectricity:(ComTotspTravelbriefingModelElectricity *)electricity {
+- (void)setElectricityWithTOTSPElectricity:(TOTSPElectricity *)electricity {
   self->electricity_ = electricity;
 }
 
-- (ComTotspTravelbriefingModelCurrency *)getCurrency {
+- (TOTSPCurrency *)getCurrency {
   return currency_;
 }
 
-- (void)setCurrencyWithComTotspTravelbriefingModelCurrency:(ComTotspTravelbriefingModelCurrency *)currency {
+- (void)setCurrencyWithTOTSPCurrency:(TOTSPCurrency *)currency {
   self->currency_ = currency;
 }
 
-- (ComTotspTravelbriefingModelWater *)getWater {
+- (TOTSPWater *)getWater {
   return water_;
 }
 
-- (void)setWaterWithComTotspTravelbriefingModelWater:(ComTotspTravelbriefingModelWater *)water {
+- (void)setWaterWithTOTSPWater:(TOTSPWater *)water {
   self->water_ = water;
 }
 
-- (ComTotspTravelbriefingModelTelephone *)getTelephone {
+- (TOTSPTelephone *)getTelephone {
   return telephone_;
 }
 
-- (void)setTelephoneWithComTotspTravelbriefingModelTelephone:(ComTotspTravelbriefingModelTelephone *)telephone {
+- (void)setTelephoneWithTOTSPTelephone:(TOTSPTelephone *)telephone {
   self->telephone_ = telephone;
 }
 
@@ -157,49 +157,49 @@ __attribute__((unused)) static IOSObjectArray *ComTotspTravelbriefingModelCountr
 
 + (const J2ObjcClassInfo *)__metadata {
   static const J2ObjcMethodInfo methods[] = {
-    { "initWithComTotspTravelbriefingModelName:withJavaUtilList:withJavaUtilList:withComTotspTravelbriefingModelMap:withComTotspTravelbriefingModelTimezone:withComTotspTravelbriefingModelElectricity:withComTotspTravelbriefingModelCurrency:withComTotspTravelbriefingModelWater:withComTotspTravelbriefingModelTelephone:withJavaUtilMap:", NULL, 0x1, -1, 0, -1, 1, -1, -1 },
-    { "getName", "LComTotspTravelbriefingModelName;", 0x1, -1, -1, -1, -1, -1, -1 },
-    { "setNameWithComTotspTravelbriefingModelName:", "V", 0x1, 2, 3, -1, -1, -1, -1 },
+    { "initWithTOTSPName:withJavaUtilList:withJavaUtilList:withTOTSPMap:withTOTSPTimezone:withTOTSPElectricity:withTOTSPCurrency:withTOTSPWater:withTOTSPTelephone:withJavaUtilMap:", NULL, 0x1, -1, 0, -1, 1, -1, -1 },
+    { "getName", "LTOTSPName;", 0x1, -1, -1, -1, -1, -1, -1 },
+    { "setNameWithTOTSPName:", "V", 0x1, 2, 3, -1, -1, -1, -1 },
     { "getLanguages", "LJavaUtilList;", 0x1, -1, -1, -1, 4, -1, -1 },
     { "setLanguagesWithJavaUtilList:", "V", 0x1, 5, 6, -1, 7, -1, -1 },
     { "getVaccinations", "LJavaUtilList;", 0x1, -1, -1, -1, 8, -1, -1 },
     { "setVaccinationsWithJavaUtilList:", "V", 0x1, 9, 6, -1, 10, -1, -1 },
-    { "getMap", "LComTotspTravelbriefingModelMap;", 0x1, -1, -1, -1, -1, -1, -1 },
-    { "setMapWithComTotspTravelbriefingModelMap:", "V", 0x1, 11, 12, -1, -1, -1, -1 },
-    { "getTimezone", "LComTotspTravelbriefingModelTimezone;", 0x1, -1, -1, -1, -1, -1, -1 },
-    { "setTimezoneWithComTotspTravelbriefingModelTimezone:", "V", 0x1, 13, 14, -1, -1, -1, -1 },
-    { "getElectricity", "LComTotspTravelbriefingModelElectricity;", 0x1, -1, -1, -1, -1, -1, -1 },
-    { "setElectricityWithComTotspTravelbriefingModelElectricity:", "V", 0x1, 15, 16, -1, -1, -1, -1 },
-    { "getCurrency", "LComTotspTravelbriefingModelCurrency;", 0x1, -1, -1, -1, -1, -1, -1 },
-    { "setCurrencyWithComTotspTravelbriefingModelCurrency:", "V", 0x1, 17, 18, -1, -1, -1, -1 },
-    { "getWater", "LComTotspTravelbriefingModelWater;", 0x1, -1, -1, -1, -1, -1, -1 },
-    { "setWaterWithComTotspTravelbriefingModelWater:", "V", 0x1, 19, 20, -1, -1, -1, -1 },
-    { "getTelephone", "LComTotspTravelbriefingModelTelephone;", 0x1, -1, -1, -1, -1, -1, -1 },
-    { "setTelephoneWithComTotspTravelbriefingModelTelephone:", "V", 0x1, 21, 22, -1, -1, -1, -1 },
+    { "getMap", "LTOTSPMap;", 0x1, -1, -1, -1, -1, -1, -1 },
+    { "setMapWithTOTSPMap:", "V", 0x1, 11, 12, -1, -1, -1, -1 },
+    { "getTimezone", "LTOTSPTimezone;", 0x1, -1, -1, -1, -1, -1, -1 },
+    { "setTimezoneWithTOTSPTimezone:", "V", 0x1, 13, 14, -1, -1, -1, -1 },
+    { "getElectricity", "LTOTSPElectricity;", 0x1, -1, -1, -1, -1, -1, -1 },
+    { "setElectricityWithTOTSPElectricity:", "V", 0x1, 15, 16, -1, -1, -1, -1 },
+    { "getCurrency", "LTOTSPCurrency;", 0x1, -1, -1, -1, -1, -1, -1 },
+    { "setCurrencyWithTOTSPCurrency:", "V", 0x1, 17, 18, -1, -1, -1, -1 },
+    { "getWater", "LTOTSPWater;", 0x1, -1, -1, -1, -1, -1, -1 },
+    { "setWaterWithTOTSPWater:", "V", 0x1, 19, 20, -1, -1, -1, -1 },
+    { "getTelephone", "LTOTSPTelephone;", 0x1, -1, -1, -1, -1, -1, -1 },
+    { "setTelephoneWithTOTSPTelephone:", "V", 0x1, 21, 22, -1, -1, -1, -1 },
     { "getAdvisories", "LJavaUtilMap;", 0x1, -1, -1, -1, 23, -1, -1 },
     { "setAdvisoriesWithJavaUtilMap:", "V", 0x1, 24, 25, -1, 26, -1, -1 },
     { "description", "LNSString;", 0x1, 27, -1, -1, -1, -1, -1 },
   };
   static const J2ObjcFieldInfo fields[] = {
-    { "name_", "LComTotspTravelbriefingModelName;", .constantValue.asLong = 0, 0x2, -1, -1, -1, 28 },
+    { "name_", "LTOTSPName;", .constantValue.asLong = 0, 0x2, -1, -1, -1, 28 },
     { "languages_", "LJavaUtilList;", .constantValue.asLong = 0, 0x2, -1, -1, 29, 30 },
     { "vaccinations_", "LJavaUtilList;", .constantValue.asLong = 0, 0x2, -1, -1, 31, -1 },
-    { "map_", "LComTotspTravelbriefingModelMap;", .constantValue.asLong = 0, 0x2, -1, -1, -1, 32 },
-    { "timezone_", "LComTotspTravelbriefingModelTimezone;", .constantValue.asLong = 0, 0x2, -1, -1, -1, -1 },
-    { "electricity_", "LComTotspTravelbriefingModelElectricity;", .constantValue.asLong = 0, 0x2, -1, -1, -1, -1 },
-    { "currency_", "LComTotspTravelbriefingModelCurrency;", .constantValue.asLong = 0, 0x2, -1, -1, -1, -1 },
-    { "water_", "LComTotspTravelbriefingModelWater;", .constantValue.asLong = 0, 0x2, -1, -1, -1, -1 },
-    { "telephone_", "LComTotspTravelbriefingModelTelephone;", .constantValue.asLong = 0, 0x2, -1, -1, -1, -1 },
+    { "map_", "LTOTSPMap;", .constantValue.asLong = 0, 0x2, -1, -1, -1, 32 },
+    { "timezone_", "LTOTSPTimezone;", .constantValue.asLong = 0, 0x2, -1, -1, -1, -1 },
+    { "electricity_", "LTOTSPElectricity;", .constantValue.asLong = 0, 0x2, -1, -1, -1, -1 },
+    { "currency_", "LTOTSPCurrency;", .constantValue.asLong = 0, 0x2, -1, -1, -1, -1 },
+    { "water_", "LTOTSPWater;", .constantValue.asLong = 0, 0x2, -1, -1, -1, -1 },
+    { "telephone_", "LTOTSPTelephone;", .constantValue.asLong = 0, 0x2, -1, -1, -1, -1 },
     { "advisories_", "LJavaUtilMap;", .constantValue.asLong = 0, 0x2, -1, -1, 33, 34 },
   };
-  static const void *ptrTable[] = { "LComTotspTravelbriefingModelName;LJavaUtilList;LJavaUtilList;LComTotspTravelbriefingModelMap;LComTotspTravelbriefingModelTimezone;LComTotspTravelbriefingModelElectricity;LComTotspTravelbriefingModelCurrency;LComTotspTravelbriefingModelWater;LComTotspTravelbriefingModelTelephone;LJavaUtilMap;", "(Lcom/totsp/travelbriefing/model/Name;Ljava/util/List<Lcom/totsp/travelbriefing/model/Language;>;Ljava/util/List<Lcom/totsp/travelbriefing/model/Vaccination;>;Lcom/totsp/travelbriefing/model/Map;Lcom/totsp/travelbriefing/model/Timezone;Lcom/totsp/travelbriefing/model/Electricity;Lcom/totsp/travelbriefing/model/Currency;Lcom/totsp/travelbriefing/model/Water;Lcom/totsp/travelbriefing/model/Telephone;Ljava/util/Map<Ljava/lang/String;Lcom/totsp/travelbriefing/model/Advisory;>;)V", "setName", "LComTotspTravelbriefingModelName;", "()Ljava/util/List<Lcom/totsp/travelbriefing/model/Language;>;", "setLanguages", "LJavaUtilList;", "(Ljava/util/List<Lcom/totsp/travelbriefing/model/Language;>;)V", "()Ljava/util/List<Lcom/totsp/travelbriefing/model/Vaccination;>;", "setVaccinations", "(Ljava/util/List<Lcom/totsp/travelbriefing/model/Vaccination;>;)V", "setMap", "LComTotspTravelbriefingModelMap;", "setTimezone", "LComTotspTravelbriefingModelTimezone;", "setElectricity", "LComTotspTravelbriefingModelElectricity;", "setCurrency", "LComTotspTravelbriefingModelCurrency;", "setWater", "LComTotspTravelbriefingModelWater;", "setTelephone", "LComTotspTravelbriefingModelTelephone;", "()Ljava/util/Map<Ljava/lang/String;Lcom/totsp/travelbriefing/model/Advisory;>;", "setAdvisories", "LJavaUtilMap;", "(Ljava/util/Map<Ljava/lang/String;Lcom/totsp/travelbriefing/model/Advisory;>;)V", "toString", (void *)&ComTotspTravelbriefingModelCountry__Annotations$0, "Ljava/util/List<Lcom/totsp/travelbriefing/model/Language;>;", (void *)&ComTotspTravelbriefingModelCountry__Annotations$1, "Ljava/util/List<Lcom/totsp/travelbriefing/model/Vaccination;>;", (void *)&ComTotspTravelbriefingModelCountry__Annotations$2, "Ljava/util/Map<Ljava/lang/String;Lcom/totsp/travelbriefing/model/Advisory;>;", (void *)&ComTotspTravelbriefingModelCountry__Annotations$3 };
-  static const J2ObjcClassInfo _ComTotspTravelbriefingModelCountry = { "Country", "com.totsp.travelbriefing.model", ptrTable, methods, fields, 7, 0x1, 22, 10, -1, -1, -1, -1, -1 };
-  return &_ComTotspTravelbriefingModelCountry;
+  static const void *ptrTable[] = { "LTOTSPName;LJavaUtilList;LJavaUtilList;LTOTSPMap;LTOTSPTimezone;LTOTSPElectricity;LTOTSPCurrency;LTOTSPWater;LTOTSPTelephone;LJavaUtilMap;", "(Lcom/totsp/travelbriefing/model/Name;Ljava/util/List<Lcom/totsp/travelbriefing/model/Language;>;Ljava/util/List<Lcom/totsp/travelbriefing/model/Vaccination;>;Lcom/totsp/travelbriefing/model/Map;Lcom/totsp/travelbriefing/model/Timezone;Lcom/totsp/travelbriefing/model/Electricity;Lcom/totsp/travelbriefing/model/Currency;Lcom/totsp/travelbriefing/model/Water;Lcom/totsp/travelbriefing/model/Telephone;Ljava/util/Map<Ljava/lang/String;Lcom/totsp/travelbriefing/model/Advisory;>;)V", "setName", "LTOTSPName;", "()Ljava/util/List<Lcom/totsp/travelbriefing/model/Language;>;", "setLanguages", "LJavaUtilList;", "(Ljava/util/List<Lcom/totsp/travelbriefing/model/Language;>;)V", "()Ljava/util/List<Lcom/totsp/travelbriefing/model/Vaccination;>;", "setVaccinations", "(Ljava/util/List<Lcom/totsp/travelbriefing/model/Vaccination;>;)V", "setMap", "LTOTSPMap;", "setTimezone", "LTOTSPTimezone;", "setElectricity", "LTOTSPElectricity;", "setCurrency", "LTOTSPCurrency;", "setWater", "LTOTSPWater;", "setTelephone", "LTOTSPTelephone;", "()Ljava/util/Map<Ljava/lang/String;Lcom/totsp/travelbriefing/model/Advisory;>;", "setAdvisories", "LJavaUtilMap;", "(Ljava/util/Map<Ljava/lang/String;Lcom/totsp/travelbriefing/model/Advisory;>;)V", "toString", (void *)&TOTSPCountry__Annotations$0, "Ljava/util/List<Lcom/totsp/travelbriefing/model/Language;>;", (void *)&TOTSPCountry__Annotations$1, "Ljava/util/List<Lcom/totsp/travelbriefing/model/Vaccination;>;", (void *)&TOTSPCountry__Annotations$2, "Ljava/util/Map<Ljava/lang/String;Lcom/totsp/travelbriefing/model/Advisory;>;", (void *)&TOTSPCountry__Annotations$3 };
+  static const J2ObjcClassInfo _TOTSPCountry = { "Country", "com.totsp.travelbriefing.model", ptrTable, methods, fields, 7, 0x1, 22, 10, -1, -1, -1, -1, -1 };
+  return &_TOTSPCountry;
 }
 
 @end
 
-void ComTotspTravelbriefingModelCountry_initWithComTotspTravelbriefingModelName_withJavaUtilList_withJavaUtilList_withComTotspTravelbriefingModelMap_withComTotspTravelbriefingModelTimezone_withComTotspTravelbriefingModelElectricity_withComTotspTravelbriefingModelCurrency_withComTotspTravelbriefingModelWater_withComTotspTravelbriefingModelTelephone_withJavaUtilMap_(ComTotspTravelbriefingModelCountry *self, ComTotspTravelbriefingModelName *name, id<JavaUtilList> languages, id<JavaUtilList> vaccinations, ComTotspTravelbriefingModelMap *map, ComTotspTravelbriefingModelTimezone *timezone, ComTotspTravelbriefingModelElectricity *electricity, ComTotspTravelbriefingModelCurrency *currency, ComTotspTravelbriefingModelWater *water, ComTotspTravelbriefingModelTelephone *telephone, id<JavaUtilMap> advisories) {
+void TOTSPCountry_initWithTOTSPName_withJavaUtilList_withJavaUtilList_withTOTSPMap_withTOTSPTimezone_withTOTSPElectricity_withTOTSPCurrency_withTOTSPWater_withTOTSPTelephone_withJavaUtilMap_(TOTSPCountry *self, TOTSPName *name, id<JavaUtilList> languages, id<JavaUtilList> vaccinations, TOTSPMap *map, TOTSPTimezone *timezone, TOTSPElectricity *electricity, TOTSPCurrency *currency, TOTSPWater *water, TOTSPTelephone *telephone, id<JavaUtilMap> advisories) {
   NSObject_init(self);
   self->name_ = name;
   self->languages_ = languages;
@@ -213,28 +213,28 @@ void ComTotspTravelbriefingModelCountry_initWithComTotspTravelbriefingModelName_
   self->advisories_ = advisories;
 }
 
-ComTotspTravelbriefingModelCountry *new_ComTotspTravelbriefingModelCountry_initWithComTotspTravelbriefingModelName_withJavaUtilList_withJavaUtilList_withComTotspTravelbriefingModelMap_withComTotspTravelbriefingModelTimezone_withComTotspTravelbriefingModelElectricity_withComTotspTravelbriefingModelCurrency_withComTotspTravelbriefingModelWater_withComTotspTravelbriefingModelTelephone_withJavaUtilMap_(ComTotspTravelbriefingModelName *name, id<JavaUtilList> languages, id<JavaUtilList> vaccinations, ComTotspTravelbriefingModelMap *map, ComTotspTravelbriefingModelTimezone *timezone, ComTotspTravelbriefingModelElectricity *electricity, ComTotspTravelbriefingModelCurrency *currency, ComTotspTravelbriefingModelWater *water, ComTotspTravelbriefingModelTelephone *telephone, id<JavaUtilMap> advisories) {
-  J2OBJC_NEW_IMPL(ComTotspTravelbriefingModelCountry, initWithComTotspTravelbriefingModelName_withJavaUtilList_withJavaUtilList_withComTotspTravelbriefingModelMap_withComTotspTravelbriefingModelTimezone_withComTotspTravelbriefingModelElectricity_withComTotspTravelbriefingModelCurrency_withComTotspTravelbriefingModelWater_withComTotspTravelbriefingModelTelephone_withJavaUtilMap_, name, languages, vaccinations, map, timezone, electricity, currency, water, telephone, advisories)
+TOTSPCountry *new_TOTSPCountry_initWithTOTSPName_withJavaUtilList_withJavaUtilList_withTOTSPMap_withTOTSPTimezone_withTOTSPElectricity_withTOTSPCurrency_withTOTSPWater_withTOTSPTelephone_withJavaUtilMap_(TOTSPName *name, id<JavaUtilList> languages, id<JavaUtilList> vaccinations, TOTSPMap *map, TOTSPTimezone *timezone, TOTSPElectricity *electricity, TOTSPCurrency *currency, TOTSPWater *water, TOTSPTelephone *telephone, id<JavaUtilMap> advisories) {
+  J2OBJC_NEW_IMPL(TOTSPCountry, initWithTOTSPName_withJavaUtilList_withJavaUtilList_withTOTSPMap_withTOTSPTimezone_withTOTSPElectricity_withTOTSPCurrency_withTOTSPWater_withTOTSPTelephone_withJavaUtilMap_, name, languages, vaccinations, map, timezone, electricity, currency, water, telephone, advisories)
 }
 
-ComTotspTravelbriefingModelCountry *create_ComTotspTravelbriefingModelCountry_initWithComTotspTravelbriefingModelName_withJavaUtilList_withJavaUtilList_withComTotspTravelbriefingModelMap_withComTotspTravelbriefingModelTimezone_withComTotspTravelbriefingModelElectricity_withComTotspTravelbriefingModelCurrency_withComTotspTravelbriefingModelWater_withComTotspTravelbriefingModelTelephone_withJavaUtilMap_(ComTotspTravelbriefingModelName *name, id<JavaUtilList> languages, id<JavaUtilList> vaccinations, ComTotspTravelbriefingModelMap *map, ComTotspTravelbriefingModelTimezone *timezone, ComTotspTravelbriefingModelElectricity *electricity, ComTotspTravelbriefingModelCurrency *currency, ComTotspTravelbriefingModelWater *water, ComTotspTravelbriefingModelTelephone *telephone, id<JavaUtilMap> advisories) {
-  J2OBJC_CREATE_IMPL(ComTotspTravelbriefingModelCountry, initWithComTotspTravelbriefingModelName_withJavaUtilList_withJavaUtilList_withComTotspTravelbriefingModelMap_withComTotspTravelbriefingModelTimezone_withComTotspTravelbriefingModelElectricity_withComTotspTravelbriefingModelCurrency_withComTotspTravelbriefingModelWater_withComTotspTravelbriefingModelTelephone_withJavaUtilMap_, name, languages, vaccinations, map, timezone, electricity, currency, water, telephone, advisories)
+TOTSPCountry *create_TOTSPCountry_initWithTOTSPName_withJavaUtilList_withJavaUtilList_withTOTSPMap_withTOTSPTimezone_withTOTSPElectricity_withTOTSPCurrency_withTOTSPWater_withTOTSPTelephone_withJavaUtilMap_(TOTSPName *name, id<JavaUtilList> languages, id<JavaUtilList> vaccinations, TOTSPMap *map, TOTSPTimezone *timezone, TOTSPElectricity *electricity, TOTSPCurrency *currency, TOTSPWater *water, TOTSPTelephone *telephone, id<JavaUtilMap> advisories) {
+  J2OBJC_CREATE_IMPL(TOTSPCountry, initWithTOTSPName_withJavaUtilList_withJavaUtilList_withTOTSPMap_withTOTSPTimezone_withTOTSPElectricity_withTOTSPCurrency_withTOTSPWater_withTOTSPTelephone_withJavaUtilMap_, name, languages, vaccinations, map, timezone, electricity, currency, water, telephone, advisories)
 }
 
-IOSObjectArray *ComTotspTravelbriefingModelCountry__Annotations$0() {
+IOSObjectArray *TOTSPCountry__Annotations$0() {
   return [IOSObjectArray newArrayWithObjects:(id[]){ create_ComGoogleGsonAnnotationsSerializedName([IOSObjectArray newArrayWithObjects:(id[]){  } count:0 type:NSObject_class_()], @"names") } count:1 type:JavaLangAnnotationAnnotation_class_()];
 }
 
-IOSObjectArray *ComTotspTravelbriefingModelCountry__Annotations$1() {
+IOSObjectArray *TOTSPCountry__Annotations$1() {
   return [IOSObjectArray newArrayWithObjects:(id[]){ create_ComGoogleGsonAnnotationsSerializedName([IOSObjectArray newArrayWithObjects:(id[]){  } count:0 type:NSObject_class_()], @"language") } count:1 type:JavaLangAnnotationAnnotation_class_()];
 }
 
-IOSObjectArray *ComTotspTravelbriefingModelCountry__Annotations$2() {
+IOSObjectArray *TOTSPCountry__Annotations$2() {
   return [IOSObjectArray newArrayWithObjects:(id[]){ create_ComGoogleGsonAnnotationsSerializedName([IOSObjectArray newArrayWithObjects:(id[]){  } count:0 type:NSObject_class_()], @"maps") } count:1 type:JavaLangAnnotationAnnotation_class_()];
 }
 
-IOSObjectArray *ComTotspTravelbriefingModelCountry__Annotations$3() {
+IOSObjectArray *TOTSPCountry__Annotations$3() {
   return [IOSObjectArray newArrayWithObjects:(id[]){ create_ComGoogleGsonAnnotationsSerializedName([IOSObjectArray newArrayWithObjects:(id[]){  } count:0 type:NSObject_class_()], @"advise") } count:1 type:JavaLangAnnotationAnnotation_class_()];
 }
 
-J2OBJC_CLASS_TYPE_LITERAL_SOURCE(ComTotspTravelbriefingModelCountry)
+J2OBJC_CLASS_TYPE_LITERAL_SOURCE(TOTSPCountry)

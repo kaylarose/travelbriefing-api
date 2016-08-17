@@ -13,87 +13,89 @@
 #endif
 #undef RESTRICT_Country
 
-#if !defined (ComTotspTravelbriefingModelCountry_) && (INCLUDE_ALL_Country || defined(INCLUDE_ComTotspTravelbriefingModelCountry))
-#define ComTotspTravelbriefingModelCountry_
+#if !defined (TOTSPCountry_) && (INCLUDE_ALL_Country || defined(INCLUDE_TOTSPCountry))
+#define TOTSPCountry_
 
-@class ComTotspTravelbriefingModelCurrency;
-@class ComTotspTravelbriefingModelElectricity;
-@class ComTotspTravelbriefingModelMap;
-@class ComTotspTravelbriefingModelName;
-@class ComTotspTravelbriefingModelTelephone;
-@class ComTotspTravelbriefingModelTimezone;
-@class ComTotspTravelbriefingModelWater;
+@class TOTSPCurrency;
+@class TOTSPElectricity;
+@class TOTSPMap;
+@class TOTSPName;
+@class TOTSPTelephone;
+@class TOTSPTimezone;
+@class TOTSPWater;
 @protocol JavaUtilList;
 @protocol JavaUtilMap;
 
-@interface ComTotspTravelbriefingModelCountry : NSObject
+@interface TOTSPCountry : NSObject
 
 #pragma mark Public
 
-- (instancetype)initWithComTotspTravelbriefingModelName:(ComTotspTravelbriefingModelName *)name
-                                       withJavaUtilList:(id<JavaUtilList>)languages
-                                       withJavaUtilList:(id<JavaUtilList>)vaccinations
-                     withComTotspTravelbriefingModelMap:(ComTotspTravelbriefingModelMap *)map
-                withComTotspTravelbriefingModelTimezone:(ComTotspTravelbriefingModelTimezone *)timezone
-             withComTotspTravelbriefingModelElectricity:(ComTotspTravelbriefingModelElectricity *)electricity
-                withComTotspTravelbriefingModelCurrency:(ComTotspTravelbriefingModelCurrency *)currency
-                   withComTotspTravelbriefingModelWater:(ComTotspTravelbriefingModelWater *)water
-               withComTotspTravelbriefingModelTelephone:(ComTotspTravelbriefingModelTelephone *)telephone
-                                        withJavaUtilMap:(id<JavaUtilMap>)advisories;
+- (instancetype)initWithTOTSPName:(TOTSPName *)name
+                 withJavaUtilList:(id<JavaUtilList>)languages
+                 withJavaUtilList:(id<JavaUtilList>)vaccinations
+                     withTOTSPMap:(TOTSPMap *)map
+                withTOTSPTimezone:(TOTSPTimezone *)timezone
+             withTOTSPElectricity:(TOTSPElectricity *)electricity
+                withTOTSPCurrency:(TOTSPCurrency *)currency
+                   withTOTSPWater:(TOTSPWater *)water
+               withTOTSPTelephone:(TOTSPTelephone *)telephone
+                  withJavaUtilMap:(id<JavaUtilMap>)advisories;
 
 - (id<JavaUtilMap>)getAdvisories;
 
-- (ComTotspTravelbriefingModelCurrency *)getCurrency;
+- (TOTSPCurrency *)getCurrency;
 
-- (ComTotspTravelbriefingModelElectricity *)getElectricity;
+- (TOTSPElectricity *)getElectricity;
 
 - (id<JavaUtilList>)getLanguages;
 
-- (ComTotspTravelbriefingModelMap *)getMap;
+- (TOTSPMap *)getMap;
 
-- (ComTotspTravelbriefingModelName *)getName;
+- (TOTSPName *)getName;
 
-- (ComTotspTravelbriefingModelTelephone *)getTelephone;
+- (TOTSPTelephone *)getTelephone;
 
-- (ComTotspTravelbriefingModelTimezone *)getTimezone;
+- (TOTSPTimezone *)getTimezone;
 
 - (id<JavaUtilList>)getVaccinations;
 
-- (ComTotspTravelbriefingModelWater *)getWater;
+- (TOTSPWater *)getWater;
 
 - (void)setAdvisoriesWithJavaUtilMap:(id<JavaUtilMap>)advisories;
 
-- (void)setCurrencyWithComTotspTravelbriefingModelCurrency:(ComTotspTravelbriefingModelCurrency *)currency;
+- (void)setCurrencyWithTOTSPCurrency:(TOTSPCurrency *)currency;
 
-- (void)setElectricityWithComTotspTravelbriefingModelElectricity:(ComTotspTravelbriefingModelElectricity *)electricity;
+- (void)setElectricityWithTOTSPElectricity:(TOTSPElectricity *)electricity;
 
 - (void)setLanguagesWithJavaUtilList:(id<JavaUtilList>)languages;
 
-- (void)setMapWithComTotspTravelbriefingModelMap:(ComTotspTravelbriefingModelMap *)map;
+- (void)setMapWithTOTSPMap:(TOTSPMap *)map;
 
-- (void)setNameWithComTotspTravelbriefingModelName:(ComTotspTravelbriefingModelName *)name;
+- (void)setNameWithTOTSPName:(TOTSPName *)name;
 
-- (void)setTelephoneWithComTotspTravelbriefingModelTelephone:(ComTotspTravelbriefingModelTelephone *)telephone;
+- (void)setTelephoneWithTOTSPTelephone:(TOTSPTelephone *)telephone;
 
-- (void)setTimezoneWithComTotspTravelbriefingModelTimezone:(ComTotspTravelbriefingModelTimezone *)timezone;
+- (void)setTimezoneWithTOTSPTimezone:(TOTSPTimezone *)timezone;
 
 - (void)setVaccinationsWithJavaUtilList:(id<JavaUtilList>)vaccinations;
 
-- (void)setWaterWithComTotspTravelbriefingModelWater:(ComTotspTravelbriefingModelWater *)water;
+- (void)setWaterWithTOTSPWater:(TOTSPWater *)water;
 
 - (NSString *)description;
 
 @end
 
-J2OBJC_EMPTY_STATIC_INIT(ComTotspTravelbriefingModelCountry)
+J2OBJC_EMPTY_STATIC_INIT(TOTSPCountry)
 
-FOUNDATION_EXPORT void ComTotspTravelbriefingModelCountry_initWithComTotspTravelbriefingModelName_withJavaUtilList_withJavaUtilList_withComTotspTravelbriefingModelMap_withComTotspTravelbriefingModelTimezone_withComTotspTravelbriefingModelElectricity_withComTotspTravelbriefingModelCurrency_withComTotspTravelbriefingModelWater_withComTotspTravelbriefingModelTelephone_withJavaUtilMap_(ComTotspTravelbriefingModelCountry *self, ComTotspTravelbriefingModelName *name, id<JavaUtilList> languages, id<JavaUtilList> vaccinations, ComTotspTravelbriefingModelMap *map, ComTotspTravelbriefingModelTimezone *timezone, ComTotspTravelbriefingModelElectricity *electricity, ComTotspTravelbriefingModelCurrency *currency, ComTotspTravelbriefingModelWater *water, ComTotspTravelbriefingModelTelephone *telephone, id<JavaUtilMap> advisories);
+FOUNDATION_EXPORT void TOTSPCountry_initWithTOTSPName_withJavaUtilList_withJavaUtilList_withTOTSPMap_withTOTSPTimezone_withTOTSPElectricity_withTOTSPCurrency_withTOTSPWater_withTOTSPTelephone_withJavaUtilMap_(TOTSPCountry *self, TOTSPName *name, id<JavaUtilList> languages, id<JavaUtilList> vaccinations, TOTSPMap *map, TOTSPTimezone *timezone, TOTSPElectricity *electricity, TOTSPCurrency *currency, TOTSPWater *water, TOTSPTelephone *telephone, id<JavaUtilMap> advisories);
 
-FOUNDATION_EXPORT ComTotspTravelbriefingModelCountry *new_ComTotspTravelbriefingModelCountry_initWithComTotspTravelbriefingModelName_withJavaUtilList_withJavaUtilList_withComTotspTravelbriefingModelMap_withComTotspTravelbriefingModelTimezone_withComTotspTravelbriefingModelElectricity_withComTotspTravelbriefingModelCurrency_withComTotspTravelbriefingModelWater_withComTotspTravelbriefingModelTelephone_withJavaUtilMap_(ComTotspTravelbriefingModelName *name, id<JavaUtilList> languages, id<JavaUtilList> vaccinations, ComTotspTravelbriefingModelMap *map, ComTotspTravelbriefingModelTimezone *timezone, ComTotspTravelbriefingModelElectricity *electricity, ComTotspTravelbriefingModelCurrency *currency, ComTotspTravelbriefingModelWater *water, ComTotspTravelbriefingModelTelephone *telephone, id<JavaUtilMap> advisories) NS_RETURNS_RETAINED;
+FOUNDATION_EXPORT TOTSPCountry *new_TOTSPCountry_initWithTOTSPName_withJavaUtilList_withJavaUtilList_withTOTSPMap_withTOTSPTimezone_withTOTSPElectricity_withTOTSPCurrency_withTOTSPWater_withTOTSPTelephone_withJavaUtilMap_(TOTSPName *name, id<JavaUtilList> languages, id<JavaUtilList> vaccinations, TOTSPMap *map, TOTSPTimezone *timezone, TOTSPElectricity *electricity, TOTSPCurrency *currency, TOTSPWater *water, TOTSPTelephone *telephone, id<JavaUtilMap> advisories) NS_RETURNS_RETAINED;
 
-FOUNDATION_EXPORT ComTotspTravelbriefingModelCountry *create_ComTotspTravelbriefingModelCountry_initWithComTotspTravelbriefingModelName_withJavaUtilList_withJavaUtilList_withComTotspTravelbriefingModelMap_withComTotspTravelbriefingModelTimezone_withComTotspTravelbriefingModelElectricity_withComTotspTravelbriefingModelCurrency_withComTotspTravelbriefingModelWater_withComTotspTravelbriefingModelTelephone_withJavaUtilMap_(ComTotspTravelbriefingModelName *name, id<JavaUtilList> languages, id<JavaUtilList> vaccinations, ComTotspTravelbriefingModelMap *map, ComTotspTravelbriefingModelTimezone *timezone, ComTotspTravelbriefingModelElectricity *electricity, ComTotspTravelbriefingModelCurrency *currency, ComTotspTravelbriefingModelWater *water, ComTotspTravelbriefingModelTelephone *telephone, id<JavaUtilMap> advisories);
+FOUNDATION_EXPORT TOTSPCountry *create_TOTSPCountry_initWithTOTSPName_withJavaUtilList_withJavaUtilList_withTOTSPMap_withTOTSPTimezone_withTOTSPElectricity_withTOTSPCurrency_withTOTSPWater_withTOTSPTelephone_withJavaUtilMap_(TOTSPName *name, id<JavaUtilList> languages, id<JavaUtilList> vaccinations, TOTSPMap *map, TOTSPTimezone *timezone, TOTSPElectricity *electricity, TOTSPCurrency *currency, TOTSPWater *water, TOTSPTelephone *telephone, id<JavaUtilMap> advisories);
 
-J2OBJC_TYPE_LITERAL_HEADER(ComTotspTravelbriefingModelCountry)
+J2OBJC_TYPE_LITERAL_HEADER(TOTSPCountry)
+
+@compatibility_alias ComTotspTravelbriefingModelCountry TOTSPCountry;
 
 #endif
 

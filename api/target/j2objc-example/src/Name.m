@@ -7,7 +7,7 @@
 #include "Name.h"
 #include "com/google/common/base/MoreObjects.h"
 
-@interface ComTotspTravelbriefingModelName () {
+@interface TOTSPName () {
  @public
   NSString *name_;
   NSString *full_;
@@ -18,20 +18,20 @@
 
 @end
 
-J2OBJC_FIELD_SETTER(ComTotspTravelbriefingModelName, name_, NSString *)
-J2OBJC_FIELD_SETTER(ComTotspTravelbriefingModelName, full_, NSString *)
-J2OBJC_FIELD_SETTER(ComTotspTravelbriefingModelName, iso2_, NSString *)
-J2OBJC_FIELD_SETTER(ComTotspTravelbriefingModelName, iso3_, NSString *)
-J2OBJC_FIELD_SETTER(ComTotspTravelbriefingModelName, continent_, NSString *)
+J2OBJC_FIELD_SETTER(TOTSPName, name_, NSString *)
+J2OBJC_FIELD_SETTER(TOTSPName, full_, NSString *)
+J2OBJC_FIELD_SETTER(TOTSPName, iso2_, NSString *)
+J2OBJC_FIELD_SETTER(TOTSPName, iso3_, NSString *)
+J2OBJC_FIELD_SETTER(TOTSPName, continent_, NSString *)
 
-@implementation ComTotspTravelbriefingModelName
+@implementation TOTSPName
 
 - (instancetype)initWithNSString:(NSString *)name
                     withNSString:(NSString *)full
                     withNSString:(NSString *)iso2
                     withNSString:(NSString *)iso3
                     withNSString:(NSString *)continent {
-  ComTotspTravelbriefingModelName_initWithNSString_withNSString_withNSString_withNSString_withNSString_(self, name, full, iso2, iso3, continent);
+  TOTSPName_initWithNSString_withNSString_withNSString_withNSString_withNSString_(self, name, full, iso2, iso3, continent);
   return self;
 }
 
@@ -102,13 +102,13 @@ J2OBJC_FIELD_SETTER(ComTotspTravelbriefingModelName, continent_, NSString *)
     { "continent_", "LNSString;", .constantValue.asLong = 0, 0x2, -1, -1, -1, -1 },
   };
   static const void *ptrTable[] = { "LNSString;LNSString;LNSString;LNSString;LNSString;", "setName", "LNSString;", "setFull", "setIso2", "setIso3", "setContinent", "toString" };
-  static const J2ObjcClassInfo _ComTotspTravelbriefingModelName = { "Name", "com.totsp.travelbriefing.model", ptrTable, methods, fields, 7, 0x1, 12, 5, -1, -1, -1, -1, -1 };
-  return &_ComTotspTravelbriefingModelName;
+  static const J2ObjcClassInfo _TOTSPName = { "Name", "com.totsp.travelbriefing.model", ptrTable, methods, fields, 7, 0x1, 12, 5, -1, -1, -1, -1, -1 };
+  return &_TOTSPName;
 }
 
 @end
 
-void ComTotspTravelbriefingModelName_initWithNSString_withNSString_withNSString_withNSString_withNSString_(ComTotspTravelbriefingModelName *self, NSString *name, NSString *full, NSString *iso2, NSString *iso3, NSString *continent) {
+void TOTSPName_initWithNSString_withNSString_withNSString_withNSString_withNSString_(TOTSPName *self, NSString *name, NSString *full, NSString *iso2, NSString *iso3, NSString *continent) {
   NSObject_init(self);
   self->name_ = name;
   self->full_ = full;
@@ -117,12 +117,12 @@ void ComTotspTravelbriefingModelName_initWithNSString_withNSString_withNSString_
   self->continent_ = continent;
 }
 
-ComTotspTravelbriefingModelName *new_ComTotspTravelbriefingModelName_initWithNSString_withNSString_withNSString_withNSString_withNSString_(NSString *name, NSString *full, NSString *iso2, NSString *iso3, NSString *continent) {
-  J2OBJC_NEW_IMPL(ComTotspTravelbriefingModelName, initWithNSString_withNSString_withNSString_withNSString_withNSString_, name, full, iso2, iso3, continent)
+TOTSPName *new_TOTSPName_initWithNSString_withNSString_withNSString_withNSString_withNSString_(NSString *name, NSString *full, NSString *iso2, NSString *iso3, NSString *continent) {
+  J2OBJC_NEW_IMPL(TOTSPName, initWithNSString_withNSString_withNSString_withNSString_withNSString_, name, full, iso2, iso3, continent)
 }
 
-ComTotspTravelbriefingModelName *create_ComTotspTravelbriefingModelName_initWithNSString_withNSString_withNSString_withNSString_withNSString_(NSString *name, NSString *full, NSString *iso2, NSString *iso3, NSString *continent) {
-  J2OBJC_CREATE_IMPL(ComTotspTravelbriefingModelName, initWithNSString_withNSString_withNSString_withNSString_withNSString_, name, full, iso2, iso3, continent)
+TOTSPName *create_TOTSPName_initWithNSString_withNSString_withNSString_withNSString_withNSString_(NSString *name, NSString *full, NSString *iso2, NSString *iso3, NSString *continent) {
+  J2OBJC_CREATE_IMPL(TOTSPName, initWithNSString_withNSString_withNSString_withNSString_withNSString_, name, full, iso2, iso3, continent)
 }
 
-J2OBJC_CLASS_TYPE_LITERAL_SOURCE(ComTotspTravelbriefingModelName)
+J2OBJC_CLASS_TYPE_LITERAL_SOURCE(TOTSPName)

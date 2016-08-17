@@ -13,25 +13,25 @@
 #endif
 #undef RESTRICT_TravelBriefingServiceCache
 
-#if !defined (ComTotspTravelbriefingServiceTravelBriefingServiceCache_) && (INCLUDE_ALL_TravelBriefingServiceCache || defined(INCLUDE_ComTotspTravelbriefingServiceTravelBriefingServiceCache))
-#define ComTotspTravelbriefingServiceTravelBriefingServiceCache_
+#if !defined (TOTSPTravelBriefingServiceCache_) && (INCLUDE_ALL_TravelBriefingServiceCache || defined(INCLUDE_TOTSPTravelBriefingServiceCache))
+#define TOTSPTravelBriefingServiceCache_
 
 #define RESTRICT_TravelBriefingServiceInterface 1
-#define INCLUDE_ComTotspTravelbriefingServiceTravelBriefingServiceInterface 1
+#define INCLUDE_TOTSPTravelBriefingServiceInterface 1
 #include "TravelBriefingServiceInterface.h"
 
-@class ComTotspTravelbriefingModelCountry;
 @class RxObservable;
+@class TOTSPCountry;
 @protocol JavaUtilList;
 
-@interface ComTotspTravelbriefingServiceTravelBriefingServiceCache : NSObject < ComTotspTravelbriefingServiceTravelBriefingServiceInterface >
+@interface TOTSPTravelBriefingServiceCache : NSObject < TOTSPTravelBriefingServiceInterface >
 
 #pragma mark Public
 
 - (instancetype)init;
 
 + (void)cacheCountryWithNSString:(NSString *)name
-withComTotspTravelbriefingModelCountry:(ComTotspTravelbriefingModelCountry *)country;
+                withTOTSPCountry:(TOTSPCountry *)country;
 
 + (void)cacheCountryListWithJavaUtilList:(id<JavaUtilList>)countries;
 
@@ -41,19 +41,21 @@ withComTotspTravelbriefingModelCountry:(ComTotspTravelbriefingModelCountry *)cou
 
 @end
 
-J2OBJC_STATIC_INIT(ComTotspTravelbriefingServiceTravelBriefingServiceCache)
+J2OBJC_STATIC_INIT(TOTSPTravelBriefingServiceCache)
 
-FOUNDATION_EXPORT void ComTotspTravelbriefingServiceTravelBriefingServiceCache_init(ComTotspTravelbriefingServiceTravelBriefingServiceCache *self);
+FOUNDATION_EXPORT void TOTSPTravelBriefingServiceCache_init(TOTSPTravelBriefingServiceCache *self);
 
-FOUNDATION_EXPORT ComTotspTravelbriefingServiceTravelBriefingServiceCache *new_ComTotspTravelbriefingServiceTravelBriefingServiceCache_init() NS_RETURNS_RETAINED;
+FOUNDATION_EXPORT TOTSPTravelBriefingServiceCache *new_TOTSPTravelBriefingServiceCache_init() NS_RETURNS_RETAINED;
 
-FOUNDATION_EXPORT ComTotspTravelbriefingServiceTravelBriefingServiceCache *create_ComTotspTravelbriefingServiceTravelBriefingServiceCache_init();
+FOUNDATION_EXPORT TOTSPTravelBriefingServiceCache *create_TOTSPTravelBriefingServiceCache_init();
 
-FOUNDATION_EXPORT void ComTotspTravelbriefingServiceTravelBriefingServiceCache_cacheCountryWithNSString_withComTotspTravelbriefingModelCountry_(NSString *name, ComTotspTravelbriefingModelCountry *country);
+FOUNDATION_EXPORT void TOTSPTravelBriefingServiceCache_cacheCountryWithNSString_withTOTSPCountry_(NSString *name, TOTSPCountry *country);
 
-FOUNDATION_EXPORT void ComTotspTravelbriefingServiceTravelBriefingServiceCache_cacheCountryListWithJavaUtilList_(id<JavaUtilList> countries);
+FOUNDATION_EXPORT void TOTSPTravelBriefingServiceCache_cacheCountryListWithJavaUtilList_(id<JavaUtilList> countries);
 
-J2OBJC_TYPE_LITERAL_HEADER(ComTotspTravelbriefingServiceTravelBriefingServiceCache)
+J2OBJC_TYPE_LITERAL_HEADER(TOTSPTravelBriefingServiceCache)
+
+@compatibility_alias ComTotspTravelbriefingServiceTravelBriefingServiceCache TOTSPTravelBriefingServiceCache;
 
 #endif
 

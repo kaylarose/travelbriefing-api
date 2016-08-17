@@ -13,12 +13,12 @@
 #endif
 #undef RESTRICT_Electricity
 
-#if !defined (ComTotspTravelbriefingModelElectricity_) && (INCLUDE_ALL_Electricity || defined(INCLUDE_ComTotspTravelbriefingModelElectricity))
-#define ComTotspTravelbriefingModelElectricity_
+#if !defined (TOTSPElectricity_) && (INCLUDE_ALL_Electricity || defined(INCLUDE_TOTSPElectricity))
+#define TOTSPElectricity_
 
 @class IOSObjectArray;
 
-@interface ComTotspTravelbriefingModelElectricity : NSObject
+@interface TOTSPElectricity : NSObject
 
 #pragma mark Public
 
@@ -42,15 +42,17 @@
 
 @end
 
-J2OBJC_EMPTY_STATIC_INIT(ComTotspTravelbriefingModelElectricity)
+J2OBJC_EMPTY_STATIC_INIT(TOTSPElectricity)
 
-FOUNDATION_EXPORT void ComTotspTravelbriefingModelElectricity_initWithNSString_withNSString_withNSStringArray_(ComTotspTravelbriefingModelElectricity *self, NSString *voltage, NSString *frequency, IOSObjectArray *plugs);
+FOUNDATION_EXPORT void TOTSPElectricity_initWithNSString_withNSString_withNSStringArray_(TOTSPElectricity *self, NSString *voltage, NSString *frequency, IOSObjectArray *plugs);
 
-FOUNDATION_EXPORT ComTotspTravelbriefingModelElectricity *new_ComTotspTravelbriefingModelElectricity_initWithNSString_withNSString_withNSStringArray_(NSString *voltage, NSString *frequency, IOSObjectArray *plugs) NS_RETURNS_RETAINED;
+FOUNDATION_EXPORT TOTSPElectricity *new_TOTSPElectricity_initWithNSString_withNSString_withNSStringArray_(NSString *voltage, NSString *frequency, IOSObjectArray *plugs) NS_RETURNS_RETAINED;
 
-FOUNDATION_EXPORT ComTotspTravelbriefingModelElectricity *create_ComTotspTravelbriefingModelElectricity_initWithNSString_withNSString_withNSStringArray_(NSString *voltage, NSString *frequency, IOSObjectArray *plugs);
+FOUNDATION_EXPORT TOTSPElectricity *create_TOTSPElectricity_initWithNSString_withNSString_withNSStringArray_(NSString *voltage, NSString *frequency, IOSObjectArray *plugs);
 
-J2OBJC_TYPE_LITERAL_HEADER(ComTotspTravelbriefingModelElectricity)
+J2OBJC_TYPE_LITERAL_HEADER(TOTSPElectricity)
+
+@compatibility_alias ComTotspTravelbriefingModelElectricity TOTSPElectricity;
 
 #endif
 

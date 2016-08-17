@@ -13,10 +13,10 @@
 #endif
 #undef RESTRICT_Telephone
 
-#if !defined (ComTotspTravelbriefingModelTelephone_) && (INCLUDE_ALL_Telephone || defined(INCLUDE_ComTotspTravelbriefingModelTelephone))
-#define ComTotspTravelbriefingModelTelephone_
+#if !defined (TOTSPTelephone_) && (INCLUDE_ALL_Telephone || defined(INCLUDE_TOTSPTelephone))
+#define TOTSPTelephone_
 
-@interface ComTotspTravelbriefingModelTelephone : NSObject
+@interface TOTSPTelephone : NSObject
 
 #pragma mark Public
 
@@ -45,15 +45,17 @@
 
 @end
 
-J2OBJC_EMPTY_STATIC_INIT(ComTotspTravelbriefingModelTelephone)
+J2OBJC_EMPTY_STATIC_INIT(TOTSPTelephone)
 
-FOUNDATION_EXPORT void ComTotspTravelbriefingModelTelephone_initWithNSString_withNSString_withNSString_withNSString_(ComTotspTravelbriefingModelTelephone *self, NSString *callingCode, NSString *police, NSString *ambulance, NSString *fire);
+FOUNDATION_EXPORT void TOTSPTelephone_initWithNSString_withNSString_withNSString_withNSString_(TOTSPTelephone *self, NSString *callingCode, NSString *police, NSString *ambulance, NSString *fire);
 
-FOUNDATION_EXPORT ComTotspTravelbriefingModelTelephone *new_ComTotspTravelbriefingModelTelephone_initWithNSString_withNSString_withNSString_withNSString_(NSString *callingCode, NSString *police, NSString *ambulance, NSString *fire) NS_RETURNS_RETAINED;
+FOUNDATION_EXPORT TOTSPTelephone *new_TOTSPTelephone_initWithNSString_withNSString_withNSString_withNSString_(NSString *callingCode, NSString *police, NSString *ambulance, NSString *fire) NS_RETURNS_RETAINED;
 
-FOUNDATION_EXPORT ComTotspTravelbriefingModelTelephone *create_ComTotspTravelbriefingModelTelephone_initWithNSString_withNSString_withNSString_withNSString_(NSString *callingCode, NSString *police, NSString *ambulance, NSString *fire);
+FOUNDATION_EXPORT TOTSPTelephone *create_TOTSPTelephone_initWithNSString_withNSString_withNSString_withNSString_(NSString *callingCode, NSString *police, NSString *ambulance, NSString *fire);
 
-J2OBJC_TYPE_LITERAL_HEADER(ComTotspTravelbriefingModelTelephone)
+J2OBJC_TYPE_LITERAL_HEADER(TOTSPTelephone)
+
+@compatibility_alias ComTotspTravelbriefingModelTelephone TOTSPTelephone;
 
 #endif
 

@@ -13,12 +13,12 @@
 #endif
 #undef RESTRICT_TravelBriefingServiceInterface
 
-#if !defined (ComTotspTravelbriefingServiceTravelBriefingServiceInterface_) && (INCLUDE_ALL_TravelBriefingServiceInterface || defined(INCLUDE_ComTotspTravelbriefingServiceTravelBriefingServiceInterface))
-#define ComTotspTravelbriefingServiceTravelBriefingServiceInterface_
+#if !defined (TOTSPTravelBriefingServiceInterface_) && (INCLUDE_ALL_TravelBriefingServiceInterface || defined(INCLUDE_TOTSPTravelBriefingServiceInterface))
+#define TOTSPTravelBriefingServiceInterface_
 
 @class RxObservable;
 
-@protocol ComTotspTravelbriefingServiceTravelBriefingServiceInterface < JavaObject >
+@protocol TOTSPTravelBriefingServiceInterface < JavaObject >
 
 - (RxObservable *)getCountries;
 
@@ -26,9 +26,11 @@
 
 @end
 
-J2OBJC_EMPTY_STATIC_INIT(ComTotspTravelbriefingServiceTravelBriefingServiceInterface)
+J2OBJC_EMPTY_STATIC_INIT(TOTSPTravelBriefingServiceInterface)
 
-J2OBJC_TYPE_LITERAL_HEADER(ComTotspTravelbriefingServiceTravelBriefingServiceInterface)
+J2OBJC_TYPE_LITERAL_HEADER(TOTSPTravelBriefingServiceInterface)
+
+#define ComTotspTravelbriefingServiceTravelBriefingServiceInterface TOTSPTravelBriefingServiceInterface
 
 #endif
 

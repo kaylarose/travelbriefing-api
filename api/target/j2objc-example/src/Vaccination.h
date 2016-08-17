@@ -13,10 +13,10 @@
 #endif
 #undef RESTRICT_Vaccination
 
-#if !defined (ComTotspTravelbriefingModelVaccination_) && (INCLUDE_ALL_Vaccination || defined(INCLUDE_ComTotspTravelbriefingModelVaccination))
-#define ComTotspTravelbriefingModelVaccination_
+#if !defined (TOTSPVaccination_) && (INCLUDE_ALL_Vaccination || defined(INCLUDE_TOTSPVaccination))
+#define TOTSPVaccination_
 
-@interface ComTotspTravelbriefingModelVaccination : NSObject
+@interface TOTSPVaccination : NSObject
 
 #pragma mark Public
 
@@ -35,15 +35,17 @@
 
 @end
 
-J2OBJC_EMPTY_STATIC_INIT(ComTotspTravelbriefingModelVaccination)
+J2OBJC_EMPTY_STATIC_INIT(TOTSPVaccination)
 
-FOUNDATION_EXPORT void ComTotspTravelbriefingModelVaccination_initWithNSString_withNSString_(ComTotspTravelbriefingModelVaccination *self, NSString *name, NSString *message);
+FOUNDATION_EXPORT void TOTSPVaccination_initWithNSString_withNSString_(TOTSPVaccination *self, NSString *name, NSString *message);
 
-FOUNDATION_EXPORT ComTotspTravelbriefingModelVaccination *new_ComTotspTravelbriefingModelVaccination_initWithNSString_withNSString_(NSString *name, NSString *message) NS_RETURNS_RETAINED;
+FOUNDATION_EXPORT TOTSPVaccination *new_TOTSPVaccination_initWithNSString_withNSString_(NSString *name, NSString *message) NS_RETURNS_RETAINED;
 
-FOUNDATION_EXPORT ComTotspTravelbriefingModelVaccination *create_ComTotspTravelbriefingModelVaccination_initWithNSString_withNSString_(NSString *name, NSString *message);
+FOUNDATION_EXPORT TOTSPVaccination *create_TOTSPVaccination_initWithNSString_withNSString_(NSString *name, NSString *message);
 
-J2OBJC_TYPE_LITERAL_HEADER(ComTotspTravelbriefingModelVaccination)
+J2OBJC_TYPE_LITERAL_HEADER(TOTSPVaccination)
+
+@compatibility_alias ComTotspTravelbriefingModelVaccination TOTSPVaccination;
 
 #endif
 

@@ -11,7 +11,7 @@
 #include "com/google/common/base/MoreObjects.h"
 #include "java/lang/annotation/Annotation.h"
 
-@interface ComTotspTravelbriefingModelWater () {
+@interface TOTSPWater () {
  @public
   NSString *shrt_;
   NSString *full_;
@@ -19,16 +19,16 @@
 
 @end
 
-J2OBJC_FIELD_SETTER(ComTotspTravelbriefingModelWater, shrt_, NSString *)
-J2OBJC_FIELD_SETTER(ComTotspTravelbriefingModelWater, full_, NSString *)
+J2OBJC_FIELD_SETTER(TOTSPWater, shrt_, NSString *)
+J2OBJC_FIELD_SETTER(TOTSPWater, full_, NSString *)
 
-__attribute__((unused)) static IOSObjectArray *ComTotspTravelbriefingModelWater__Annotations$0();
+__attribute__((unused)) static IOSObjectArray *TOTSPWater__Annotations$0();
 
-@implementation ComTotspTravelbriefingModelWater
+@implementation TOTSPWater
 
 - (instancetype)initWithNSString:(NSString *)shrt
                     withNSString:(NSString *)full {
-  ComTotspTravelbriefingModelWater_initWithNSString_withNSString_(self, shrt, full);
+  TOTSPWater_initWithNSString_withNSString_(self, shrt, full);
   return self;
 }
 
@@ -65,29 +65,29 @@ __attribute__((unused)) static IOSObjectArray *ComTotspTravelbriefingModelWater_
     { "shrt_", "LNSString;", .constantValue.asLong = 0, 0x2, -1, -1, -1, 5 },
     { "full_", "LNSString;", .constantValue.asLong = 0, 0x2, -1, -1, -1, -1 },
   };
-  static const void *ptrTable[] = { "LNSString;LNSString;", "setShrt", "LNSString;", "setFull", "toString", (void *)&ComTotspTravelbriefingModelWater__Annotations$0 };
-  static const J2ObjcClassInfo _ComTotspTravelbriefingModelWater = { "Water", "com.totsp.travelbriefing.model", ptrTable, methods, fields, 7, 0x1, 6, 2, -1, -1, -1, -1, -1 };
-  return &_ComTotspTravelbriefingModelWater;
+  static const void *ptrTable[] = { "LNSString;LNSString;", "setShrt", "LNSString;", "setFull", "toString", (void *)&TOTSPWater__Annotations$0 };
+  static const J2ObjcClassInfo _TOTSPWater = { "Water", "com.totsp.travelbriefing.model", ptrTable, methods, fields, 7, 0x1, 6, 2, -1, -1, -1, -1, -1 };
+  return &_TOTSPWater;
 }
 
 @end
 
-void ComTotspTravelbriefingModelWater_initWithNSString_withNSString_(ComTotspTravelbriefingModelWater *self, NSString *shrt, NSString *full) {
+void TOTSPWater_initWithNSString_withNSString_(TOTSPWater *self, NSString *shrt, NSString *full) {
   NSObject_init(self);
   self->full_ = full;
   self->shrt_ = shrt;
 }
 
-ComTotspTravelbriefingModelWater *new_ComTotspTravelbriefingModelWater_initWithNSString_withNSString_(NSString *shrt, NSString *full) {
-  J2OBJC_NEW_IMPL(ComTotspTravelbriefingModelWater, initWithNSString_withNSString_, shrt, full)
+TOTSPWater *new_TOTSPWater_initWithNSString_withNSString_(NSString *shrt, NSString *full) {
+  J2OBJC_NEW_IMPL(TOTSPWater, initWithNSString_withNSString_, shrt, full)
 }
 
-ComTotspTravelbriefingModelWater *create_ComTotspTravelbriefingModelWater_initWithNSString_withNSString_(NSString *shrt, NSString *full) {
-  J2OBJC_CREATE_IMPL(ComTotspTravelbriefingModelWater, initWithNSString_withNSString_, shrt, full)
+TOTSPWater *create_TOTSPWater_initWithNSString_withNSString_(NSString *shrt, NSString *full) {
+  J2OBJC_CREATE_IMPL(TOTSPWater, initWithNSString_withNSString_, shrt, full)
 }
 
-IOSObjectArray *ComTotspTravelbriefingModelWater__Annotations$0() {
+IOSObjectArray *TOTSPWater__Annotations$0() {
   return [IOSObjectArray newArrayWithObjects:(id[]){ create_ComGoogleGsonAnnotationsSerializedName([IOSObjectArray newArrayWithObjects:(id[]){  } count:0 type:NSObject_class_()], @"short") } count:1 type:JavaLangAnnotationAnnotation_class_()];
 }
 
-J2OBJC_CLASS_TYPE_LITERAL_SOURCE(ComTotspTravelbriefingModelWater)
+J2OBJC_CLASS_TYPE_LITERAL_SOURCE(TOTSPWater)

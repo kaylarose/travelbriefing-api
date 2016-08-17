@@ -13,16 +13,16 @@
 #endif
 #undef RESTRICT_TravelBriefingService
 
-#if !defined (ComTotspTravelbriefingServiceTravelBriefingService_) && (INCLUDE_ALL_TravelBriefingService || defined(INCLUDE_ComTotspTravelbriefingServiceTravelBriefingService))
-#define ComTotspTravelbriefingServiceTravelBriefingService_
+#if !defined (TOTSPTravelBriefingService_) && (INCLUDE_ALL_TravelBriefingService || defined(INCLUDE_TOTSPTravelBriefingService))
+#define TOTSPTravelBriefingService_
 
 #define RESTRICT_TravelBriefingServiceInterface 1
-#define INCLUDE_ComTotspTravelbriefingServiceTravelBriefingServiceInterface 1
+#define INCLUDE_TOTSPTravelBriefingServiceInterface 1
 #include "TravelBriefingServiceInterface.h"
 
 @class RxObservable;
 
-@interface ComTotspTravelbriefingServiceTravelBriefingService : NSObject < ComTotspTravelbriefingServiceTravelBriefingServiceInterface >
+@interface TOTSPTravelBriefingService : NSObject < TOTSPTravelBriefingServiceInterface >
 
 #pragma mark Public
 
@@ -34,15 +34,17 @@
 
 @end
 
-J2OBJC_EMPTY_STATIC_INIT(ComTotspTravelbriefingServiceTravelBriefingService)
+J2OBJC_EMPTY_STATIC_INIT(TOTSPTravelBriefingService)
 
-FOUNDATION_EXPORT void ComTotspTravelbriefingServiceTravelBriefingService_init(ComTotspTravelbriefingServiceTravelBriefingService *self);
+FOUNDATION_EXPORT void TOTSPTravelBriefingService_init(TOTSPTravelBriefingService *self);
 
-FOUNDATION_EXPORT ComTotspTravelbriefingServiceTravelBriefingService *new_ComTotspTravelbriefingServiceTravelBriefingService_init() NS_RETURNS_RETAINED;
+FOUNDATION_EXPORT TOTSPTravelBriefingService *new_TOTSPTravelBriefingService_init() NS_RETURNS_RETAINED;
 
-FOUNDATION_EXPORT ComTotspTravelbriefingServiceTravelBriefingService *create_ComTotspTravelbriefingServiceTravelBriefingService_init();
+FOUNDATION_EXPORT TOTSPTravelBriefingService *create_TOTSPTravelBriefingService_init();
 
-J2OBJC_TYPE_LITERAL_HEADER(ComTotspTravelbriefingServiceTravelBriefingService)
+J2OBJC_TYPE_LITERAL_HEADER(TOTSPTravelBriefingService)
+
+@compatibility_alias ComTotspTravelbriefingServiceTravelBriefingService TOTSPTravelBriefingService;
 
 #endif
 

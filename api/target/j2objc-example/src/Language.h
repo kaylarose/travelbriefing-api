@@ -13,10 +13,10 @@
 #endif
 #undef RESTRICT_Language
 
-#if !defined (ComTotspTravelbriefingModelLanguage_) && (INCLUDE_ALL_Language || defined(INCLUDE_ComTotspTravelbriefingModelLanguage))
-#define ComTotspTravelbriefingModelLanguage_
+#if !defined (TOTSPLanguage_) && (INCLUDE_ALL_Language || defined(INCLUDE_TOTSPLanguage))
+#define TOTSPLanguage_
 
-@interface ComTotspTravelbriefingModelLanguage : NSObject
+@interface TOTSPLanguage : NSObject
 
 #pragma mark Public
 
@@ -35,15 +35,17 @@
 
 @end
 
-J2OBJC_EMPTY_STATIC_INIT(ComTotspTravelbriefingModelLanguage)
+J2OBJC_EMPTY_STATIC_INIT(TOTSPLanguage)
 
-FOUNDATION_EXPORT void ComTotspTravelbriefingModelLanguage_initWithNSString_withNSString_(ComTotspTravelbriefingModelLanguage *self, NSString *language, NSString *official);
+FOUNDATION_EXPORT void TOTSPLanguage_initWithNSString_withNSString_(TOTSPLanguage *self, NSString *language, NSString *official);
 
-FOUNDATION_EXPORT ComTotspTravelbriefingModelLanguage *new_ComTotspTravelbriefingModelLanguage_initWithNSString_withNSString_(NSString *language, NSString *official) NS_RETURNS_RETAINED;
+FOUNDATION_EXPORT TOTSPLanguage *new_TOTSPLanguage_initWithNSString_withNSString_(NSString *language, NSString *official) NS_RETURNS_RETAINED;
 
-FOUNDATION_EXPORT ComTotspTravelbriefingModelLanguage *create_ComTotspTravelbriefingModelLanguage_initWithNSString_withNSString_(NSString *language, NSString *official);
+FOUNDATION_EXPORT TOTSPLanguage *create_TOTSPLanguage_initWithNSString_withNSString_(NSString *language, NSString *official);
 
-J2OBJC_TYPE_LITERAL_HEADER(ComTotspTravelbriefingModelLanguage)
+J2OBJC_TYPE_LITERAL_HEADER(TOTSPLanguage)
+
+@compatibility_alias ComTotspTravelbriefingModelLanguage TOTSPLanguage;
 
 #endif
 

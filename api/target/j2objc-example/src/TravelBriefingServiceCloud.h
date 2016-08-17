@@ -13,16 +13,16 @@
 #endif
 #undef RESTRICT_TravelBriefingServiceCloud
 
-#if !defined (ComTotspTravelbriefingServiceTravelBriefingServiceCloud_) && (INCLUDE_ALL_TravelBriefingServiceCloud || defined(INCLUDE_ComTotspTravelbriefingServiceTravelBriefingServiceCloud))
-#define ComTotspTravelbriefingServiceTravelBriefingServiceCloud_
+#if !defined (TOTSPTravelBriefingServiceCloud_) && (INCLUDE_ALL_TravelBriefingServiceCloud || defined(INCLUDE_TOTSPTravelBriefingServiceCloud))
+#define TOTSPTravelBriefingServiceCloud_
 
 #define RESTRICT_TravelBriefingServiceInterface 1
-#define INCLUDE_ComTotspTravelbriefingServiceTravelBriefingServiceInterface 1
+#define INCLUDE_TOTSPTravelBriefingServiceInterface 1
 #include "TravelBriefingServiceInterface.h"
 
 @class RxObservable;
 
-@interface ComTotspTravelbriefingServiceTravelBriefingServiceCloud : NSObject < ComTotspTravelbriefingServiceTravelBriefingServiceInterface >
+@interface TOTSPTravelBriefingServiceCloud : NSObject < TOTSPTravelBriefingServiceInterface >
 
 #pragma mark Public
 
@@ -34,20 +34,22 @@
 
 @end
 
-J2OBJC_STATIC_INIT(ComTotspTravelbriefingServiceTravelBriefingServiceCloud)
+J2OBJC_STATIC_INIT(TOTSPTravelBriefingServiceCloud)
 
-inline NSString *ComTotspTravelbriefingServiceTravelBriefingServiceCloud_get_HOST();
+inline NSString *TOTSPTravelBriefingServiceCloud_get_HOST();
 /*! INTERNAL ONLY - Use accessor function from above. */
-FOUNDATION_EXPORT NSString *ComTotspTravelbriefingServiceTravelBriefingServiceCloud_HOST;
-J2OBJC_STATIC_FIELD_OBJ_FINAL(ComTotspTravelbriefingServiceTravelBriefingServiceCloud, HOST, NSString *)
+FOUNDATION_EXPORT NSString *TOTSPTravelBriefingServiceCloud_HOST;
+J2OBJC_STATIC_FIELD_OBJ_FINAL(TOTSPTravelBriefingServiceCloud, HOST, NSString *)
 
-FOUNDATION_EXPORT void ComTotspTravelbriefingServiceTravelBriefingServiceCloud_init(ComTotspTravelbriefingServiceTravelBriefingServiceCloud *self);
+FOUNDATION_EXPORT void TOTSPTravelBriefingServiceCloud_init(TOTSPTravelBriefingServiceCloud *self);
 
-FOUNDATION_EXPORT ComTotspTravelbriefingServiceTravelBriefingServiceCloud *new_ComTotspTravelbriefingServiceTravelBriefingServiceCloud_init() NS_RETURNS_RETAINED;
+FOUNDATION_EXPORT TOTSPTravelBriefingServiceCloud *new_TOTSPTravelBriefingServiceCloud_init() NS_RETURNS_RETAINED;
 
-FOUNDATION_EXPORT ComTotspTravelbriefingServiceTravelBriefingServiceCloud *create_ComTotspTravelbriefingServiceTravelBriefingServiceCloud_init();
+FOUNDATION_EXPORT TOTSPTravelBriefingServiceCloud *create_TOTSPTravelBriefingServiceCloud_init();
 
-J2OBJC_TYPE_LITERAL_HEADER(ComTotspTravelbriefingServiceTravelBriefingServiceCloud)
+J2OBJC_TYPE_LITERAL_HEADER(TOTSPTravelBriefingServiceCloud)
+
+@compatibility_alias ComTotspTravelbriefingServiceTravelBriefingServiceCloud TOTSPTravelBriefingServiceCloud;
 
 #endif
 

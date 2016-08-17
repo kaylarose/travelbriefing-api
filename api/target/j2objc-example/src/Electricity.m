@@ -8,7 +8,7 @@
 #include "J2ObjC_source.h"
 #include "com/google/common/base/MoreObjects.h"
 
-@interface ComTotspTravelbriefingModelElectricity () {
+@interface TOTSPElectricity () {
  @public
   NSString *voltage_;
   NSString *frequency_;
@@ -17,16 +17,16 @@
 
 @end
 
-J2OBJC_FIELD_SETTER(ComTotspTravelbriefingModelElectricity, voltage_, NSString *)
-J2OBJC_FIELD_SETTER(ComTotspTravelbriefingModelElectricity, frequency_, NSString *)
-J2OBJC_FIELD_SETTER(ComTotspTravelbriefingModelElectricity, plugs_, IOSObjectArray *)
+J2OBJC_FIELD_SETTER(TOTSPElectricity, voltage_, NSString *)
+J2OBJC_FIELD_SETTER(TOTSPElectricity, frequency_, NSString *)
+J2OBJC_FIELD_SETTER(TOTSPElectricity, plugs_, IOSObjectArray *)
 
-@implementation ComTotspTravelbriefingModelElectricity
+@implementation TOTSPElectricity
 
 - (instancetype)initWithNSString:(NSString *)voltage
                     withNSString:(NSString *)frequency
                withNSStringArray:(IOSObjectArray *)plugs {
-  ComTotspTravelbriefingModelElectricity_initWithNSString_withNSString_withNSStringArray_(self, voltage, frequency, plugs);
+  TOTSPElectricity_initWithNSString_withNSString_withNSStringArray_(self, voltage, frequency, plugs);
   return self;
 }
 
@@ -75,25 +75,25 @@ J2OBJC_FIELD_SETTER(ComTotspTravelbriefingModelElectricity, plugs_, IOSObjectArr
     { "plugs_", "[LNSString;", .constantValue.asLong = 0, 0x2, -1, -1, -1, -1 },
   };
   static const void *ptrTable[] = { "LNSString;LNSString;[LNSString;", "setVoltage", "LNSString;", "setFrequency", "setPlugs", "[LNSString;", "toString" };
-  static const J2ObjcClassInfo _ComTotspTravelbriefingModelElectricity = { "Electricity", "com.totsp.travelbriefing.model", ptrTable, methods, fields, 7, 0x1, 8, 3, -1, -1, -1, -1, -1 };
-  return &_ComTotspTravelbriefingModelElectricity;
+  static const J2ObjcClassInfo _TOTSPElectricity = { "Electricity", "com.totsp.travelbriefing.model", ptrTable, methods, fields, 7, 0x1, 8, 3, -1, -1, -1, -1, -1 };
+  return &_TOTSPElectricity;
 }
 
 @end
 
-void ComTotspTravelbriefingModelElectricity_initWithNSString_withNSString_withNSStringArray_(ComTotspTravelbriefingModelElectricity *self, NSString *voltage, NSString *frequency, IOSObjectArray *plugs) {
+void TOTSPElectricity_initWithNSString_withNSString_withNSStringArray_(TOTSPElectricity *self, NSString *voltage, NSString *frequency, IOSObjectArray *plugs) {
   NSObject_init(self);
   self->voltage_ = voltage;
   self->frequency_ = frequency;
   self->plugs_ = plugs;
 }
 
-ComTotspTravelbriefingModelElectricity *new_ComTotspTravelbriefingModelElectricity_initWithNSString_withNSString_withNSStringArray_(NSString *voltage, NSString *frequency, IOSObjectArray *plugs) {
-  J2OBJC_NEW_IMPL(ComTotspTravelbriefingModelElectricity, initWithNSString_withNSString_withNSStringArray_, voltage, frequency, plugs)
+TOTSPElectricity *new_TOTSPElectricity_initWithNSString_withNSString_withNSStringArray_(NSString *voltage, NSString *frequency, IOSObjectArray *plugs) {
+  J2OBJC_NEW_IMPL(TOTSPElectricity, initWithNSString_withNSString_withNSStringArray_, voltage, frequency, plugs)
 }
 
-ComTotspTravelbriefingModelElectricity *create_ComTotspTravelbriefingModelElectricity_initWithNSString_withNSString_withNSStringArray_(NSString *voltage, NSString *frequency, IOSObjectArray *plugs) {
-  J2OBJC_CREATE_IMPL(ComTotspTravelbriefingModelElectricity, initWithNSString_withNSString_withNSStringArray_, voltage, frequency, plugs)
+TOTSPElectricity *create_TOTSPElectricity_initWithNSString_withNSString_withNSStringArray_(NSString *voltage, NSString *frequency, IOSObjectArray *plugs) {
+  J2OBJC_CREATE_IMPL(TOTSPElectricity, initWithNSString_withNSString_withNSStringArray_, voltage, frequency, plugs)
 }
 
-J2OBJC_CLASS_TYPE_LITERAL_SOURCE(ComTotspTravelbriefingModelElectricity)
+J2OBJC_CLASS_TYPE_LITERAL_SOURCE(TOTSPElectricity)

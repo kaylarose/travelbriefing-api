@@ -7,7 +7,7 @@
 #include "Language.h"
 #include "com/google/common/base/MoreObjects.h"
 
-@interface ComTotspTravelbriefingModelLanguage () {
+@interface TOTSPLanguage () {
  @public
   NSString *language_;
   NSString *official_;
@@ -15,14 +15,14 @@
 
 @end
 
-J2OBJC_FIELD_SETTER(ComTotspTravelbriefingModelLanguage, language_, NSString *)
-J2OBJC_FIELD_SETTER(ComTotspTravelbriefingModelLanguage, official_, NSString *)
+J2OBJC_FIELD_SETTER(TOTSPLanguage, language_, NSString *)
+J2OBJC_FIELD_SETTER(TOTSPLanguage, official_, NSString *)
 
-@implementation ComTotspTravelbriefingModelLanguage
+@implementation TOTSPLanguage
 
 - (instancetype)initWithNSString:(NSString *)language
                     withNSString:(NSString *)official {
-  ComTotspTravelbriefingModelLanguage_initWithNSString_withNSString_(self, language, official);
+  TOTSPLanguage_initWithNSString_withNSString_(self, language, official);
   return self;
 }
 
@@ -60,24 +60,24 @@ J2OBJC_FIELD_SETTER(ComTotspTravelbriefingModelLanguage, official_, NSString *)
     { "official_", "LNSString;", .constantValue.asLong = 0, 0x2, -1, -1, -1, -1 },
   };
   static const void *ptrTable[] = { "LNSString;LNSString;", "setLanguage", "LNSString;", "setOfficial", "toString" };
-  static const J2ObjcClassInfo _ComTotspTravelbriefingModelLanguage = { "Language", "com.totsp.travelbriefing.model", ptrTable, methods, fields, 7, 0x1, 6, 2, -1, -1, -1, -1, -1 };
-  return &_ComTotspTravelbriefingModelLanguage;
+  static const J2ObjcClassInfo _TOTSPLanguage = { "Language", "com.totsp.travelbriefing.model", ptrTable, methods, fields, 7, 0x1, 6, 2, -1, -1, -1, -1, -1 };
+  return &_TOTSPLanguage;
 }
 
 @end
 
-void ComTotspTravelbriefingModelLanguage_initWithNSString_withNSString_(ComTotspTravelbriefingModelLanguage *self, NSString *language, NSString *official) {
+void TOTSPLanguage_initWithNSString_withNSString_(TOTSPLanguage *self, NSString *language, NSString *official) {
   NSObject_init(self);
   self->language_ = language;
   self->official_ = official;
 }
 
-ComTotspTravelbriefingModelLanguage *new_ComTotspTravelbriefingModelLanguage_initWithNSString_withNSString_(NSString *language, NSString *official) {
-  J2OBJC_NEW_IMPL(ComTotspTravelbriefingModelLanguage, initWithNSString_withNSString_, language, official)
+TOTSPLanguage *new_TOTSPLanguage_initWithNSString_withNSString_(NSString *language, NSString *official) {
+  J2OBJC_NEW_IMPL(TOTSPLanguage, initWithNSString_withNSString_, language, official)
 }
 
-ComTotspTravelbriefingModelLanguage *create_ComTotspTravelbriefingModelLanguage_initWithNSString_withNSString_(NSString *language, NSString *official) {
-  J2OBJC_CREATE_IMPL(ComTotspTravelbriefingModelLanguage, initWithNSString_withNSString_, language, official)
+TOTSPLanguage *create_TOTSPLanguage_initWithNSString_withNSString_(NSString *language, NSString *official) {
+  J2OBJC_CREATE_IMPL(TOTSPLanguage, initWithNSString_withNSString_, language, official)
 }
 
-J2OBJC_CLASS_TYPE_LITERAL_SOURCE(ComTotspTravelbriefingModelLanguage)
+J2OBJC_CLASS_TYPE_LITERAL_SOURCE(TOTSPLanguage)
