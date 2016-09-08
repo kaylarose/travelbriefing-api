@@ -3,8 +3,8 @@ package com.totsp.travelbriefing.service;
 
 import com.totsp.travelbriefing.model.Country;
 import com.totsp.travelbriefing.model.CountryListItem;
-import retrofit2.http.GET;
-import retrofit2.http.Path;
+//import retrofit2.http.GET;
+//import retrofit2.http.Path;
 import rx.Observable;
 import java.util.List;
 
@@ -15,10 +15,10 @@ import java.util.List;
  */
 public interface TravelBriefingServiceInterface {
 
-    @GET("/countries.json")
+    //@GET("/countries.json")
     Observable<List<CountryListItem>> getCountries();
 
-    @GET("{country}?format=json")
-    Observable<Country> getCountry(@Path("country") final String countryName);
+    //@GET("{country}?format=json")
+    Observable<Country> getCountry(final String countryName);
 
 }
