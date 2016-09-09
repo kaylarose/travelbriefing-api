@@ -18,7 +18,8 @@ package okhttp3.internal.tls;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 import java.security.PublicKey;
-import java.security.cert.TrustAnchor;
+// SDP Patch: Not supported as part of J2ObjC Security Subset
+//import java.security.cert.TrustAnchor;
 import java.security.cert.X509Certificate;
 import java.util.ArrayList;
 import java.util.LinkedHashMap;
@@ -32,16 +33,17 @@ public abstract class TrustRootIndex {
   abstract X509Certificate findByIssuerAndSignature(X509Certificate cert);
 
   public static TrustRootIndex get(X509TrustManager trustManager) {
-    try {
-      // From org.conscrypt.TrustManagerImpl, we want the method with this signature:
-      // private TrustAnchor findTrustAnchorByIssuerAndSignature(X509Certificate lastCert);
-      Method method = trustManager.getClass().getDeclaredMethod(
-          "findTrustAnchorByIssuerAndSignature", X509Certificate.class);
-      method.setAccessible(true);
-      return new AndroidTrustRootIndex(trustManager, method);
-    } catch (NoSuchMethodException e) {
+// SDP Patch: Trust Anchor supported as part of J2ObjC Security Subset
+//    try {
+//      // From org.conscrypt.TrustManagerImpl, we want the method with this signature:
+//      // private TrustAnchor findTrustAnchorByIssuerAndSignature(X509Certificate lastCert);
+//      Method method = trustManager.getClass().getDeclaredMethod(
+//          "findTrustAnchorByIssuerAndSignature", X509Certificate.class);
+//      method.setAccessible(true);
+//      return new AndroidTrustRootIndex(trustManager, method);
+//    } catch (NoSuchMethodException e) {
       return get(trustManager.getAcceptedIssuers());
-    }
+//    }
   }
 
   public static TrustRootIndex get(X509Certificate... caCerts) {
@@ -57,29 +59,30 @@ public abstract class TrustRootIndex {
    * class shouldn't be used in Android API 17 or better because those releases are better served by
    * {@link CertificateChainCleaner.AndroidCertificateChainCleaner}.
    */
-  static final class AndroidTrustRootIndex extends TrustRootIndex {
-    private final X509TrustManager trustManager;
-    private final Method findByIssuerAndSignatureMethod;
-
-    AndroidTrustRootIndex(X509TrustManager trustManager, Method findByIssuerAndSignatureMethod) {
-      this.findByIssuerAndSignatureMethod = findByIssuerAndSignatureMethod;
-      this.trustManager = trustManager;
-    }
-
-    @Override public X509Certificate findByIssuerAndSignature(X509Certificate cert) {
-      try {
-        TrustAnchor trustAnchor = (TrustAnchor) findByIssuerAndSignatureMethod.invoke(
-            trustManager, cert);
-        return trustAnchor != null
-            ? trustAnchor.getTrustedCert()
-            : null;
-      } catch (IllegalAccessException e) {
-        throw new AssertionError();
-      } catch (InvocationTargetException e) {
-        return null;
-      }
-    }
-  }
+// SDP Patch: Trust Anchor supported as part of J2ObjC Security Subset
+//  static final class AndroidTrustRootIndex extends TrustRootIndex {
+//    private final X509TrustManager trustManager;
+//    private final Method findByIssuerAndSignatureMethod;
+//
+//    AndroidTrustRootIndex(X509TrustManager trustManager, Method findByIssuerAndSignatureMethod) {
+//      this.findByIssuerAndSignatureMethod = findByIssuerAndSignatureMethod;
+//      this.trustManager = trustManager;
+//    }
+//
+//    @Override public X509Certificate findByIssuerAndSignature(X509Certificate cert) {
+//      try {
+//        TrustAnchor trustAnchor = (TrustAnchor) findByIssuerAndSignatureMethod.invoke(
+//            trustManager, cert);
+//        return trustAnchor != null
+//            ? trustAnchor.getTrustedCert()
+//            : null;
+//      } catch (IllegalAccessException e) {
+//        throw new AssertionError();
+//      } catch (InvocationTargetException e) {
+//        return null;
+//      }
+//    }
+//  }
 
   /** A simple index that of trusted root certificates that have been loaded into memory. */
   static final class BasicTrustRootIndex extends TrustRootIndex {
