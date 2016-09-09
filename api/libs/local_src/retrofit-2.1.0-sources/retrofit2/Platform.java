@@ -15,9 +15,10 @@
  */
 package retrofit2;
 
-import android.os.Build;
-import android.os.Handler;
-import android.os.Looper;
+// SDP Patch: android.os Subset supported as part of J2ObjC Android Subset
+//import android.os.Build;
+//import android.os.Handler;
+//import android.os.Looper;
 import java.lang.invoke.MethodHandles.Lookup;
 import java.lang.reflect.Constructor;
 import java.lang.reflect.InvocationTargetException;
@@ -33,13 +34,14 @@ class Platform {
   }
 
   private static Platform findPlatform() {
-    try {
-      Class.forName("android.os.Build");
-      if (Build.VERSION.SDK_INT != 0) {
-        return new Android();
-      }
-    } catch (ClassNotFoundException ignored) {
-    }
+// SDP Patch: android.os Subset supported as part of J2ObjC Android Subset
+//    try {
+//      Class.forName("android.os.Build");
+//      if (Build.VERSION.SDK_INT != 0) {
+//        return new Android();
+//      }
+//    } catch (ClassNotFoundException ignored) {
+//    }
     try {
       Class.forName("java.util.Optional");
       return new Java8();
@@ -75,9 +77,10 @@ class Platform {
 
   @IgnoreJRERequirement // Only classloaded and used on Java 8.
   static class Java8 extends Platform {
-    @Override boolean isDefaultMethod(Method method) {
-      return method.isDefault();
-    }
+// SDP Patch: method.isDefault() not currently supported by J2ObjC JRE Subset
+//    @Override boolean isDefaultMethod(Method method) {
+//      return method.isDefault();
+//    }
 
     @Override Object invokeDefaultMethod(Method method, Class<?> declaringClass, Object object,
         Object... args) throws Throwable {
@@ -92,23 +95,24 @@ class Platform {
     }
   }
 
-  static class Android extends Platform {
-    @Override public Executor defaultCallbackExecutor() {
-      return new MainThreadExecutor();
-    }
-
-    @Override CallAdapter.Factory defaultCallAdapterFactory(Executor callbackExecutor) {
-      return new ExecutorCallAdapterFactory(callbackExecutor);
-    }
-
-    static class MainThreadExecutor implements Executor {
-      private final Handler handler = new Handler(Looper.getMainLooper());
-
-      @Override public void execute(Runnable r) {
-        handler.post(r);
-      }
-    }
-  }
+// SDP Patch: android.os Subset supported as part of J2ObjC Android Subset
+//  static class Android extends Platform {
+//    @Override public Executor defaultCallbackExecutor() {
+//      return new MainThreadExecutor();
+//    }
+//
+//    @Override CallAdapter.Factory defaultCallAdapterFactory(Executor callbackExecutor) {
+//      return new ExecutorCallAdapterFactory(callbackExecutor);
+//    }
+//
+//    static class MainThreadExecutor implements Executor {
+//      private final Handler handler = new Handler(Looper.getMainLooper());
+//
+//      @Override public void execute(Runnable r) {
+//        handler.post(r);
+//      }
+//    }
+//  }
 
   static class IOS extends Platform {
     @Override public Executor defaultCallbackExecutor() {
