@@ -1,5 +1,6 @@
 SHELL=/bin/bash
 .SUFFIXES: .java .m
+.PHONY: translate_dependencies
 
 BUILD_DIR = build
 SRC_DIR = src
@@ -17,12 +18,15 @@ APP_OBJECTS = $(patsubst $(APP_DIR)/%.java, $(BUILD_DIR)/%.o, $(APP_JAVA_SRCS))
 APP_OBJC_SRCS = $(patsubst %.o,%.m,$(APP_OBJECTS))
 APP_STATIC_LIB = $(BUILD_DIR)/libs/totspCore.a
 
+
 DEP_LOCAL_LIBS_ROOT=./libs/local_src
 DEP_LOCAL_LIBS = $(shell find $(DEP_LOCAL_LIBS_ROOT) -name *-sources)
 DEP_LOCAL_LIBS_CLASSPATH = $(shell find $(DEP_LOCAL_LIBS_ROOT) -name *-sources | paste -s -d":" -)
 DEP_LOCAL_LIBS_RAW = $(shell find ./libs/raw_src_jars -name *-sources.jar)
 DEP_LOCAL_LIBS_RAW_CLASSPATH = $(shell find ./libs/raw_src_jars -name *-sources.jar | paste -s -d":" -)
 TRANSLATED_LIBS_ROOT=$(BUILD_DIR)/libs/translated/
+TRANSLATED_LIB_OBJECTS = $(patsubst $(APP_DIR)/%.java, $(BUILD_DIR)/%.o, $(APP_JAVA_SRCS))
+TRANSLATED_LIB_SRCS = $(patsubst %.o,%.m,$(APP_OBJECTS))
 
 DEP_JRE_EMUL=$(J2OBJC_PATH)/lib/jre_emul-src.jar
 DEP_GUAVA=$(J2OBJC_PATH)/lib/guava-19.0.jar
@@ -72,21 +76,26 @@ define prepare_dependency
     -sourcepath $(DEP_LOCAL_LIBS_CLASSPATH):$(DEP_J2OBJC_DIST_LIBS_CLASSPATH) \
     -classpath $(DEP_LOCAL_LIBS_CLASSPATH):$(DEP_J2OBJC_DIST_LIBS_CLASSPATH):. $(lib_srcs) && echo "Success" || rm -r $(translated_dir))
 	# Exit: $(TRANSLATE)
-$(BUILD_DIR)/%.m: $(BUILD_DIR)/%.o
-	$(J2OBJCC) -ObjC -I$(BUILD_DIR) -ljre_emul -lguava -ljavax_inject -ljsr305 -o $@
+	$(eval translated_object_files=$(patsubst $(lib_dir_src)/%.java, $(translated_dir)/%.o, $(lib_srcs)))
+	$(eval translated_source_files=$(patsubst %.o,%.m, $(translated_object_files)))
+$(translated_object_files): $(translated_source_files)
+  $(info $@)
+  $(info $?)
+	$(J2OBJCC) -ObjC -I$(BUILD_DIR) -combine -c -ljre_emul -lguava -ljavax_inject -ljsr305 -o $@
   $(debug_leave)
 endef
 
 default: translate_dependencies
+	@:
 
-translate:
+translate: $(APP_JAVA_SRCS)
 	# Translating Java to Objective C, with local dependency translation...
 	$(J2OBJC) -Werror -use-arc --swift-friendly --nullability --doc-comments --build-closure -d $(BUILD_DIR) \
 	-sourcepath $(APP_DIR):$(DEP_LOCAL_LIBS_CLASSPATH) -classpath $(DEP_LOCAL_LIBS_CLASSPATH):$(DEP_J2OBJC_DIST_LIBS_CLASSPATH):. \
 	$(APP_JAVA_SRCS)
 	#$(J2OBJCC) -c `find . -name *.m`
 
-translate_dependencies:
+translate_dependencies: $(DEP_LOCAL_LIBS_RAW)
     $(info $(DEP_LOCAL_LIBS_RAW))
     $(foreach lib_jar,$(DEP_LOCAL_LIBS_RAW),$(info $(lib_jar)))
     $(foreach lib_jar,$(DEP_LOCAL_LIBS_RAW),$(eval$(call prepare_dependency,$(lib_jar))))
@@ -94,29 +103,11 @@ translate_dependencies:
 clean:
 	@rm -rf $(BUILD_DIR)
 
-dependencies:
-	#@mkdir -p $(BUILD_DIR)
-	#@mkdir build_output
-	#@unzip -d build_output "libs/*.jar"
-	#@cd build_output
-	#@cd libs
-	#$(DEP_CLASSPATH)
-	#@$(J2OBJC) -use-arc --no-package-directories --verbose -d $(BUILD_DIR)/deps `find . -name *-sources.jar | sed 's/,$/\n/'`
-	#$(J2OBJCC) -c `find . -name *.m`
-	#@libtool -o dependencies.a *.o
-	#@cd libssrc
-	#$(DEP_SRCPATH)
-	#$(J2OBJC) -use-arc --swift-friendly --no-package-directories --verbose --nullability --doc-comments --build-closure -d $(BUILD_DIR)/deps \
-	#-sourcepath $(DEP_CLASSPATH):. -classpath $(DEP_LOCAL_LIBS_CLASSPATH):$(DEP_GUAVA):$(DEP_JSR):$(DEP_JAVAX):$(DEP_ANNOTATIONS):. \
-	#$(DEP_CLASSPATH)
-	#$(J2OBJCC) -c `find . -name *.m`
-	#$(foreach DEP,$(NUMBERS),./a.out $(DEP);)
-	#$(foreach file, $(DEP_LOCAL_LIBS), $(shell unzip -d $(lib_dir_src) $$lib_source_jar) | head -1))
-
 vanilla_compile:
 	# Validating vanilla JVM compile...
 	javac -implicit:none -d $(BUILD_DIR) \
 	-Xprefer:newer \
+	- sourcepath $(APP_DIR):$(DEP_LOCAL_LIBS_CLASSPATH)
 	-classpath $(DEP_LOCAL_LIBS_CLASSPATH):$(DEP_J2OBJC_DIST_LIBS_CLASSPATH):. \
 	$(APP_JAVA_SRCS)
 
@@ -129,27 +120,20 @@ package:
 	@libtool -o $(APP_STATIC_LIB) $(APP_OBJECTS) $(APP_STATIC_LIB)
 
 $(BUILD_DIR):
-	@mkdir $(BUILD_DIR)
+	@mkdir -p $(BUILD_DIR)
 
+#$(TRANSLATED_LIBS_ROOT):
+#	@mkdir -p $(TRANSLATED_LIBS_ROOT)
 
+#$(TRANSLATED_LIBS_ROOT)/%: $(DEP_LOCAL_LIBS_ROOT)/%
+#    @echo "Translating Libs"
+#    $(info $(DEP_LOCAL_LIBS_RAW))
+#	$(info $@)
+#	$(info $?)
+#	$(info $<)
 
-
-
-
-#OBJECTS = \
-#  $(BUILD_DIR)/foo/MainClass.o \
-#  $(BUILD_DIR)/foo/bar/Support.o \
-#  $(BUILD_DIR)/foo/bar/Utils.o
-#OBJC_SOURCES = $(OBJECTS:.o=.m)
-#RESULT = mainclass
-
-#default: translate $(OBJECTS)
-#	$(J2OBJCC) -o $(RESULT) $(OBJECTS)
-#
-#translate: $(BUILD_DIR) $(OBJC_SOURCES)
-#
-#clean:
-#	@rm -rf $(RESULT) $(BUILD_DIR)
+#$(TRANSLATED_LIBS_ROOT)/%.a: $(DEP_LOCAL_LIBS_ROOT)/%
+#    @echo "Creating Static"
 
 #$(BUILD_DIR)/%.m $(BUILD_DIR)/%.h: $(SOURCE_DIR)/%.java
 #	$(J2OBJC) -sourcepath $(SOURCE_DIR) -d $(BUILD_DIR) $?
