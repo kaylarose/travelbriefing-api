@@ -81,7 +81,7 @@ define prepare_dependency
 $(translated_object_files): $(translated_source_files)
   $(info $@)
   $(info $?)
-	$(J2OBJCC) -ObjC -I$(BUILD_DIR) -combine -c -ljre_emul -lguava -ljavax_inject -ljsr305 -o $@
+	$(J2OBJCC) -ObjC -I$(BUILD_DIR) -c -ljre_emul -lguava -ljavax_inject -ljsr305 -o $@
   $(debug_leave)
 endef
 
@@ -124,6 +124,12 @@ $(BUILD_DIR):
 
 #$(TRANSLATED_LIBS_ROOT):
 #	@mkdir -p $(TRANSLATED_LIBS_ROOT)
+
+$(TRANSLATED_LIBS_ROOT)/*/%.a: $(DEP_LOCAL_LIBS_ROOT)/*/%.o
+	@echo "Creating Static"
+
+$(TRANSLATED_LIBS_ROOT)/%.o: $(DEP_LOCAL_LIBS_ROOT)/%.m
+	@echo "Creating Source"
 
 #$(TRANSLATED_LIBS_ROOT)/%: $(DEP_LOCAL_LIBS_ROOT)/%
 #    @echo "Translating Libs"
